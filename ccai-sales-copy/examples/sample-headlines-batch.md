@@ -11,7 +11,7 @@ generated: 2026-05-12
 word_count: 130
 ---
 
-# Headlines batch — landing page A/B testing
+# Headlines batch, landing page A/B testing
 
 ## 10 headline variants
 
@@ -20,7 +20,7 @@ word_count: 130
 2. **The reason your Claude output sounds soulless (and the 20-minute fix).**
 
 ### Specific-result angle
-3. **From "this sounds like AI" to "this sounds like me" — in one Saturday.**
+3. **From "this sounds like AI" to "this sounds like me", in one Saturday.**
 4. **12 of 14 small business owners I taught had usable AI output within two weeks.**
 
 ### Contrarian angle
@@ -33,7 +33,7 @@ word_count: 130
 
 ### Pain-mirror angle
 9. **Tired of AI output that sounds like every other LinkedIn post? Start here.**
-10. **You bought Claude Pro and stopped using it. Here's why — and how to fix it.**
+10. **You bought Claude Pro and stopped using it. Here's why, and how to fix it.**
 
 ---
 
@@ -42,14 +42,14 @@ word_count: 130
 | # | Pick | Why it's the strongest |
 |---|---|---|
 | #1 | "Your AI sounds like every other AI. Here's how to fix that in one weekend." | Names the exact pain in the reader's own words + bounds the time commitment in the same headline. Hardest-working single line. |
-| #3 | "From 'this sounds like AI' to 'this sounds like me' — in one Saturday." | Before/after frame is concrete. "Saturday" beats "one weekend" — more specific. |
+| #3 | "From 'this sounds like AI' to 'this sounds like me', in one Saturday." | Before/after frame is concrete. "Saturday" beats "one weekend", more specific. |
 | #5 | "Stop trying to make Claude sound 'professional.' Make it sound like *you.*" | Contrarian reframe of common advice. Best for audiences that have been over-coached to "be professional." |
 
 ## Recommended testing plan
 
-Run #1 against #3 first — both target the same audience but from different angles (pain-first vs transformation-first). Whichever wins, test against #5 next.
+Run #1 against #3 first, both target the same audience but from different angles (pain-first vs transformation-first). Whichever wins, test against #5 next.
 
-Avoid running #4 in cold-traffic ads — the "12 of 14" claim works as proof inside copy but is too dense for a headline-only test.
+Avoid running #4 in cold-traffic ads, the "12 of 14" claim works as proof inside copy but is too dense for a headline-only test.
 
 ---
 

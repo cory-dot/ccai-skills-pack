@@ -1,9 +1,9 @@
 # ccai-marketing-prompts
 
-> A curated, callable library of 35 marketing prompts — surfaced for your task and adapted to your voice. Not a flat document.
+> A curated, callable library of 35 marketing prompts, surfaced for your task and adapted to your voice. Not a flat document.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-marketing-prompts`
 **Status:** v0.1 · works with Claude Code
@@ -41,7 +41,7 @@ Full index in [`prompts/_INDEX.md`](prompts/_INDEX.md).
 ## Why it's different from a prompt PDF
 
 1. **Searchable by task, not category.** You don't have to know what category "write me an offer audit" falls under. The skill matches the request to the right prompt.
-2. **Voice-adapted on the fly.** Each prompt gets calibrated to your `BRAND_VOICE.md` — taboos respected, signature vocab inserted, cadence rules applied.
+2. **Voice-adapted on the fly.** Each prompt gets calibrated to your `BRAND_VOICE.md`, taboos respected, signature vocab inserted, cadence rules applied.
 3. **Variable collection is interactive.** The skill walks you through what inputs the prompt needs rather than handing you a fill-in-the-blank template.
 4. **Knows when to defer to deeper skills.** Want a full sales page? The skill redirects you to `/ccai-sales-copy`, not a generic prompt. The 35 prompts are for *quick starts*; the deeper skills are for *full builds*.
 5. **Trackable usage.** Optional usage log builds your personal performance history of which prompts work best for your audience.
@@ -117,7 +117,7 @@ The skill will tell you so and either suggest the closest match (with adaptation
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -127,7 +127,7 @@ git clone https://github.com/cory-dot/ccai-marketing-prompts ~/.claude/skills/cc
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 

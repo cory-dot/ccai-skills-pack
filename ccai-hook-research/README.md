@@ -3,7 +3,7 @@
 > Build and grow a structured library of proven content hooks. Generate new hooks for any topic, calibrated to your brand voice.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-hook-research`
 **Status:** v0.1 · works with Claude Code
@@ -12,7 +12,7 @@
 
 ## What it does
 
-You collect hooks all the time — screenshots from creators you watch, lines that stopped you scrolling, openers from emails that made you actually read on. The problem is they live in your camera roll, your Notes app, and your head. You can't reuse what you can't find.
+You collect hooks all the time, screenshots from creators you watch, lines that stopped you scrolling, openers from emails that made you actually read on. The problem is they live in your camera roll, your Notes app, and your head. You can't reuse what you can't find.
 
 This skill turns that scattered collection into a structured `HOOK_LIBRARY.md`:
 
@@ -21,7 +21,7 @@ This skill turns that scattered collection into a structured `HOOK_LIBRARY.md`:
 - Tags performance data if you have it (outlier scoring vs. creator baseline)
 - **Generates 10 new hooks** for any topic when you ask, using your library + your brand voice
 
-If you also have `ccai-brand-voice` set up, generated hooks come out sounding like *you* — not like a generic AI ad.
+If you also have `ccai-brand-voice` set up, generated hooks come out sounding like *you*, not like a generic AI ad.
 
 ---
 
@@ -42,7 +42,7 @@ Most hook tools just give you a list of formulas and ask you to fill in the blan
 - Claude Code installed (`@anthropic-ai/claude-code`)
 - Some hooks to research, OR a topic to generate hooks for
 - **Strongly recommended:** `ccai-brand-voice` already run in the same directory so this skill can match your voice
-- **Optional:** performance data (views vs. creator baseline) — enables outlier scoring
+- **Optional:** performance data (views vs. creator baseline), enables outlier scoring
 
 No API keys, no scraping, no external services. You provide the hooks, the skill does the analysis.
 
@@ -60,7 +60,7 @@ Restart Claude Code or run `/doctor` to confirm.
 
 ## Usage
 
-### Mode A — Research (add hooks to your library)
+### Mode A, Research (add hooks to your library)
 
 ```
 /ccai-hook-research research
@@ -75,7 +75,7 @@ The skill will:
 4. Score against creator baseline if you have data
 5. Append to `HOOK_LIBRARY.md` in your working directory
 
-### Mode B — Generate (make new hooks)
+### Mode B, Generate (make new hooks)
 
 ```
 /ccai-hook-research generate "topic goes here"
@@ -96,16 +96,16 @@ The skill will:
 
 Full definitions in [`templates/HOOK_PATTERNS.md`](templates/HOOK_PATTERNS.md). Quick summary:
 
-1. **Contrarian** — "Stop doing X. Do Y instead."
-2. **Pain mirror** — "You've [specific painful experience]?"
-3. **Authority + proof** — "I [credential]. Here's the one thing that mattered."
-4. **Step-by-step promise** — "N steps to X. Step 1 is the one most people skip."
-5. **Confession / forbidden** — "I probably shouldn't share this, but…"
-6. **Before vs after** — "[Where I started] → [where I am]"
-7. **Quick-fix promise** — "Fix X in 60 seconds."
-8. **Suspense / open loop** — "Watch what happens when I…"
-9. **Personal cost** — "This cost me $X. Don't repeat it."
-10. **Hidden truth** — "No one talks about X in [niche]."
+1. **Contrarian**, "Stop doing X. Do Y instead."
+2. **Pain mirror**, "You've [specific painful experience]?"
+3. **Authority + proof**, "I [credential]. Here's the one thing that mattered."
+4. **Step-by-step promise**, "N steps to X. Step 1 is the one most people skip."
+5. **Confession / forbidden**, "I probably shouldn't share this, but…"
+6. **Before vs after**, "[Where I started] → [where I am]"
+7. **Quick-fix promise**, "Fix X in 60 seconds."
+8. **Suspense / open loop**, "Watch what happens when I…"
+9. **Personal cost**, "This cost me $X. Don't repeat it."
+10. **Hidden truth**, "No one talks about X in [niche]."
 
 ---
 
@@ -123,13 +123,13 @@ Full definitions in [`templates/HOOK_PATTERNS.md`](templates/HOOK_PATTERNS.md). 
 
 ## Workflow tip
 
-Run **research mode every 1–2 weeks** as you collect new hooks. Run **generate mode every time you write a new piece of content.** The library compounds — the longer you've been adding to it, the better your generated hooks get.
+Run **research mode every 1–2 weeks** as you collect new hooks. Run **generate mode every time you write a new piece of content.** The library compounds, the longer you've been adding to it, the better your generated hooks get.
 
 ---
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -139,7 +139,7 @@ git clone https://github.com/cory-dot/ccai-hook-research ~/.claude/skills/ccai-h
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 
@@ -148,4 +148,4 @@ Want someone to set this all up for you? [Book a diagnostic call](https://creati
 
 ## License
 
-MIT. Use commercially, fork, modify — don't claim you wrote it.
+MIT. Use commercially, fork, modify, don't claim you wrote it.

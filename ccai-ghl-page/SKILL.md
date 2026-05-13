@@ -1,8 +1,8 @@
 ---
 name: ccai-ghl-page
-description: Builds landing pages for GoHighLevel (GHL) — the agency-favorite CRM+page-builder platform. Generates the page copy + section structure + form spec ready to paste into GHL's drag-and-drop editor, calibrated to BRAND_VOICE.md. Use when the user is on GoHighLevel (white-labeled or main brand) and needs structured page content for their funnels.
-when_to_use: User mentions GoHighLevel, GHL, HighLevel, sub-account, funnel builder (GHL context), white-label CRM, or asks for landing pages they'll paste into GHL.
-argument-hint: "[funnel goal — lead-gen / sale / appointment]"
+description: "Builds landing pages for GoHighLevel (GHL), the agency-favorite CRM+page-builder platform. Generates the page copy + section structure + form spec ready to paste into GHL's drag-and-drop editor, calibrated to BRAND_VOICE.md. Use when the user is on GoHighLevel (white-labeled or main brand) and needs structured page content for their funnels."
+when_to_use: "User mentions GoHighLevel, GHL, HighLevel, sub-account, funnel builder (GHL context), white-label CRM, or asks for landing pages they'll paste into GHL."
+argument-hint: "[funnel goal, lead-gen / sale / appointment]"
 ---
 
 # CCAI GHL Page
@@ -11,7 +11,7 @@ GoHighLevel-specific landing page generator. Output formatted to paste directly 
 
 ## Why this exists separately from ccai-landing-page
 
-`ccai-landing-page` generates Next.js code. That doesn't help if your funnel lives in GoHighLevel — you can't paste React into GHL's drag-and-drop builder.
+`ccai-landing-page` generates Next.js code. That doesn't help if your funnel lives in GoHighLevel, you can't paste React into GHL's drag-and-drop builder.
 
 This skill produces what GHL editors actually accept: section-by-section copy, image specs, form field lists, and the structural plan that maps to GHL's "rows + columns + blocks" model.
 
@@ -33,21 +33,21 @@ Saves to `ghl-pages/YYYY-MM-DD-funnel-slug.md`:
 
 ## Process
 
-### Step 1 — Choose funnel type
+### Step 1, Choose funnel type
 GHL funnels vary structurally:
 - **Lead-gen:** 1-page opt-in + thank you page (2 pages)
 - **Webinar / appointment:** opt-in + booking page + confirmation (3 pages)
 - **Product sale:** sales page + order form + upsell (optional) + thank you (3-4 pages)
 - **Cold lead nurture:** long-form sales letter + footer-only CTA
 
-### Step 2 — Diagnose audience awareness
-Same Schwartz framework as `ccai-sales-copy` — drives the copy depth per section.
+### Step 2, Diagnose audience awareness
+Same Schwartz framework as `ccai-sales-copy`, drives the copy depth per section.
 
-### Step 3 — Generate the section-by-section spec
+### Step 3, Generate the section-by-section spec
 For each section, output:
 
 ```
-### Section N — [section name]
+### Section N, [section name]
 **GHL block type:** [Headline / Text / Image / Button / Form / Video / Spacer / Column-row]
 
 **Copy:**
@@ -60,15 +60,15 @@ For each section, output:
 - Padding: [tight / normal / loose]
 ```
 
-### Step 4 — Form specification
+### Step 4, Form specification
 For the opt-in or order form:
 - Each field: type, label, placeholder, required/optional
 - GHL custom field name suggestions
 - Tag(s) to apply on submission
 - Workflow trigger name to fire
 
-### Step 5 — Workflow stub
-A 1-paragraph description of what the post-submit workflow should do — user builds this in GHL's automation builder. The skill doesn't auto-create workflows (no GHL API in free version).
+### Step 5, Workflow stub
+A 1-paragraph description of what the post-submit workflow should do, user builds this in GHL's automation builder. The skill doesn't auto-create workflows (no GHL API in free version).
 
 ## Hard rules
 
@@ -86,5 +86,5 @@ A 1-paragraph description of what the post-submit workflow should do — user bu
 - Snapshot for multi-tenant agency deployment
 
 ## Reference files
-- `templates/GHL_FUNNEL.md` — schema for funnel output
-- `examples/sample-ghl-funnel.md` — filled example for a coaching opt-in funnel
+- `templates/GHL_FUNNEL.md`, schema for funnel output
+- `examples/sample-ghl-funnel.md`, filled example for a coaching opt-in funnel

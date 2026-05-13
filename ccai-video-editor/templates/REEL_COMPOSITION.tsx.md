@@ -118,7 +118,7 @@ export const Hook: React.FC<{ headline: string }> = ({ headline }) => {
 }
 ```
 
-## `src/data.ts` — variants
+## `src/data.ts`, variants
 
 ```typescript
 import { ReelProps } from './Composition'

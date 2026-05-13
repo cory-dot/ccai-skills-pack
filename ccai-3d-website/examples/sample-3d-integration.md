@@ -1,30 +1,30 @@
-# Sample 3D website integration — CCAI Hero with rotating cube
+# Sample 3D website integration, CCAI Hero with rotating cube
 
 > Real walk-through. ccai-website-builder-setup already ran. Goal: add a slowly-rotating 3D abstract cube to the hero background.
 
-## Step 1 — Picked section type
+## Step 1, Picked section type
 
 **Choice:** Hero with 3D background.
 
-The cube is decorative — it sets a "premium tech-aware" tone without distracting from the headline + CTA.
+The cube is decorative, it sets a "premium tech-aware" tone without distracting from the headline + CTA.
 
-## Step 2 — Dependencies installed
+## Step 2, Dependencies installed
 
 ```bash
 npm install @react-three/fiber @react-three/drei three
 ```
 
-No Spline used — chose GLB direct because we want full code control.
+No Spline used, chose GLB direct because we want full code control.
 
-## Step 3 — Asset provided
+## Step 3, Asset provided
 
 Used a free CC0 abstract cube from Sketchfab (https://sketchfab.com/3d-models/cc0-abstract-cube). Downloaded as `.glb`, dropped at `public/3d/hero-cube.glb`.
 
 File size: 78KB after `gltfpack -c` optimization (was 340KB raw).
 
-Also created a still fallback: `public/3d/hero-fallback.jpg` — 1920×1080 screenshot of the scene rendered.
+Also created a still fallback: `public/3d/hero-fallback.jpg`, 1920×1080 screenshot of the scene rendered.
 
-## Step 4 — Components generated
+## Step 4, Components generated
 
 ### `components/sections/Hero3D.tsx`
 - Uses `next/dynamic` for the scene import
@@ -36,20 +36,20 @@ Also created a still fallback: `public/3d/hero-fallback.jpg` — 1920×1080 scre
 - Canvas with `dpr={[1, 2]}` for performance
 - Single directional light + ambient
 - `<Float>` from drei for subtle bobbing motion
-- `OrbitControls` with `autoRotate` (slow) — no user pan/zoom
+- `OrbitControls` with `autoRotate` (slow), no user pan/zoom
 - `<Environment preset="city">` for reflections
 
-## Step 5 — Performance audit results
+## Step 5, Performance audit results
 
 Lighthouse score (after deploy to Vercel):
-- Performance: **88** (good — was 96 without 3D)
+- Performance: **88** (good, was 96 without 3D)
 - LCP: 1.8s (just below 2.5s threshold; acceptable)
-- CLS: 0.02 (good — the suspense fallback is the same size as the rendered scene)
+- CLS: 0.02 (good, the suspense fallback is the same size as the rendered scene)
 - TTI: 2.1s
 
 **Verdict:** ship-ready. The 8-point perf trade-off is worth it for the visual premium feel for this specific brand. If the brand were budget-sensitive, we'd skip 3D.
 
-## Step 6 — Verification
+## Step 6, Verification
 
 ```bash
 npm run dev
@@ -81,7 +81,7 @@ public/
 
 1. ⚠ "Three.js bundle adds ~600KB even with code-splitting. Confirm this is acceptable for your audience."
 2. ⚠ "Optimize the GLB. Raw was 340KB; ran `gltfpack -c` and dropped to 78KB."
-3. ⚠ "Fallback image required for reduced-motion users — generated stub, you must replace with real screenshot before launch."
+3. ⚠ "Fallback image required for reduced-motion users, generated stub, you must replace with real screenshot before launch."
 4. ⚠ "If LCP drops below 2.5s, consider lazy-loading the 3D scene below the fold and using a CSS gradient hero above the fold."
 
 ## Total time investment

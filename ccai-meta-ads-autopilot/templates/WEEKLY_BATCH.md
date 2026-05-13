@@ -10,7 +10,7 @@ offer: [URL or name]
 generated: YYYY-MM-DD
 ---
 
-# Meta Ads — Week [N]
+# Meta Ads, Week [N]
 
 ## Last week's audit
 
@@ -21,15 +21,15 @@ generated: YYYY-MM-DD
 ### Action list (do these manually in Meta Ads Manager)
 
 **🟢 Promote to main campaign:**
-1. [Ad name] — move to main campaign at $[X]/day starting today
+1. [Ad name], move to main campaign at $[X]/day starting today
 2. [Ad name]
 
 **🔴 Kill (pause permanently):**
-1. [Ad name] — spent $[X], 0 conversions
+1. [Ad name], spent $[X], 0 conversions
 2. [Ad name]
 
 **🟡 Let run another week:**
-1. [Ad name] — close to threshold, needs more data
+1. [Ad name], close to threshold, needs more data
 2. [Ad name]
 
 ---
@@ -38,7 +38,7 @@ generated: YYYY-MM-DD
 
 - **Top 5 winners by CPA:** [list]
 - **Bottom 5 by CPA:** [list]
-- **Format winners:** [single image / carousel / video — which is leading]
+- **Format winners:** [single image / carousel / video, which is leading]
 - **Audience pattern:** [which targeting setups produce wins]
 
 ---
@@ -55,7 +55,7 @@ generated: YYYY-MM-DD
 
 ### Winners-doubled-down (3)
 
-#### Concept 1 — [name]
+#### Concept 1, [name]
 - **Hook pattern:** [from HOOK_PATTERNS taxonomy]
 - **Primary text:** [≤90 chars]
 - **Headline:** [≤30 chars]
@@ -65,15 +65,15 @@ generated: YYYY-MM-DD
 - **Daily budget:** $[X]
 - **Why this is a winners-doubled-down concept:** [reasoning]
 
-#### Concept 2 — [name]
+#### Concept 2, [name]
 [Same structure]
 
-#### Concept 3 — [name]
+#### Concept 3, [name]
 [Same structure]
 
 ### Competitor-inspired (3)
 
-#### Concept 4 — [name]
+#### Concept 4, [name]
 - **Inspired by:** [competitor name + pattern]
 - **Primary text:**
 - **Headline:**
@@ -82,15 +82,15 @@ generated: YYYY-MM-DD
 - **Audience:**
 - **Daily budget:**
 
-#### Concept 5 — [name]
+#### Concept 5, [name]
 [Same structure]
 
-#### Concept 6 — [name]
+#### Concept 6, [name]
 [Same structure]
 
 ### New psychology pillars (2)
 
-#### Concept 7 — [name]
+#### Concept 7, [name]
 - **Psychology pillar tested:** [e.g. social proof / urgency / before-after / contrarian / transformation]
 - **Primary text:**
 - **Headline:**
@@ -99,12 +99,12 @@ generated: YYYY-MM-DD
 - **Audience:**
 - **Daily budget:**
 
-#### Concept 8 — [name]
+#### Concept 8, [name]
 [Same structure]
 
 ### Wildcards (2)
 
-#### Concept 9 — [name]
+#### Concept 9, [name]
 - **What makes it a wildcard:** [why this isn't a normal-for-you move]
 - **Primary text:**
 - **Headline:**
@@ -113,14 +113,14 @@ generated: YYYY-MM-DD
 - **Audience:**
 - **Daily budget:**
 
-#### Concept 10 — [name]
+#### Concept 10, [name]
 [Same structure]
 
 ---
 
 ## Upload order (recommended)
 
-1. Generate all 10 images (using your tool of choice — Midjourney, Canva, DALL-E, Higgsfield)
+1. Generate all 10 images (using your tool of choice, Midjourney, Canva, DALL-E, Higgsfield)
 2. Upload all 10 to Meta Ads Manager in **PAUSED** state
 3. Verify all targeting and budgets are set
 4. Un-pause all 10 as a single batch (so they enter the auction at the same time for clean comparison)

@@ -1,4 +1,4 @@
-# Hook Library — Cory @ Creative Core AI
+# Hook Library, Cory @ Creative Core AI
 
 > Last updated: 2026-05-12
 > Maintained by: ccai-hook-research
@@ -18,7 +18,7 @@ Append-only library of hooks I've collected, classified, and tagged. Used by `cc
 
 | # | Hook | Source | Template | Why it works | Score |
 |---|---|---|---|---|---|
-| 1 | "Most people install Claude Code and use it like a fancy autocomplete." | Cory · article 7 | "Most people [common usage of tool]. They miss [the real value]." | Names the wasted potential — the audience self-recognizes. | ⭐ |
+| 1 | "Most people install Claude Code and use it like a fancy autocomplete." | Cory · article 7 | "Most people [common usage of tool]. They miss [the real value]." | Names the wasted potential, the audience self-recognizes. | ⭐ |
 | 2 | "Stop posting 3x a day. Post once a week and dominate." | Justin Welsh | "Stop [common advice]. Do [opposite specific number] instead." | Specific number reversal makes the contrarian feel earned, not just provocative. | ⭐ |
 | 3 | "Everyone says you need a niche. You don't. You need a *signal*." | Naval | "Everyone says [advice]. You don't. You need [reframed concept]." | Replaces a worn concept with a sharper one in the same slot. | 🔥 |
 
@@ -26,7 +26,7 @@ Append-only library of hooks I've collected, classified, and tagged. Used by `cc
 
 | # | Hook | Source | Template | Why it works | Score |
 |---|---|---|---|---|---|
-| 1 | "You've redone your Instagram bio four times this month and still don't feel like it's right." | Dickie Bush | "You've [specific repeated action] and still [unresolved feeling]." | Highly specific — "four times" beats "many times." Reader self-identifies. | ⭐ |
+| 1 | "You've redone your Instagram bio four times this month and still don't feel like it's right." | Dickie Bush | "You've [specific repeated action] and still [unresolved feeling]." | Highly specific, "four times" beats "many times." Reader self-identifies. | ⭐ |
 | 2 | "Here's something that frustrates every business owner who uses Claude regularly." | Cory · article 3 | "Here's something that frustrates every [target audience] who [does action] regularly." | Sets up universal pain with audience-specific framing. | 🔥 |
 
 ### 3. Authority + proof
@@ -40,7 +40,7 @@ Append-only library of hooks I've collected, classified, and tagged. Used by `cc
 
 | # | Hook | Source | Template | Why it works | Score |
 |---|---|---|---|---|---|
-| 1 | "5 things I'd do if I started over with $0 and only had 30 days." | Alex Hormozi (variant) | "[N] things I'd do if I [restart constraint] with [resource constraint]." | Triggers vicarious planning — viewer imagines themselves in the constraint. | ⭐ |
+| 1 | "5 things I'd do if I started over with $0 and only had 30 days." | Alex Hormozi (variant) | "[N] things I'd do if I [restart constraint] with [resource constraint]." | Triggers vicarious planning, viewer imagines themselves in the constraint. | ⭐ |
 
 ### 5. Confession / forbidden
 
@@ -64,7 +64,7 @@ Append-only library of hooks I've collected, classified, and tagged. Used by `cc
 
 | # | Hook | Source | Template | Why it works | Score |
 |---|---|---|---|---|---|
-| 1 | "Watch what Claude does when I tell it to refuse the first answer." | Cory · reel (May 2026) | "Watch what [tool] does when I [unusual action]." | Frames a counterintuitive demo — the viewer has to watch to resolve the curiosity. | ✅ |
+| 1 | "Watch what Claude does when I tell it to refuse the first answer." | Cory · reel (May 2026) | "Watch what [tool] does when I [unusual action]." | Frames a counterintuitive demo, the viewer has to watch to resolve the curiosity. | ✅ |
 
 ### 9. Personal cost
 
@@ -84,7 +84,7 @@ Append-only library of hooks I've collected, classified, and tagged. Used by `cc
 
 | # | Hook | Source | Note |
 |---|---|---|---|
-| 1 | "If you're reading this, you're already losing." | (anonymous) | Aggressive framing — possibly fear/urgency, doesn't fit clean into 10 patterns. |
+| 1 | "If you're reading this, you're already losing." | (anonymous) | Aggressive framing, possibly fear/urgency, doesn't fit clean into 10 patterns. |
 
 ---
 
@@ -103,7 +103,7 @@ Append-only library of hooks I've collected, classified, and tagged. Used by `cc
 - 🔥 above baseline: 2–5x
 - ✅ baseline: ~creator median
 - ❌ underperformed: below baseline (kept as cautionary)
-- — no data
+-, no data
 
 ---
 
@@ -112,7 +112,7 @@ Append-only library of hooks I've collected, classified, and tagged. Used by `cc
 - Total hooks collected: 14
 - Outliers (⭐): 6
 - Pattern most used: Contrarian (3)
-- Pattern with highest avg score: Contrarian + Pain mirror (tied — all ⭐ or 🔥)
+- Pattern with highest avg score: Contrarian + Pain mirror (tied, all ⭐ or 🔥)
 
 ---
 

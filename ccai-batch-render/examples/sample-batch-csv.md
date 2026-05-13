@@ -1,25 +1,25 @@
-# Sample batch render — 50 personalized intro videos
+# Sample batch render, 50 personalized intro videos
 
 > Real walk-through. CSV-driven render of 50 5-second personalized intro videos for sales outreach.
 
 ## Use case
 
-Sending cold outreach to 50 prospects via Loom. Want a short personalized intro video per prospect — same template, different name + company + role + opener line. Manual production = 5 hours. With this skill = 8 minutes of render + 3 minutes of setup.
+Sending cold outreach to 50 prospects via Loom. Want a short personalized intro video per prospect, same template, different name + company + role + opener line. Manual production = 5 hours. With this skill = 8 minutes of render + 3 minutes of setup.
 
 ## The CSV (`data/variants.csv`)
 
 ```csv
 slug,firstName,company,role,openingLine,ctaText
-sarah-chen-northstar,Sarah,Northstar Coaching,coach,"Saw your recent Marketing Operations hire — congrats.",Watch the 3-min walkthrough →
+sarah-chen-northstar,Sarah,Northstar Coaching,coach,"Saw your recent Marketing Operations hire, congrats.",Watch the 3-min walkthrough →
 david-reyes-rrg,David,Reyes Real Estate Group,broker,"Saw your AI-for-onboarding post from a couple weeks back.",Watch the 3-min walkthrough →
 maria-patel-pco,Maria,Patel & Co Bookkeeping,owner,"Caught the line in your latest Patel Notes about wanting to automate client intake.",Watch the 3-min walkthrough →
-james-wu-wu,James,Wu Consulting,principal,"VA hire is the right move — also the moment most owners realize a few tasks should never have existed.",Watch the 3-min walkthrough →
+james-wu-wu,James,Wu Consulting,principal,"VA hire is the right move, also the moment most owners realize a few tasks should never have existed.",Watch the 3-min walkthrough →
 ... (46 more rows)
 ```
 
 ## The Remotion template (from `ccai-video-editor`)
 
-Composition: `PersonalizedIntro` — 5-second 1920×1080 video.
+Composition: `PersonalizedIntro`, 5-second 1920×1080 video.
 
 ```tsx
 // src/Composition.tsx (simplified)

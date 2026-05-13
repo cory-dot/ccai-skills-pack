@@ -8,13 +8,13 @@ audience_aha: "Cheap" subscription isn't cheap when it forces you to context-swi
 formats_generated: [LinkedIn, Twitter thread, Email, Carousel]
 ---
 
-# Repurpose Summary — Why free Claude is a trap for small business owners
+# Repurpose Summary, Why free Claude is a trap for small business owners
 
 ## Core extraction
 
 - **The single load-bearing claim:** Free Claude is more expensive than $20 Pro when you account for the lost-momentum cost.
 - **Proof anchor:** 12 of 14 clients I onboarded this year regretted starting on free.
-- **Audience aha:** I've been optimizing the wrong variable — the subscription fee, not the workflow cost.
+- **Audience aha:** I've been optimizing the wrong variable, the subscription fee, not the workflow cost.
 - **Format-specific worth preserving:** the "$20/mo = lost hour math" frame is the punchy crystallization. Should appear in every format.
 
 ---
@@ -53,7 +53,7 @@ That's three hours of your work week. At any reasonable hourly rate, that's alre
 
 The two who started on Pro? They were running real workflows by day 4.
 
-If you're going to use Claude for actual business work — not just tinkering — start on Pro.
+If you're going to use Claude for actual business work, not just tinkering, start on Pro.
 
 The free plan is for testing the interface. It's not for getting work done.
 
@@ -131,7 +131,7 @@ PRE-HEADER: Free looks cheaper. It isn't. Here's the math.
 
 A small business owner I onboarded last week sent me a message:
 
-"I signed up for Claude Free first to test it. After two days I gave up — kept getting locked out mid-prompt. Should I just pay?"
+"I signed up for Claude Free first to test it. After two days I gave up, kept getting locked out mid-prompt. Should I just pay?"
 
 Yes. The free plan is more expensive than the $20 plan.
 
@@ -199,10 +199,10 @@ Full plan breakdown → link in bio
 |---|---|
 | LinkedIn | "$20/month for Claude Pro is the cheaper plan." → confidence-by-paradox |
 | Twitter | Same paradox but framed as social proof: "I've watched happen with 12 of 14..." |
-| Email | Frames around a real client message — narrative entry, not a claim |
-| Carousel | Pure assertion + visual strikethrough — visual-first medium |
+| Email | Frames around a real client message, narrative entry, not a claim |
+| Carousel | Pure assertion + visual strikethrough, visual-first medium |
 
-Each format opens differently. Each ends differently. The core claim and the 12/14 anchor appear in all four — by design — but framed with different stakes.
+Each format opens differently. Each ends differently. The core claim and the 12/14 anchor appear in all four, by design, but framed with different stakes.
 
 ---
 

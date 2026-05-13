@@ -4,19 +4,19 @@
 
 ---
 
-## AIDA — Attention, Interest, Desire, Action
+## AIDA, Attention, Interest, Desire, Action
 
 **Best for:** Problem-aware audience. They know the problem exists but don't know solutions are available.
 
 **Structure:**
-1. **Attention** — grab them with a hook that names their pain
-2. **Interest** — explain why this matters now (cost of inaction, what they're missing)
-3. **Desire** — paint the after-state, build the want
-4. **Action** — make the next step obvious and low-friction
+1. **Attention**, grab them with a hook that names their pain
+2. **Interest**, explain why this matters now (cost of inaction, what they're missing)
+3. **Desire**, paint the after-state, build the want
+4. **Action**, make the next step obvious and low-friction
 
 **Example skeleton:**
 > *"You spend 4 hours a week chasing client invoices.* [Attention]
-> *That's 200 hours a year — a full month of work.* [Interest]
+> *That's 200 hours a year, a full month of work.* [Interest]
 > *Imagine getting that month back. Same revenue. Same clients. No more chasing.* [Desire]
 > *[CTA: Try our invoicing tool free for 30 days →]"* [Action]
 
@@ -24,14 +24,14 @@
 
 ---
 
-## PAS — Problem, Agitation, Solution
+## PAS, Problem, Agitation, Solution
 
 **Best for:** Solution-aware audience. They know solutions exist; they're shopping. Use PAS to make the cost of *their current solution* (or no solution) feel sharper.
 
 **Structure:**
-1. **Problem** — name the specific pain in their words
-2. **Agitation** — twist the knife. What's the cost of staying in this pain? What does it become in 6 months?
-3. **Solution** — present your offer as the relief
+1. **Problem**, name the specific pain in their words
+2. **Agitation**, twist the knife. What's the cost of staying in this pain? What does it become in 6 months?
+3. **Solution**, present your offer as the relief
 
 **Example skeleton:**
 > *"You're spending two hours every Sunday night planning the week's content.* [Problem]
@@ -43,14 +43,14 @@
 
 ---
 
-## BAB — Before, After, Bridge
+## BAB, Before, After, Bridge
 
 **Best for:** Solution-aware audience. Especially good when you have a visual contrast or vivid before/after.
 
 **Structure:**
-1. **Before** — paint the reader's current state in concrete detail
-2. **After** — paint the changed state in equally concrete detail
-3. **Bridge** — your offer is the bridge from one to the other
+1. **Before**, paint the reader's current state in concrete detail
+2. **After**, paint the changed state in equally concrete detail
+3. **Bridge**, your offer is the bridge from one to the other
 
 **Example skeleton:**
 > *"Right now: you send 40 cold emails a week. You get 2 replies. You're tired.* [Before]
@@ -62,15 +62,15 @@
 
 ---
 
-## FAB — Features, Advantages, Benefits
+## FAB, Features, Advantages, Benefits
 
 **Best for:** Product-aware audience. They know your product exists and are weighing it vs alternatives. They want specifics.
 
 **Structure:**
 For each feature, walk through:
-1. **Feature** — what the thing does (concrete, technical)
-2. **Advantage** — why that's better than what they have / competitors offer
-3. **Benefit** — what it means in their day-to-day life
+1. **Feature**, what the thing does (concrete, technical)
+2. **Advantage**, why that's better than what they have / competitors offer
+3. **Benefit**, what it means in their day-to-day life
 
 **Example skeleton:**
 > *"Our scheduler uses your time-zone settings automatically.* [Feature]
@@ -81,7 +81,7 @@ For each feature, walk through:
 
 ---
 
-## OATH — Oblivious, Apathetic, Thinking, Hurting
+## OATH, Oblivious, Apathetic, Thinking, Hurting
 
 **Best for:** Diagnosing audience awareness; not so much a structure as a framework for matching tone and depth of agitation.
 
@@ -100,7 +100,7 @@ For each feature, walk through:
 
 ## Hybridizing the frameworks
 
-Elite copywriters don't pick one — they layer:
+Elite copywriters don't pick one, they layer:
 
 - **PAS hook + FAB body + AIDA close** is a common stack for solution-aware → product-aware funnel pages
 - **BAB hero + FAB middle + direct offer close** works for product-pages with strong before/after stories

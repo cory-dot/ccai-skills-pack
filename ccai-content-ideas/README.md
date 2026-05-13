@@ -1,9 +1,9 @@
 # ccai-content-ideas
 
-> Structured content idea generation that compounds over time. Not a one-shot brainstormer — a content radar.
+> Structured content idea generation that compounds over time. Not a one-shot brainstormer, a content radar.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-content-ideas`
 **Status:** v0.1 · works with Claude Code
@@ -19,8 +19,8 @@ This skill is built differently. It maintains a persistent `CONTENT_IDEAS.md` fi
 - Captures 10 new ideas per run, each with hook + format + angle + proof anchor
 - Tracks status (`idea` → `drafting` → `posted` → `worked/flopped`)
 - Avoids duplicating topics from recent batches
-- Learns from your results — patterns marked ✅ get prioritized, ❌ patterns get avoided
-- Builds an **insights ledger** as a side-effect — observations about what works for *your* audience
+- Learns from your results, patterns marked ✅ get prioritized, ❌ patterns get avoided
+- Builds an **insights ledger** as a side-effect, observations about what works for *your* audience
 
 After 4–6 batches, the file becomes more valuable than the AI generating the ideas. That's the point.
 
@@ -108,17 +108,17 @@ The skill will mark #3 as `posted` + result `worked` and use that signal next ti
 **Can I run this without `ccai-brand-voice` or `ccai-hook-research`?**
 Yes, but the output will be generic. The whole point is calibration to *you*. Run the two foundation skills first, then this.
 
-**My audience is B2B / enterprise — does this still work?**
+**My audience is B2B / enterprise, does this still work?**
 Yes. The format mix is configurable (LinkedIn, email, white paper sections, sales talking points). The taxonomy isn't TikTok-specific.
 
 **What about Pro version with auto trend-scraping?**
-Coming in `ccai-content-ideas-pro` — adds Apify/Reddit/Google Trends auto-feed for trending topic discovery. Free version intentionally requires you to bring your own observations because the observation *is* the differentiator.
+Coming in `ccai-content-ideas-pro`, adds Apify/Reddit/Google Trends auto-feed for trending topic discovery. Free version intentionally requires you to bring your own observations because the observation *is* the differentiator.
 
 ---
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -128,7 +128,7 @@ git clone https://github.com/cory-dot/ccai-content-ideas ~/.claude/skills/ccai-c
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 

@@ -86,7 +86,7 @@
 **Formula:** *"[Where I started] → [Where I am now]"* OR *"Compare these two."*
 
 **Example:**
-> "$0/month from this newsletter vs. $4,200/month from the same newsletter — only 2 things changed."
+> "$0/month from this newsletter vs. $4,200/month from the same newsletter, only 2 things changed."
 
 **Best for:** Fitness, fashion, business growth, redesigns, makeovers.
 

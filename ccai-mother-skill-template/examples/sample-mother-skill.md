@@ -1,50 +1,50 @@
 ---
 name: content-sprint
-description: End-to-end content sprint — generates a content idea, drafts a video script, scores it pre-film, and repurposes the final approved script into LinkedIn, Twitter, email, and carousel formats. One command, one approved deliverable, four repurposed assets.
+description: End-to-end content sprint, generates a content idea, drafts a video script, scores it pre-film, and repurposes the final approved script into LinkedIn, Twitter, email, and carousel formats. One command, one approved deliverable, four repurposed assets.
 disable-model-invocation: true
-argument-hint: "[topic seed — optional]"
+argument-hint: "[topic seed, optional]"
 ---
 
 # Content Sprint Mother Skill
 
 ## Mission
-Take a topic seed from the user, generate a content idea calibrated to their brand voice and hook library, draft a video script from that idea, score the script before filming, and (after user approval) repurpose the script into four cross-platform formats — all in one orchestrated session.
+Take a topic seed from the user, generate a content idea calibrated to their brand voice and hook library, draft a video script from that idea, score the script before filming, and (after user approval) repurpose the script into four cross-platform formats, all in one orchestrated session.
 
 End state: one filmable Reel script + 4 platform-ready posts, with the user having approved at 3 checkpoints.
 
 ## Sub-skills used
-- `ccai-content-ideas` — generates 10 content ideas; user picks one
-- `ccai-video-script` — drafts the Reel script for the chosen idea
-- `ccai-reel-scorer` — scores the script before user films
-- `ccai-content-repurpose` — adapts the approved script into 4 formats
+- `ccai-content-ideas`, generates 10 content ideas; user picks one
+- `ccai-video-script`, drafts the Reel script for the chosen idea
+- `ccai-reel-scorer`, scores the script before user films
+- `ccai-content-repurpose`, adapts the approved script into 4 formats
 
 ## State files (data passed between steps)
-- `CONTENT_IDEAS.md` — generated/updated by step 1; the user picks idea #N
-- `scripts/YYYY-MM-DD-NN-slug.md` — produced by step 2 from the chosen idea
-- `reel-scores/YYYY-MM-DD-NN-slug.md` — produced by step 3 against the script
-- `repurposed/YYYY-MM-DD-source-slug/` — final repurposed assets from step 5
+- `CONTENT_IDEAS.md`, generated/updated by step 1; the user picks idea #N
+- `scripts/YYYY-MM-DD-NN-slug.md`, produced by step 2 from the chosen idea
+- `reel-scores/YYYY-MM-DD-NN-slug.md`, produced by step 3 against the script
+- `repurposed/YYYY-MM-DD-source-slug/`, final repurposed assets from step 5
 
 ## Orchestration plan
 
-### Step 1 — Generate content ideas
+### Step 1, Generate content ideas
 **Sub-skill invoked:** `ccai-content-ideas`
 **Input:** topic seed (from user); reads BRAND_VOICE.md, HOOK_LIBRARY.md
 **Output:** 10 fresh ideas appended to `CONTENT_IDEAS.md` under today's batch
-**Approval gate:** yes — user picks which idea to develop (one of the 10)
+**Approval gate:** yes, user picks which idea to develop (one of the 10)
 
-### Step 2 — Draft the script
+### Step 2, Draft the script
 **Sub-skill invoked:** `ccai-video-script`
 **Input:** chosen idea (referenced as "today's batch #N" in CONTENT_IDEAS.md)
 **Output:** full script saved to `scripts/YYYY-MM-DD-NN-slug.md`
-**Approval gate:** no — user reviews after scoring (step 3)
+**Approval gate:** no, user reviews after scoring (step 3)
 
-### Step 3 — Score the script
+### Step 3, Score the script
 **Sub-skill invoked:** `ccai-reel-scorer`
 **Input:** the script file from step 2
 **Output:** scoring report at `reel-scores/YYYY-MM-DD-NN-slug.md`
-**Approval gate:** yes — if score < 70, user decides: revise (loop back to step 2 with feedback) / keep as-is / kill
+**Approval gate:** yes, if score < 70, user decides: revise (loop back to step 2 with feedback) / keep as-is / kill
 
-### Step 4 — Loop back (conditional)
+### Step 4, Loop back (conditional)
 If user chose "revise" in step 3:
 1. Pass the top-3 revisions from the score report back to `ccai-video-script` as input
 2. Re-draft the script (overwrites scripts/YYYY-MM-DD-NN-slug.md, keeps old version as `-v1.md`)
@@ -53,18 +53,18 @@ If user chose "revise" in step 3:
 
 Max 3 revision loops. After 3, suggest: "This concept may not be the right one. Want to go back to step 1 and pick a different idea?"
 
-### Step 5 — Repurpose
+### Step 5, Repurpose
 **Sub-skill invoked:** `ccai-content-repurpose`
 **Input:** the approved script file
 **Output:** `repurposed/YYYY-MM-DD-source-slug/` folder with `linkedin.md`, `twitter-thread.md`, `email.md`, `carousel.md`
-**Approval gate:** yes — user reviews the 4 repurposed assets and approves or asks for tightening
+**Approval gate:** yes, user reviews the 4 repurposed assets and approves or asks for tightening
 
-### Step 6 — Final summary
-**Sub-skill invoked:** none — Claude assembles the summary
+### Step 6, Final summary
+**Sub-skill invoked:** none, Claude assembles the summary
 **Output:**
 
 ```markdown
-# Content Sprint Complete — YYYY-MM-DD
+# Content Sprint Complete, YYYY-MM-DD
 
 ## What you have:
 - 1 publish-ready Reel script: scripts/[file] (scored [N]/100)

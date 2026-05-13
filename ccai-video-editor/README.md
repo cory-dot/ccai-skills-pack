@@ -1,9 +1,9 @@
 # ccai-video-editor
 
-> Programmatic video editing via Remotion. Generate 1 or 1,000 video variants from a React-based template. Free tier — pro adds AI voice + image generation.
+> Programmatic video editing via Remotion. Generate 1 or 1,000 video variants from a React-based template. Free tier, pro adds AI voice + image generation.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-video-editor`
 **Status:** v0.1 · Tier C · works with Claude Code
@@ -12,7 +12,7 @@
 
 ## What it does
 
-[Remotion](https://www.remotion.dev/) is "videos in React" — your video is a function from frame number to JSX, with text, animation, audio sync, and transitions all in code.
+[Remotion](https://www.remotion.dev/) is "videos in React", your video is a function from frame number to JSX, with text, animation, audio sync, and transitions all in code.
 
 This skill makes Remotion accessible without learning the framework: it generates the project scaffold + composition components for 5 video patterns, and you customize from there.
 
@@ -33,17 +33,17 @@ This skill specifically earns its place when you need *many* videos that share a
 
 ## The 5 template types
 
-1. **Reel/Short** — 15-60sec vertical, hook/body/CTA
-2. **Ad variants** — designed for batch generation, single template + variant data array
-3. **Personalized intro** — 5-15sec custom intros per recipient
-4. **Carousel-to-video** — slides → video with auto-paced reveals
-5. **Data-viz video** — animated numbers/charts
+1. **Reel/Short**, 15-60sec vertical, hook/body/CTA
+2. **Ad variants**, designed for batch generation, single template + variant data array
+3. **Personalized intro**, 5-15sec custom intros per recipient
+4. **Carousel-to-video**, slides → video with auto-paced reveals
+5. **Data-viz video**, animated numbers/charts
 
 ## What you need
 
 - Node.js v20+
-- A specific scaled-video use case (not "let's make a video" — that's `ccai-video-script`)
-- Audio files (voiceover, background music) — user-provided, no copyrighted tracks
+- A specific scaled-video use case (not "let's make a video", that's `ccai-video-script`)
+- Audio files (voiceover, background music), user-provided, no copyrighted tracks
 
 ## Install
 
@@ -61,7 +61,7 @@ The skill walks through template selection → scaffold → composition generati
 
 ## Example output
 
-See [`examples/sample-video-project.md`](examples/sample-video-project.md) — full walk-through of producing 50 Meta ad variants in 30 minutes, including upload-and-launch.
+See [`examples/sample-video-project.md`](examples/sample-video-project.md), full walk-through of producing 50 Meta ad variants in 30 minutes, including upload-and-launch.
 
 ## Pro version
 
@@ -73,7 +73,7 @@ See [`examples/sample-video-project.md`](examples/sample-video-project.md) — f
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (32 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (32 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)

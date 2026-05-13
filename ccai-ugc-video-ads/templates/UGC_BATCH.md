@@ -6,21 +6,21 @@ voice_loaded: [yes/no]
 generated: YYYY-MM-DD
 ---
 
-# UGC Ad Batch — [Product]
+# UGC Ad Batch, [Product]
 
-## Concept 1 — Discovery Confession
+## Concept 1, Discovery Confession
 [Full structure as per SKILL.md]
 
-## Concept 2 — Problem-Fixed Reaction
+## Concept 2, Problem-Fixed Reaction
 [Full structure]
 
-## Concept 3 — Honest Comparison
+## Concept 3, Honest Comparison
 [Full structure]
 
-## Concept 4 — Insider Tip / Hack
+## Concept 4, Insider Tip / Hack
 [Full structure]
 
-## Concept 5 — Before/After Transformation
+## Concept 5, Before/After Transformation
 [Full structure]
 
 ---
@@ -38,7 +38,7 @@ generated: YYYY-MM-DD
 
 ## Production checklist
 
-- [ ] Hire creator(s) — use brief per concept
+- [ ] Hire creator(s), use brief per concept
 - [ ] Or generate via Higgsfield (pro version)
 - [ ] Film B-roll if creator can't produce all shots
 - [ ] Edit + add on-screen text overlays per plan

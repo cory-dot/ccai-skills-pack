@@ -3,7 +3,7 @@
 > CSV → many videos. Bridge between a `ccai-video-editor` Remotion template and a spreadsheet of variants. Produces one MP4 per row.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-batch-render`
 **Status:** v0.1 · Tier C · works with Claude Code
@@ -28,10 +28,10 @@ Real use cases:
 
 ## What's in the box
 
-- `scripts/batch-render.ts` — the orchestration script (generated)
-- `data/variants.csv` — where you put your CSV
-- `out/` — rendered MP4s land here
-- `out/_render-log.md` — per-row success/failure log
+- `scripts/batch-render.ts`, the orchestration script (generated)
+- `data/variants.csv`, where you put your CSV
+- `out/`, rendered MP4s land here
+- `out/_render-log.md`, per-row success/failure log
 
 Failed rows don't stop the batch. Renders that already exist get skipped (use `--overwrite` to re-render).
 
@@ -65,7 +65,7 @@ Sequential rendering on a typical laptop:
 Math:
 - 50 videos × 8s = ~7 minutes
 - 100 reels × 30s = ~50 minutes
-- 500 videos × 1 min = ~8 hours (you'll want Lambda for this — pro version)
+- 500 videos × 1 min = ~8 hours (you'll want Lambda for this, pro version)
 
 ## Pro version
 
@@ -78,7 +78,7 @@ Math:
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (32 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (32 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)

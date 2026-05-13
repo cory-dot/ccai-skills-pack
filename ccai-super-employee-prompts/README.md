@@ -1,9 +1,9 @@
 # ccai-super-employee-prompts
 
-> 8 prompt patterns for delegating recurring business tasks to Claude. Free version — manual input, no MCPs required.
+> 8 prompt patterns for delegating recurring business tasks to Claude. Free version, manual input, no MCPs required.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-super-employee-prompts`
 **Status:** v0.1 · works with Claude Code
@@ -16,7 +16,7 @@ Most business owners do the same 5-10 tasks every week: triage inbox, write a re
 
 This skill turns those recurring tasks into delegate-able prompts Claude runs for you. Free version: you provide the input manually (paste, file drop). Pro version: cron + MCPs auto-run them.
 
-It also teaches the underlying **5-part framework** for building your own super-employee prompts — because the included 8 patterns won't cover everything you do, and you'll want to build pattern 9, 10, 11... yourself.
+It also teaches the underlying **5-part framework** for building your own super-employee prompts, because the included 8 patterns won't cover everything you do, and you'll want to build pattern 9, 10, 11... yourself.
 
 ---
 
@@ -35,7 +35,7 @@ It also teaches the underlying **5-part framework** for building your own super-
 
 Patterns 1 (`inbox-triage`) and 2 (`weekly-review`) are fully written in v0.1. Remaining 6 are stubbed in `_INDEX.md` for v0.2 fill-in.
 
-**Start with `weekly-review`** — lowest external dependency, highest visible value, the output is for you (so voice fit matters less while you're learning).
+**Start with `weekly-review`**, lowest external dependency, highest visible value, the output is for you (so voice fit matters less while you're learning).
 
 ---
 
@@ -43,11 +43,11 @@ Patterns 1 (`inbox-triage`) and 2 (`weekly-review`) are fully written in v0.1. R
 
 Every super-employee prompt has 5 parts. Documented in [`patterns/_FRAMEWORK.md`](patterns/_FRAMEWORK.md):
 
-1. **The job** — one sentence
-2. **The input** — what data, what format
-3. **The transformation** — exact steps + decision criteria
-4. **The output** — exact format, length, sort order
-5. **The voice/tone constraint** — usually "match BRAND_VOICE.md"
+1. **The job**, one sentence
+2. **The input**, what data, what format
+3. **The transformation**, exact steps + decision criteria
+4. **The output**, exact format, length, sort order
+5. **The voice/tone constraint**, usually "match BRAND_VOICE.md"
 
 Skip any part → output gets inconsistent. The skill enforces this when adapting patterns.
 
@@ -57,7 +57,7 @@ Skip any part → output gets inconsistent. The skill enforces this when adaptin
 
 1. **Patterns over templates.** Templates are fill-in-the-blank. Patterns teach the underlying logic so you can build your own when the included 8 don't cover your task.
 2. **5-part framework is taught explicitly.** Not just "here's a prompt." The skill walks you through *why* each part matters.
-3. **Tone-matched output where it matters.** Inbox triage and meeting recaps go to other humans — `BRAND_VOICE.md` calibration is mandatory.
+3. **Tone-matched output where it matters.** Inbox triage and meeting recaps go to other humans, `BRAND_VOICE.md` calibration is mandatory.
 4. **Saves the adapted prompt for re-running.** Every successful pattern run can be saved to `super-employee/<pattern>-adapted.md`, ready to re-run next week with new input.
 5. **Free + pro split is honest.** Free version = manual input. Pro version = auto-execution via cron + MCPs. Same logic, different trigger.
 
@@ -118,10 +118,10 @@ The skill will:
 ## FAQ
 
 **Why doesn't the free version auto-run?**
-Auto-running needs MCPs (Gmail, Stripe, Meta Ads) — those require API keys and account setup. Pro version (`ccai-super-employee-prompts-pro`) adds the auto-run layer once the manual layer is reliable.
+Auto-running needs MCPs (Gmail, Stripe, Meta Ads), those require API keys and account setup. Pro version (`ccai-super-employee-prompts-pro`) adds the auto-run layer once the manual layer is reliable.
 
 **Can I run these in non-Claude-Code (like Claude.ai)?**
-Yes — the prompts work in any Claude interface. But Claude Code gives you file persistence (saving adapted prompts, weekly reviews to disk), which is the whole point of making these recurring.
+Yes, the prompts work in any Claude interface. But Claude Code gives you file persistence (saving adapted prompts, weekly reviews to disk), which is the whole point of making these recurring.
 
 **What about my own custom patterns?**
 Use [`patterns/_FRAMEWORK.md`](patterns/_FRAMEWORK.md) to build them. The framework is the same; just add a new file to `patterns/` following the format.
@@ -130,7 +130,7 @@ Use [`patterns/_FRAMEWORK.md`](patterns/_FRAMEWORK.md) to build them. The framew
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -140,7 +140,7 @@ git clone https://github.com/cory-dot/ccai-super-employee-prompts ~/.claude/skil
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 

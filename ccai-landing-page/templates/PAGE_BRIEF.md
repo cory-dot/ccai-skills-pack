@@ -1,11 +1,11 @@
 # Landing Page Brief
 
 ## 1. Awareness stage (Schwartz 5)
-- [ ] Unaware — doesn't know they have the problem
-- [ ] Problem-aware — knows problem, doesn't know solutions
-- [ ] Solution-aware — knows solutions, evaluating
-- [ ] Product-aware — knows your product, comparing alternatives
-- [ ] Most-aware — ready to buy, needs reason now
+- [ ] Unaware, doesn't know they have the problem
+- [ ] Problem-aware, knows problem, doesn't know solutions
+- [ ] Solution-aware, knows solutions, evaluating
+- [ ] Product-aware, knows your product, comparing alternatives
+- [ ] Most-aware, ready to buy, needs reason now
 
 ## 2. The offer
 - **Product/service:**

@@ -1,7 +1,7 @@
 ---
 name: ccai-batch-render
-description: Renders hundreds of video variants from a spreadsheet/CSV using a ccai-video-editor Remotion template. Produces one MP4 per row. Use when the user has a CSV of variants (customer names, headlines, prices, etc.) and a Remotion template — generates the script that walks the CSV and renders each.
-when_to_use: User mentions batch render, render 100 videos, CSV-driven video, spreadsheet to videos, mass video production, scaled personalization, or asks "how do I produce N videos from this data."
+description: "Renders hundreds of video variants from a spreadsheet/CSV using a ccai-video-editor Remotion template. Produces one MP4 per row. Use when the user has a CSV of variants (customer names, headlines, prices, etc.) and a Remotion template, generates the script that walks the CSV and renders each."
+when_to_use: "User mentions batch render, render 100 videos, CSV-driven video, spreadsheet to videos, mass video production, scaled personalization, or asks \"how do I produce N videos from this data.\""
 argument-hint: "[path to CSV + path to Remotion template]"
 ---
 
@@ -27,23 +27,23 @@ Companion to `ccai-video-editor`. That skill generates the Remotion template. Th
 ## Output contract
 
 Generates:
-- `scripts/batch-render.ts` — the orchestration script
-- `data/variants.csv` — placement for the user's CSV (or accepts a path)
-- `out/` directory — where rendered MP4s land
+- `scripts/batch-render.ts`, the orchestration script
+- `data/variants.csv`, placement for the user's CSV (or accepts a path)
+- `out/` directory, where rendered MP4s land
 
 After running:
 - `out/video-001-<slug>.mp4`, `out/video-002-<slug>.mp4`, ..., `out/video-NNN-<slug>.mp4`
-- `out/_render-log.md` — per-row status (success / failed / skipped)
+- `out/_render-log.md`, per-row status (success / failed / skipped)
 
 ## Process
 
-### Step 1 — Verify Remotion project + CSV
+### Step 1, Verify Remotion project + CSV
 - Check that a Remotion `package.json` exists
 - Check the CSV file is readable
 - Parse CSV header to confirm columns match the template's expected variant props
 - If mismatch, show the user the diff and ask whether to map columns / add fields / abort
 
-### Step 2 — Generate `scripts/batch-render.ts`
+### Step 2, Generate `scripts/batch-render.ts`
 
 ```typescript
 import { renderMedia, selectComposition } from '@remotion/renderer'
@@ -68,7 +68,7 @@ async function batchRender() {
     try {
       const composition = await selectComposition({
         serveUrl: bundled,
-        id: 'AdVariant',          // composition ID — adapt per template
+        id: 'AdVariant',          // composition ID, adapt per template
         inputProps: row,
       })
       await renderMedia({
@@ -99,7 +99,7 @@ function generateLogMarkdown(log: any[]): string {
 batchRender()
 ```
 
-### Step 3 — Add the npm script
+### Step 3, Add the npm script
 Edit user's `package.json` to add:
 ```json
 "scripts": {
@@ -107,20 +107,20 @@ Edit user's `package.json` to add:
 }
 ```
 
-### Step 4 — Performance preview
+### Step 4, Performance preview
 Before running, estimate:
 - Avg render time per video (from template duration + complexity)
 - Total estimated wall time
 - Total disk space needed
 - Whether the user should split into smaller batches (>200 videos = consider Remotion Lambda)
 
-### Step 5 — Run + monitor
+### Step 5, Run + monitor
 - `npm run render-batch`
 - Live console output: progress bar + ETA
 - On failure of any row: continue with the rest, log the failure
 - Final summary: N succeeded, M failed, total time
 
-### Step 6 — Output verification
+### Step 6, Output verification
 After completion:
 - Open the `out/_render-log.md` file
 - Spot-check 3-5 rendered videos
@@ -132,17 +132,17 @@ After completion:
 - **Continue past failures, don't crash the whole batch.** A failed row gets logged; the rest continue.
 - **No silent codec changes.** If the template uses h264 + crf 23, the batch render uses the same. No "I'll optimize" hidden behavior.
 - **Disk space check before starting.** Estimate total output size; warn if disk has less than 1.5× that available.
-- **Filename safety.** Slugs derived from CSV must be filesystem-safe — strip special chars.
+- **Filename safety.** Slugs derived from CSV must be filesystem-safe, strip special chars.
 
 ## Pro version differences
 
 `ccai-batch-render-pro` (planned):
-- Remotion Lambda integration (cloud rendering — runs 100s of videos in parallel)
+- Remotion Lambda integration (cloud rendering, runs 100s of videos in parallel)
 - Direct CDN upload after each render (Cloudflare R2 / S3)
 - Cost estimation per batch (Lambda billing)
 - Failure auto-retry with exponential backoff
 - Slack notification on batch completion
 
 ## Reference files
-- `templates/batch-render.ts.md` — sample render script
-- `examples/sample-batch-csv.md` — example CSV + render log
+- `templates/batch-render.ts.md`, sample render script
+- `examples/sample-batch-csv.md`, example CSV + render log

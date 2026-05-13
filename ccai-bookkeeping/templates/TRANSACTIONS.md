@@ -1,4 +1,4 @@
-# Transactions — [Business Name] — YYYY-MM
+# Transactions, [Business Name], YYYY-MM
 
 > Maintained by: ccai-bookkeeping
 > Period: YYYY-MM-01 to YYYY-MM-31
@@ -48,8 +48,8 @@
 - Sum of income rows: $X
 - Sum of expense rows: $X
 - Net: $X
-- Matches source statement total? [yes / no — variance: $X]
+- Matches source statement total? [yes / no, variance: $X]
 
 ---
 
-*Regenerate this file by re-running `/ccai-bookkeeping`. Edit freely — keep section headings intact.*
+*Regenerate this file by re-running `/ccai-bookkeeping`. Edit freely, keep section headings intact.*

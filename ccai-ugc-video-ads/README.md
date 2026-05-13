@@ -1,9 +1,9 @@
 # ccai-ugc-video-ads
 
-> 5 UGC-style video ad concepts from a product brief. Each uses a different proven UGC archetype (discovery confession, problem-fixed reaction, honest comparison, insider tip, before/after). Full creator brief — script, on-screen text plan, shot list, persona.
+> 5 UGC-style video ad concepts from a product brief. Each uses a different proven UGC archetype (discovery confession, problem-fixed reaction, honest comparison, insider tip, before/after). Full creator brief, script, on-screen text plan, shot list, persona.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-ugc-video-ads`
 **Status:** v0.1 · Tier B · works with Claude Code
@@ -14,12 +14,12 @@
 
 UGC video ads consistently outperform polished branded creative on Meta and TikTok for small-business spend. But producing them is hard: brief creators well, get the right energy, structure the on-screen text.
 
-This skill produces the *brief* for 5 distinct UGC concepts — one per archetype:
-1. **Discovery confession** — "I just figured out..."
-2. **Problem-fixed reaction** — "I almost gave up, then..."
-3. **Honest comparison** — "I tested all of these..."
-4. **Insider tip / hack** — "My friend in [industry] told me..."
-5. **Before/after transformation** — visual-first
+This skill produces the *brief* for 5 distinct UGC concepts, one per archetype:
+1. **Discovery confession**, "I just figured out..."
+2. **Problem-fixed reaction**, "I almost gave up, then..."
+3. **Honest comparison**, "I tested all of these..."
+4. **Insider tip / hack**, "My friend in [industry] told me..."
+5. **Before/after transformation**, visual-first
 
 For each concept, the output includes:
 - Spoken hook (first 3 sec)
@@ -62,14 +62,14 @@ Or *"5 UGC ad concepts for [product]."*
 ## Pro version
 
 `ccai-ugc-video-ads-pro` (planned):
-- Higgsfield MCP integration — auto-generate videos from the brief
+- Higgsfield MCP integration, auto-generate videos from the brief
 - TikTok API for trending-sound auto-detection
 - Direct Meta upload via API
 - A/B variant generation
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (32 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (32 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)

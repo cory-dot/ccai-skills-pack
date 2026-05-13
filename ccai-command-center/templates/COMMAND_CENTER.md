@@ -1,4 +1,4 @@
-# Command Center — YYYY-MM-DD ([daily | weekly])
+# Command Center, YYYY-MM-DD ([daily | weekly])
 
 > Generated YYYY-MM-DD HH:MM by ccai-command-center
 
@@ -27,13 +27,13 @@
 
 ## Open decisions (from second-opinion/)
 
-- [Decision title] — generated [date], status: [open / awaiting input]
+- [Decision title], generated [date], status: [open / awaiting input]
 
 ---
 
 ## Top 3 actions today
 
-1. [Most important — usually pulls from open decisions, slipped tasks, or fires]
+1. [Most important, usually pulls from open decisions, slipped tasks, or fires]
 2.
 3.
 
@@ -42,7 +42,7 @@
 ## What to skip / defer
 
 - [Anything that's low-priority but tempting]
-- [Decisions that aren't ready — flagged from second-opinion verdicts]
+- [Decisions that aren't ready, flagged from second-opinion verdicts]
 
 ---
 

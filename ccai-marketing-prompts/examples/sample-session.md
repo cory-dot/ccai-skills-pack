@@ -1,10 +1,10 @@
-# Sample session — ccai-marketing-prompts in action
+# Sample session, ccai-marketing-prompts in action
 
 **User:** I need to write a caption for an Instagram post I'm about to put up. It's a screenshot of a Claude Code conversation I had.
 
 **Skill response:**
 
-That's a content caption — let me pull `caption.short` and adapt it to your BRAND_VOICE.md (which I see is loaded).
+That's a content caption, let me pull `caption.short` and adapt it to your BRAND_VOICE.md (which I see is loaded).
 
 **Adapted prompt** (calibrated to Cory @ Creative Core AI):
 
@@ -18,7 +18,7 @@ Voice + tone rules:
 - No "Hey loves" or "Hey friends" openers
 - No "transformative," "powerful," "game-changing"
 - No emoji
-- Sign-off matches user's normal closing pattern (none — Cory's voice ends on the punchline)
+- Sign-off matches user's normal closing pattern (none, Cory's voice ends on the punchline)
 
 For each caption:
 - Option A: under 100 characters (punchy, suitable for hidden by "more")
@@ -27,14 +27,14 @@ For each caption:
 
 Each caption should:
 - Add something the photo doesn't say on its own
-- End with a specific CTA or thought-prompt — not "tap in" or "follow for more"
+- End with a specific CTA or thought-prompt, not "tap in" or "follow for more"
 - Use Cory's signature vocabulary: "actually," "here's the thing," "real" (used adjectivally)
 
 Show me all 3. Then tell me your top pick and why.
 ```
 
 **One missing variable:**
-Tell me what the screenshot actually shows — what's the most interesting thing about this specific Claude Code conversation? (Otherwise the captions will be generic.)
+Tell me what the screenshot actually shows, what's the most interesting thing about this specific Claude Code conversation? (Otherwise the captions will be generic.)
 
 ---
 
@@ -57,7 +57,7 @@ Good. Running the prompt now:
 
 **My pick: Option B.**
 
-Reason: Option A is punchy but doesn't quite earn the $20 claim. Option C is too detailed for a single-image feed caption — works better as a carousel. Option B lands the contrarian frame ("I built it myself, then audited it") and the specific anchor ("3 holes in 30 seconds") in the right length window for a feed photo.
+Reason: Option A is punchy but doesn't quite earn the $20 claim. Option C is too detailed for a single-image feed caption, works better as a carousel. Option B lands the contrarian frame ("I built it myself, then audited it") and the specific anchor ("3 holes in 30 seconds") in the right length window for a feed photo.
 
 ---
 
@@ -65,7 +65,7 @@ Reason: Option A is punchy but doesn't quite earn the $20 claim. Option C is too
 
 **Skill response:**
 
-That's an idea-generation task, which is a different skill. Use `/ccai-content-ideas` — it generates 10 ideas with structure, calibrated to your radar and voice. Want me to invoke it?
+That's an idea-generation task, which is a different skill. Use `/ccai-content-ideas`, it generates 10 ideas with structure, calibrated to your radar and voice. Want me to invoke it?
 
 ---
 

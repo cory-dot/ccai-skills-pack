@@ -1,4 +1,4 @@
-# Pattern Index — ccai-super-employee-prompts
+# Pattern Index, ccai-super-employee-prompts
 
 8 patterns for delegating recurring business tasks to Claude.
 

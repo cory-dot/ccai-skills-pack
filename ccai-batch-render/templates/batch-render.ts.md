@@ -123,7 +123,7 @@ function generateLogMarkdown(log: RenderLog[], totalSec: number): string {
   for (const entry of log) {
     const status = entry.status === 'success' ? '✓' : entry.status === 'failed' ? '✗' : '⏭'
     const detail = entry.error ? `❌ ${entry.error}` : `\`${path.basename(entry.file)}\``
-    const dur = entry.durationMs ? `${(entry.durationMs / 1000).toFixed(1)}s` : '—'
+    const dur = entry.durationMs ? `${(entry.durationMs / 1000).toFixed(1)}s` : '-'
     md += `| ${entry.row} | ${entry.slug} | ${status} ${entry.status} | ${dur} | ${detail} |\n`
   }
 
@@ -146,5 +146,5 @@ npm run render-batch -- --overwrite   # render all, overwriting existing
 ## Notes
 
 - Renders are sequential by default (one at a time). For parallelization, see `ccai-batch-render-pro` (Remotion Lambda).
-- Failed rows don't stop the batch — the log captures them for retry.
+- Failed rows don't stop the batch, the log captures them for retry.
 - `--overwrite` flag forces re-render of existing output files.

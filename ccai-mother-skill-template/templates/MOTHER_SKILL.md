@@ -2,7 +2,7 @@
 name: [your-mother-skill-name]
 description: [What this mother skill accomplishes end-to-end. Should mention the sub-skills it orchestrates and the final deliverable.]
 disable-model-invocation: true
-argument-hint: "[input the mother skill takes — e.g. 'topic']"
+argument-hint: "[input the mother skill takes, e.g. 'topic']"
 ---
 
 # [Mother Skill Display Name]
@@ -11,39 +11,39 @@ argument-hint: "[input the mother skill takes — e.g. 'topic']"
 [One sentence stating what this workflow accomplishes end-to-end.]
 
 ## Sub-skills used
-- `[sub-skill-1]` — [what it does in this workflow]
-- `[sub-skill-2]` — [what it does]
-- `[sub-skill-3]` — [what it does]
+- `[sub-skill-1]`, [what it does in this workflow]
+- `[sub-skill-2]`, [what it does]
+- `[sub-skill-3]`, [what it does]
 
 ## State files (data passed between steps)
-- `[FILE_NAME.md]` — produced by step [N], consumed by step [N+1]
-- `[FILE_NAME.md]` — produced by step [N], consumed by step [N+1]
+- `[FILE_NAME.md]`, produced by step [N], consumed by step [N+1]
+- `[FILE_NAME.md]`, produced by step [N], consumed by step [N+1]
 
 ## Orchestration plan
 
-### Step 1 — [Step name]
+### Step 1, [Step name]
 **Sub-skill invoked:** `[skill-name]`
 **Input:** [what data comes in]
 **Output:** [what file/data this step produces]
-**Approval gate:** [yes/no — if yes, what the user is approving]
+**Approval gate:** [yes/no, if yes, what the user is approving]
 
-### Step 2 — [Step name]
+### Step 2, [Step name]
 **Sub-skill invoked:** `[skill-name]`
 **Input:** [from step 1's output: file path or data]
 **Output:** [what this step produces]
 **Approval gate:** [yes/no]
 
-### Step 3 — [Step name]
+### Step 3, [Step name]
 **Sub-skill invoked:** `[skill-name]`
 **Input:**
 **Output:**
 **Approval gate:**
 
-### Step 4 — [Step name]
+### Step 4, [Step name]
 *(Add as many steps as needed; keep under 6 for sanity)*
 
-### Step N — Final summary
-**Sub-skill invoked:** none — Claude assembles the summary
+### Step N, Final summary
+**Sub-skill invoked:** none, Claude assembles the summary
 **Input:** outputs from all previous steps
 **Output:** a single summary at the end of the conversation listing what was produced + where each file lives + suggested next actions
 

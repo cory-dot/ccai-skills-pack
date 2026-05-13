@@ -1,4 +1,4 @@
-# Sample Dashboard Spec — CCAI Revenue Dashboard
+# Sample Dashboard Spec, CCAI Revenue Dashboard
 
 ## Purpose
 A weekly-glance dashboard for tracking Creative Core AI revenue across service work, Skool community, and course sales.
@@ -32,7 +32,7 @@ A weekly-glance dashboard for tracking Creative Core AI revenue across service w
 | StatCard / RevenueLast7Days | Top stat | `getRevenueLast7Days()` |
 | StatCard / MRR | Top stat | `getMRR()` |
 | StatCard / OpenInvoices | Top stat | `getOpenInvoicesCount()` |
-| DataTable / RecentTransactions | Middle table — 30 most recent | `getRecentTransactions(30)` |
+| DataTable / RecentTransactions | Middle table, 30 most recent | `getRecentTransactions(30)` |
 | LineChart / RevenueTrend90d | Bottom chart | `getRevenueTrend(90)` |
 | PieChart / RevenueBySource | Bottom-right chart | `getRevenueBySource()` |
 
@@ -74,7 +74,7 @@ export async function getRevenueBySource(): Promise<{ source: string; amount: nu
 ```
 
 ## Auth
-- N/A — internal-only, route protected via path obscurity (e.g., `/dashboard/revenue` not linked from main nav). For full auth, run separate skill.
+- N/A, internal-only, route protected via path obscurity (e.g., `/dashboard/revenue` not linked from main nav). For full auth, run separate skill.
 
 ## After-generate checklist
 - [ ] Run `npm run dev`, visit `/dashboard/revenue`, confirm dashboard loads with mock data

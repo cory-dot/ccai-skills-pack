@@ -1,4 +1,4 @@
-# Dashboard Spec — [Dashboard Purpose]
+# Dashboard Spec, [Dashboard Purpose]
 
 ## Purpose
 [One sentence on what this dashboard is for]
@@ -6,7 +6,7 @@
 ## Audience
 - [ ] Just me
 - [ ] My team (internal)
-- [ ] My clients (external — needs auth)
+- [ ] My clients (external, needs auth)
 
 ## Refresh cadence
 - [ ] Real-time

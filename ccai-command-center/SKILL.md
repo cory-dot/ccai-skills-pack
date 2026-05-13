@@ -1,7 +1,7 @@
 ---
 name: ccai-command-center
-description: A single Claude Code dashboard that surfaces the most important state across your business — open inbox count, calendar today, last week's revenue, top 3 content ideas, pending decisions, agent status. Pulls from your CCAI skill outputs and (in pro version) from connected MCPs. Use as your morning standup tool — one command shows you what matters today.
-when_to_use: User mentions morning routine, daily standup, business dashboard, "what should I focus on today," weekly review (lighter version), or asks for a single summary view of their business state.
+description: "A single Claude Code dashboard that surfaces the most important state across your business, open inbox count, calendar today, last week's revenue, top 3 content ideas, pending decisions, agent status. Pulls from your CCAI skill outputs and (in pro version) from connected MCPs. Use as your morning standup tool, one command shows you what matters today."
+when_to_use: "User mentions morning routine, daily standup, business dashboard, \"what should I focus on today,\" weekly review (lighter version), or asks for a single summary view of their business state."
 argument-hint: "[daily | weekly]"
 ---
 
@@ -29,25 +29,25 @@ If user pastes input (calendar dump, inbox count), the skill incorporates that t
 
 ## Process
 
-### Step 1 — Mode
+### Step 1, Mode
 Daily (default) or weekly (more detail, week-over-week)?
 
-### Step 2 — Pull state
+### Step 2, Pull state
 Scan all known CCAI files. For each, extract the headline number/status.
 
-### Step 3 — Ask for the rest (manually)
+### Step 3, Ask for the rest (manually)
 Things the free version can't pull automatically:
 - "What's on your calendar today?"
 - "How many new emails in your inbox?"
 - "Any client fires?"
 
-### Step 4 — Surface the dashboard
+### Step 4, Surface the dashboard
 Output structure:
 ```
-# Command Center — YYYY-MM-DD
+# Command Center, YYYY-MM-DD
 
 ## What matters most today
-[3-5 bullets — top priorities pulled from the data]
+[3-5 bullets, top priorities pulled from the data]
 
 ## Quick stats
 - [Stat] · [Stat]
@@ -62,7 +62,7 @@ Output structure:
 3.
 ```
 
-### Step 5 — Save and timestamp
+### Step 5, Save and timestamp
 Saved to `command-center/YYYY-MM-DD-NN.md` so weekly review has the daily snapshots to look back on.
 
 ## Hard rules
@@ -81,5 +81,5 @@ Saved to `command-center/YYYY-MM-DD-NN.md` so weekly review has the daily snapsh
 - Voice command summary ("read me my command center")
 
 ## Reference files
-- `templates/COMMAND_CENTER.md` — daily/weekly schema
-- `examples/sample-daily.md` — a filled daily snapshot
+- `templates/COMMAND_CENTER.md`, daily/weekly schema
+- `examples/sample-daily.md`, a filled daily snapshot

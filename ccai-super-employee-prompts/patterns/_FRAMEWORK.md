@@ -1,6 +1,6 @@
 # The 5-Part Super-Employee Prompt Framework
 
-Every recurring task you delegate to Claude needs these 5 parts. Skip one and the output becomes inconsistent. This is the framework `ccai-super-employee-prompts` enforces when adapting patterns — and when teaching you to build your own.
+Every recurring task you delegate to Claude needs these 5 parts. Skip one and the output becomes inconsistent. This is the framework `ccai-super-employee-prompts` enforces when adapting patterns, and when teaching you to build your own.
 
 ---
 
@@ -79,13 +79,13 @@ Decision criteria for [classification/judgment]:
 - [Rule]
 
 OUTPUT:
-[Exact format spec — markdown? JSON? Plain text? Table? Paragraph?]
+[Exact format spec, markdown? JSON? Plain text? Table? Paragraph?]
 [Length cap]
 [Sort order]
 [Where to save / where to return]
 
 VOICE:
-[Constraint — usually "match BRAND_VOICE.md" + any pattern-specific notes]
+[Constraint, usually "match BRAND_VOICE.md" + any pattern-specific notes]
 ```
 
 ---
@@ -95,10 +95,10 @@ VOICE:
 The 8 included patterns cover the most common recurring tasks. If your task isn't one of them:
 
 1. Write out your task as the 5 parts above. Start with **job** in one sentence.
-2. If you can't write **transformation** in 3-5 explicit steps, your task is too vague — break it into sub-tasks.
+2. If you can't write **transformation** in 3-5 explicit steps, your task is too vague, break it into sub-tasks.
 3. If your **output** format isn't defined, the prompt will be inconsistent. Force yourself to specify length, sort order, and structure.
 4. Test it once with real data before committing to running it weekly.
-5. After 2-3 runs, look at where the output drifted from what you wanted — that's your prompt's weakness. Tighten the transformation step.
+5. After 2-3 runs, look at where the output drifted from what you wanted, that's your prompt's weakness. Tighten the transformation step.
 
 A prompt that survives 4 runs without modification is a real super-employee. One that needs tweaking every time is just a template.
 

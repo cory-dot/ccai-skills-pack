@@ -2,11 +2,11 @@
 decision: [the decision in one sentence]
 why_stuck: [what's making this hard]
 already_considered: [what user has thought through]
-hoped_for: [what user was hoping the advisors agree with — confirmation bias flag]
+hoped_for: [what user was hoping the advisors agree with, confirmation bias flag]
 generated: YYYY-MM-DD
 ---
 
-# Second Opinion — [decision in 6-10 words]
+# Second Opinion, [decision in 6-10 words]
 
 ## The decision
 
@@ -14,26 +14,26 @@ generated: YYYY-MM-DD
 
 ---
 
-## Round 1 — Independent responses
+## Round 1, Independent responses
 
 ### The Contrarian
-[Response — hunts for fatal flaws]
+[Response, hunts for fatal flaws]
 
 ### The First Principles Thinker
-[Response — strips assumptions, reframes]
+[Response, strips assumptions, reframes]
 
 ### The Expansionist
-[Response — looks for asymmetric upside]
+[Response, looks for asymmetric upside]
 
 ### The Outsider
-[Response — zero-context customer/observer perspective]
+[Response, zero-context customer/observer perspective]
 
 ### The Executor
-[Response — Monday-morning action focus]
+[Response, Monday-morning action focus]
 
 ---
 
-## Round 2 — Anonymous peer review
+## Round 2, Anonymous peer review
 
 *The responses above are labeled A through E. Reviewers don't know who said what.*
 
@@ -46,8 +46,8 @@ generated: YYYY-MM-DD
 | E | [first 20 words of advisor E's response] |
 
 ### Contrarian's peer review
-1. **Strongest:** [letter] — because [reason]
-2. **Biggest blind spot:** [letter] — because [reason]
+1. **Strongest:** [letter], because [reason]
+2. **Biggest blind spot:** [letter], because [reason]
 3. **What all five missed:** [insight]
 
 ### First Principles' peer review
@@ -77,10 +77,10 @@ generated: YYYY-MM-DD
 [1-2 points]
 
 **Where they clash:**
-[1-2 points — show the disagreement, don't smooth it over]
+[1-2 points, show the disagreement, don't smooth it over]
 
 **Blind spots the council caught:**
-[The synthesis of "what all five missed" answers — usually the highest-value output]
+[The synthesis of "what all five missed" answers, usually the highest-value output]
 
 **Confirmation bias check:**
 The user said they were hoping for [X]. The council [confirms / challenges] that. Read this as: [interpretation].

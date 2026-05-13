@@ -1,4 +1,4 @@
-# Meta API Quota — App [app-name]
+# Meta API Quota, App [app-name]
 
 > Maintained by: ccai-meta-api-throttle
 > Ad account: act_[id]
@@ -10,19 +10,19 @@
 
 | Endpoint | Calls this hour | Soft cap | Hard cap | % of hard | Status |
 |---|---|---|---|---|---|
-| /act_X/ads (read) | 0 | — | per-spend tier | — | 🟢 |
+| /act_X/ads (read) | 0 |, | per-spend tier |, | 🟢 |
 | /act_X/ads (write) | 0 | 100 | 200 | 0% | 🟢 |
 | /act_X/adsets | 0 | 80 | 150 | 0% | 🟢 |
 | /act_X/campaigns | 0 | 50 | 100 | 0% | 🟢 |
 | /act_X/insights | 0 | 30 | 60 | 0% | 🟢 |
 | /me/business_users | 0 | 100 | 200 | 0% | 🟢 |
-| Other | 0 | — | — | — | 🟢 |
+| Other | 0 |, |, |, | 🟢 |
 
 **Status legend:**
-- 🟢 under 70% of hard cap — PROCEED
-- 🟡 70-90% — PROCEED-WITH-WARNING
-- 🟠 90-100% — WAIT until window reset
-- 🔴 4xx error in last 5 min — BACKOFF (exponential)
+- 🟢 under 70% of hard cap, PROCEED
+- 🟡 70-90%, PROCEED-WITH-WARNING
+- 🟠 90-100%, WAIT until window reset
+- 🔴 4xx error in last 5 min, BACKOFF (exponential)
 
 ## CPU score tracking (Business Use Case rate limits)
 

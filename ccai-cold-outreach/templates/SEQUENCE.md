@@ -1,4 +1,4 @@
-# Outreach Sequence — [Lead name @ Company]
+# Outreach Sequence, [Lead name @ Company]
 
 > Batch: YYYY-MM-DD · Lead score: N/100
 > Channel: [LinkedIn / Email]
@@ -8,18 +8,18 @@
 
 ---
 
-## Touch 1 — Day 0 (the angle)
+## Touch 1, Day 0 (the angle)
 
 **Subject:** [6-9 words, curiosity-gap or specific-detail]
 
 **Body:**
-[Open with the signal — verbatim mention. 2-3 sentences max for LinkedIn, 4-6 for email. End with ONE specific question.]
+[Open with the signal, verbatim mention. 2-3 sentences max for LinkedIn, 4-6 for email. End with ONE specific question.]
 
 **Length:** [N words / characters]
 
 ---
 
-## Touch 2 — Day 4 (the reframe)
+## Touch 2, Day 4 (the reframe)
 
 *Send only if no reply to Touch 1.*
 
@@ -32,25 +32,25 @@
 
 ---
 
-## Touch 3 — Day 9 (the breakup)
+## Touch 3, Day 9 (the breakup)
 
 *Send only if no reply to Touch 2.*
 
-**Subject:** [Last note — N]
+**Subject:** [Last note, N]
 
 **Body:**
-[Honest one-liner: "Going to stop here unless you say to keep going. If it's not the right time, no worries — wishing you well."]
+[Honest one-liner: "Going to stop here unless you say to keep going. If it's not the right time, no worries, wishing you well."]
 
 **Length:** [N]
 
 ---
 
-## Touch 4 — Day 14 (long-tail, optional)
+## Touch 4, Day 14 (long-tail, optional)
 
 *Send only if there's been any engagement signal (email opened, profile viewed, post liked).*
 
 **Body:**
-[Light reference to a recent signal from THEIR end — "saw you posted X." Not pitchy.]
+[Light reference to a recent signal from THEIR end, "saw you posted X." Not pitchy.]
 
 **Length:** [N]
 
@@ -66,10 +66,10 @@
 
 ## Reply scoring rubric (when they respond)
 
-- 🟢 **Engaged** — asked a question, requested info, said "tell me more"
-- 🟡 **Polite no** — "not right now, thanks" → log + reach out in 6 months
-- 🔴 **Hard no** — "stop emailing me" → never re-contact, remove from lists
-- ⚫ **No reply after Touch 4** — log as "no engagement"
+- 🟢 **Engaged**, asked a question, requested info, said "tell me more"
+- 🟡 **Polite no**, "not right now, thanks" → log + reach out in 6 months
+- 🔴 **Hard no**, "stop emailing me" → never re-contact, remove from lists
+- ⚫ **No reply after Touch 4**, log as "no engagement"
 
 ---
 

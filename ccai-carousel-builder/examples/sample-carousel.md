@@ -12,36 +12,36 @@ generated: 2026-05-12
 
 ## Slides
 
-### Slide 1 — HOOK
+### Slide 1, HOOK
 **Copy:** $20 is the cheaper Claude plan.
 **Visual direction:** Stark white background. The number "$20" in massive bold serif type, with a red strikethrough crossing out the word "Free" beneath it. Single visual idea, no clutter.
 **On-screen text style:** Headline 120pt, single line, centered.
 
-### Slide 2 — SETUP
+### Slide 2, SETUP
 **Copy:** Here's why most small business owners get this wrong.
 **Visual direction:** Same background. Smaller text. Pull-quote style. A faint downward arrow at the bottom hinting at the swipe.
 
-### Slide 3 — BODY (idea 1)
+### Slide 3, BODY (idea 1)
 **Copy:** Free Claude has a tight usage cap. You'll hit it in 10-15 prompts.
 **Visual direction:** Screenshot inset of Claude.ai's rate-limit popup. Top half text, bottom half screenshot.
 
-### Slide 4 — BODY (idea 2)
+### Slide 4, BODY (idea 2)
 **Copy:** Then you're locked out for 5 hours. The context is gone.
 **Visual direction:** Animated clock graphic or "5:00:00" countdown overlay. Stark and angry.
 
-### Slide 5 — BODY (idea 3)
+### Slide 5, BODY (idea 3)
 **Copy:** Each reset = ~45 minutes of lost momentum.
 **Visual direction:** Bar chart showing 45-min gap per reset across a week. Or a simple "45 min" text in red with explanation underneath.
 
-### Slide 6 — BODY (idea 4)
+### Slide 6, BODY (idea 4)
 **Copy:** 12 of 14 clients I onboarded this year regretted starting Free.
 **Visual direction:** Big "12/14" fraction graphic. Caption beneath: "first-hand data."
 
-### Slide 7 — PAYOFF
+### Slide 7, PAYOFF
 **Copy:** The $20 buys back the hour. The free plan costs the hour.
 **Visual direction:** Two-column visual: left side "$0 = lost hour" / right side "$20 = saved hour." Bold equation feel.
 
-### Slide 8 — CTA
+### Slide 8, CTA
 **Copy:** Full plan guide → link in bio
 **Visual direction:** Large arrow pointing up-and-right toward the bio. Creative Core AI handle at the bottom of the slide.
 
@@ -59,7 +59,7 @@ generated: 2026-05-12
   - 5→6: per-reset cost stated; weekly proof anchor next → swipe
   - 6→7: data point lands; payoff equation closes the loop → swipe
   - 7→8: payoff lands; CTA prompts the action
-- ✅ **CTA specificity:** "Full plan guide → link in bio" — specific, named asset, clear next step. Not "follow for more."
+- ✅ **CTA specificity:** "Full plan guide → link in bio", specific, named asset, clear next step. Not "follow for more."
 
 ---
 
@@ -76,7 +76,7 @@ The two who started on Pro day 1? Running real workflows by day 4.
 
 The free plan is a tool for testing the interface. Not for getting work done.
 
-Full breakdown of all 4 Claude plans is in my bio — share with anyone who's about to make the same mistake.
+Full breakdown of all 4 Claude plans is in my bio, share with anyone who's about to make the same mistake.
 
 Cory
 ```

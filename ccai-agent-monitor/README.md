@@ -3,7 +3,7 @@
 > Status + cost + drift monitoring for your running Claude agents and scheduled skills.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-agent-monitor`
 **Status:** v0.1 · Tier B · works with Claude Code
@@ -16,15 +16,15 @@ Once you have 5+ skills running and a couple of scheduled agents, knowing what's
 
 4 modes:
 
-1. **Status** (default) — snapshot of every active skill: last run, success/fail, output paths, next scheduled
-2. **Costs** — monthly token consumption rollup with outliers flagged (paste in Anthropic console export)
-3. **Drift** — compares recent outputs to historical baselines, flags possible quality drift
-4. **Failures** — categorizes failed runs in last 7 days with suggested fixes
+1. **Status** (default), snapshot of every active skill: last run, success/fail, output paths, next scheduled
+2. **Costs**, monthly token consumption rollup with outliers flagged (paste in Anthropic console export)
+3. **Drift**, compares recent outputs to historical baselines, flags possible quality drift
+4. **Failures**, categorizes failed runs in last 7 days with suggested fixes
 
 ## Why it's different
 
 1. **Doesn't auto-restart failures.** Surfaces them; you decide.
-2. **Drift detection is heuristic, not authoritative.** Flags "possible drift" — you confirm.
+2. **Drift detection is heuristic, not authoritative.** Flags "possible drift", you confirm.
 3. **Reads CCAI skill outputs directly.** No new logging system to set up.
 4. **Privacy-first.** Customer/lead data never appears in summaries unless you approve.
 

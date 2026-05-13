@@ -1,10 +1,10 @@
-# Ideal Customer Profile — [Your Business]
+# Ideal Customer Profile, [Your Business]
 
 > Last updated: YYYY-MM-DD · Maintained by ccai-lead-finder
 
 ## Who they are
 - **Industry:** [primary] / [secondary]
-- **Company size:** [range — employees or revenue]
+- **Company size:** [range, employees or revenue]
 - **Role/title at company:** [decision-maker title(s)]
 - **Geography:** [regions / countries]
 - **Stage:** [bootstrap / funded / mature / publicly traded]

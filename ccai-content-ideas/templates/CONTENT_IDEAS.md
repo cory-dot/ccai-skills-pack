@@ -1,4 +1,4 @@
-# Content Ideas Radar — [Your Name / Business]
+# Content Ideas Radar, [Your Name / Business]
 
 > Last updated: YYYY-MM-DD
 > Maintained by: ccai-content-ideas
@@ -8,25 +8,25 @@
 
 ## How this file works
 
-Every time you run `/ccai-content-ideas`, 10 fresh ideas get appended below under a new dated batch. Ideas are never deleted — they're updated with status and results as you act on them.
+Every time you run `/ccai-content-ideas`, 10 fresh ideas get appended below under a new dated batch. Ideas are never deleted, they're updated with status and results as you act on them.
 
 **Status legend:**
-- `idea` — generated, not yet acted on (default)
-- `drafting` — actively writing/filming
-- `scheduled` — done, queued to post
-- `posted` — live in the world
-- `skipped` — decided not to make
+- `idea`, generated, not yet acted on (default)
+- `drafting`, actively writing/filming
+- `scheduled`, done, queued to post
+- `posted`, live in the world
+- `skipped`, decided not to make
 
 **Result legend (fill in after posting):**
-- `worked` — outperformed your baseline
-- `flopped` — underperformed
-- `mixed` — average, neither great nor bad
-- `tbd` — too soon to tell
-- (empty) — not yet known
+- `worked`, outperformed your baseline
+- `flopped`, underperformed
+- `mixed`, average, neither great nor bad
+- `tbd`, too soon to tell
+- (empty), not yet known
 
 ---
 
-## Active radar — sorted by status
+## Active radar, sorted by status
 
 ### To draft next
 
@@ -36,7 +36,7 @@ Every time you run `/ccai-content-ideas`, 10 fresh ideas get appended below unde
 
 ## Batches
 
-### Batch [YYYY-MM-DD] — Topic: [seed topic]
+### Batch [YYYY-MM-DD], Topic: [seed topic]
 
 **Brief:**
 - Topic: [what the batch was about]
@@ -67,8 +67,8 @@ Every time you run `/ccai-content-ideas`, 10 fresh ideas get appended below unde
 
 As you accumulate results, jot down patterns you notice. These feed future batches.
 
-- [date] — [observation, e.g. "contrarian hooks consistently outperform pain-mirror for my audience"]
-- [date] — [observation]
+- [date], [observation, e.g. "contrarian hooks consistently outperform pain-mirror for my audience"]
+- [date], [observation]
 
 ---
 

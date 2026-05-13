@@ -3,7 +3,7 @@
 > Scaffold a production-grade Next.js + Tailwind + shadcn/ui + Framer Motion project that Claude Code can build a marketing site into. With a brand-aware STYLE_GUIDE.md so every page stays on-brand.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-website-builder-setup`
 **Status:** v0.1 · works with Claude Code
@@ -14,17 +14,17 @@
 
 Most AI-generated websites end up looking like every other AI-generated website. The reason is usually structural: there's no design system, no style guide, no shared vocabulary between sessions. Claude Code rebuilds your aesthetic from scratch on every page.
 
-This skill fixes that by scaffolding a modern web project with the right design stack — and writing a `STYLE_GUIDE.md` that Claude Code reads before building anything new.
+This skill fixes that by scaffolding a modern web project with the right design stack, and writing a `STYLE_GUIDE.md` that Claude Code reads before building anything new.
 
 What you get:
 - A working **Next.js 14 + TypeScript + Tailwind** project
-- **shadcn/ui** components (copied into your project, not imported — you own them)
+- **shadcn/ui** components (copied into your project, not imported, you own them)
 - **Framer Motion** for animations
 - **lucide-react** for icons
 - A `STYLE_GUIDE.md` derived from your `BRAND_VOICE.md` (colors, typography, spacing, voice rules)
 - A symlinked `BRAND_VOICE.md` so Claude Code can read it from inside the project
 - Sensible `package.json`, `tailwind.config.ts`, `tsconfig.json`
-- A placeholder hero section that's ready to be built into — not "finished-looking"
+- A placeholder hero section that's ready to be built into, not "finished-looking"
 - `npm run dev` verified working before handoff
 
 What you DON'T get (intentionally):
@@ -42,10 +42,10 @@ The original `@tenfoldmarc/website-builder-setup` was a wrapper that installed 3
 
 This version is different in scope:
 1. **Scaffolds an actual project**, not just installs other skills
-2. **Generates STYLE_GUIDE.md from your BRAND_VOICE.md** — design tokens linked to your voice
-3. **Zero third-party paid dependencies** — works with free tools end-to-end
-4. **TypeScript + App Router by default** — modern Next.js, not legacy
-5. **Includes deployment notes** — Vercel one-click is documented in the project README
+2. **Generates STYLE_GUIDE.md from your BRAND_VOICE.md**, design tokens linked to your voice
+3. **Zero third-party paid dependencies**, works with free tools end-to-end
+4. **TypeScript + App Router by default**, modern Next.js, not legacy
+5. **Includes deployment notes**, Vercel one-click is documented in the project README
 
 ---
 
@@ -88,7 +88,7 @@ The skill will:
 7. Verify `npm run dev` works
 8. Hand off with next-step instructions
 
-After scaffold, you tell Claude Code: *"build a hero section for [your offer]"* — and it reads STYLE_GUIDE.md + BRAND_VOICE.md and builds it on-brand.
+After scaffold, you tell Claude Code: *"build a hero section for [your offer]"*, and it reads STYLE_GUIDE.md + BRAND_VOICE.md and builds it on-brand.
 
 ---
 
@@ -119,7 +119,7 @@ Plus `lucide-react` for icons (MIT-licensed, comprehensive).
 ## FAQ
 
 **Can I use this for a non-marketing site (app, dashboard, blog)?**
-Yes — the stack supports all of those. The scaffold optimizes for *marketing sites* by default (single-page or few-page), but it's a starting point you can extend.
+Yes, the stack supports all of those. The scaffold optimizes for *marketing sites* by default (single-page or few-page), but it's a starting point you can extend.
 
 **What about Astro / SvelteKit / Remix?**
 v0.1 ships Next.js only. If demand justifies it, v0.2 will add a `--framework` flag.
@@ -137,7 +137,7 @@ After scaffolding, the README in your project explains Vercel one-click deployme
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -147,7 +147,7 @@ git clone https://github.com/cory-dot/ccai-website-builder-setup ~/.claude/skill
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 

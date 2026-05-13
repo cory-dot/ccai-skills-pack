@@ -1,4 +1,4 @@
-# Competitor Radar — [Your Name / Business]
+# Competitor Radar, [Your Name / Business]
 
 > Last updated: YYYY-MM-DD
 > Maintained by: ccai-competitor-research
@@ -7,7 +7,7 @@
 
 ## How this file works
 
-Living radar of competitors you've researched. Each competitor gets a profile section. Profiles are updated by appending new dated entries — never overwriting — so you can track how a competitor evolves.
+Living radar of competitors you've researched. Each competitor gets a profile section. Profiles are updated by appending new dated entries, never overwriting, so you can track how a competitor evolves.
 
 ---
 
@@ -22,9 +22,9 @@ Living radar of competitors you've researched. Each competitor gets a profile se
 [One sentence: who they say they are, who they serve, what they promise.]
 
 #### Content pillars
-1. [Pillar name] — [one-line description]
-2. [Pillar name] — [one-line description]
-3. [Pillar name] — [one-line description]
+1. [Pillar name], [one-line description]
+2. [Pillar name], [one-line description]
+3. [Pillar name], [one-line description]
 
 #### Format mix
 - Short-form video: [%]
@@ -38,7 +38,7 @@ Living radar of competitors you've researched. Each competitor gets a profile se
 - Unique tells: [any signature opener style that's theirs]
 
 #### Offers and monetization
-- [Product/service]: [$price] — [positioning]
+- [Product/service]: [$price], [positioning]
 - [Affiliate / sponsorship signals]: [yes/no, notes]
 
 #### Audience proxies
@@ -59,8 +59,8 @@ Living radar of competitors you've researched. Each competitor gets a profile se
 - 🎯 **Gap:** [what they're not doing that you could own]
 
 #### Update log
-- YYYY-MM-DD — Initial profile created
-- YYYY-MM-DD — [What changed about their strategy or positioning]
+- YYYY-MM-DD, Initial profile created
+- YYYY-MM-DD, [What changed about their strategy or positioning]
 
 ---
 
@@ -77,7 +77,7 @@ Living radar of competitors you've researched. Each competitor gets a profile se
 - [Competitor B] owns [pillar]
 
 #### White space (no one is covering this well)
-- 🎯 [Specific pillar/angle no competitor is doing — your opportunity]
+- 🎯 [Specific pillar/angle no competitor is doing, your opportunity]
 
 #### Hook patterns dominant in this space
 - Saturated: [pattern names]

@@ -1,4 +1,4 @@
-# Hook Library — [Your Name / Business]
+# Hook Library, [Your Name / Business]
 
 > Last updated: YYYY-MM-DD
 > Maintained by: ccai-hook-research
@@ -10,7 +10,7 @@
 
 This is the source of truth for hooks you've collected, classified, and want to reuse. Every time you run `/ccai-hook-research` in research mode, new hooks get appended below under their pattern. In generate mode, this file is read first to use *your* hooks as the starting structures for new ones.
 
-**File rule:** Append-only. Old hooks are never deleted, only annotated. If a hook turned out not to work, mark it `❌ underperformed` rather than removing it — failed hooks teach what to avoid.
+**File rule:** Append-only. Old hooks are never deleted, only annotated. If a hook turned out not to work, mark it `❌ underperformed` rather than removing it, failed hooks teach what to avoid.
 
 ---
 
@@ -100,7 +100,7 @@ This is the source of truth for hooks you've collected, classified, and want to 
 - 🔥 above baseline: 2–5x above
 - ✅ baseline: roughly at the creator's median
 - ❌ underperformed: below baseline (kept as cautionary template)
-- — no performance data
+-, no performance data
 
 ---
 

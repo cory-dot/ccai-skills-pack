@@ -8,40 +8,40 @@ target_cta: [save / share / link in bio / comment / follow]
 generated: YYYY-MM-DD
 ---
 
-# [Working title — the topic in 8-10 words]
+# [Working title, the topic in 8-10 words]
 
 ## Slides
 
-### Slide 1 — HOOK
-**Copy:** [10-15 words max — punchy hook]
+### Slide 1, HOOK
+**Copy:** [10-15 words max, punchy hook]
 **Visual direction:** [bold typography, color/contrast notes, any key image]
 **On-screen text style:** [headline-size, single line, etc.]
 
-### Slide 2 — SETUP
+### Slide 2, SETUP
 **Copy:** [What's at stake. What they get if they swipe through.]
 **Visual direction:** [supporting visual or text continuation]
 
-### Slide 3 — BODY (idea 1)
+### Slide 3, BODY (idea 1)
 **Copy:**
 **Visual direction:**
 
-### Slide 4 — BODY (idea 2)
+### Slide 4, BODY (idea 2)
 **Copy:**
 **Visual direction:**
 
-### Slide 5 — BODY (idea 3)
+### Slide 5, BODY (idea 3)
 **Copy:**
 **Visual direction:**
 
-### Slide 6 — BODY (idea 4)
+### Slide 6, BODY (idea 4)
 **Copy:**
 **Visual direction:**
 
-### Slide 7 — PAYOFF
-**Copy:** [The takeaway — what changed if they took this in]
+### Slide 7, PAYOFF
+**Copy:** [The takeaway, what changed if they took this in]
 **Visual direction:** [usually a return to face/brand mark + payoff text]
 
-### Slide 8 — CTA
+### Slide 8, CTA
 **Copy:** [One specific action]
 **Visual direction:** [arrow / handle / link prompt]
 
@@ -51,7 +51,7 @@ generated: YYYY-MM-DD
 
 - ✅ **Slide 1 standalone test:** would reader still have an unanswered question? [yes/no, with note]
 - ✅ **Density audit:** word count per slide [N, N, N, ...]. Max allowed: 15 IG / 25 LinkedIn.
-- ✅ **Promise chain:** [transition strength notes — between each slide pair]
+- ✅ **Promise chain:** [transition strength notes, between each slide pair]
 - ✅ **CTA specificity:** the last slide asks for [specific action], not "follow for more"
 
 ---
@@ -66,7 +66,7 @@ generated: YYYY-MM-DD
 
 - Slide aspect ratio: [1080x1080 IG / 1080x1350 IG portrait / 1200x1500 LinkedIn]
 - Suggested font: [if BRAND_VOICE.md or brand guide specifies]
-- Color palette: [primary, accent, background — pull from brand if known]
+- Color palette: [primary, accent, background, pull from brand if known]
 - Recurring visual element: [logo placement, watermark, swipe-arrow consistency]
 
 ---

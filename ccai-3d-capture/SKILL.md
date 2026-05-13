@@ -1,17 +1,17 @@
 ---
 name: ccai-3d-capture
-description: End-to-end Gaussian Splatting workflow for capturing real-world objects/spaces as 3D models for the web. Covers shooting protocol (which apps, how many photos, what lighting), processing (Polycam, Luma, Postshot, Brush), web-optimization, and integration with ccai-3d-website. Use when the user wants real 3D captures of their products, locations, or spaces — not synthetic 3D models. This is the "Gaussian Splatting business" playbook from the course.
-when_to_use: User mentions Gaussian Splatting, 3D scanning, photogrammetry, Polycam, Luma AI, Postshot, NeRF, capturing real-world objects in 3D, real-estate 3D tours, or asks about the "Gaussian Splatting business."
-argument-hint: "[capture subject — product / space / person / vehicle]"
+description: "End-to-end Gaussian Splatting workflow for capturing real-world objects/spaces as 3D models for the web. Covers shooting protocol (which apps, how many photos, what lighting), processing (Polycam, Luma, Postshot, Brush), web-optimization, and integration with ccai-3d-website. Use when the user wants real 3D captures of their products, locations, or spaces, not synthetic 3D models. This is the \"Gaussian Splatting business\" playbook from the course."
+when_to_use: "User mentions Gaussian Splatting, 3D scanning, photogrammetry, Polycam, Luma AI, Postshot, NeRF, capturing real-world objects in 3D, real-estate 3D tours, or asks about the \"Gaussian Splatting business.\""
+argument-hint: "[capture subject, product / space / person / vehicle]"
 ---
 
 # CCAI 3D Capture
 
-The end-to-end playbook for capturing real-world objects/spaces as Gaussian Splats for the web. Not synthetic 3D — actual photogrammetric captures.
+The end-to-end playbook for capturing real-world objects/spaces as Gaussian Splats for the web. Not synthetic 3D, actual photogrammetric captures.
 
 ## What Gaussian Splatting is (and isn't)
 
-Gaussian Splatting is a rendering technique that turns photo sets into volumetric 3D scenes. The output looks photorealistic — closer to a real photo than a traditional 3D model — and renders in real-time in browsers.
+Gaussian Splatting is a rendering technique that turns photo sets into volumetric 3D scenes. The output looks photorealistic, closer to a real photo than a traditional 3D model, and renders in real-time in browsers.
 
 For business owners, it's a way to put real products, spaces, or people on a website in interactive 3D without:
 - A 3D modeler ($500-5K per asset)
@@ -21,8 +21,8 @@ For business owners, it's a way to put real products, spaces, or people on a web
 A smartphone + 5 minutes + the right app can produce a usable splat.
 
 What it CAN'T do well (yet):
-- Reflective/transparent surfaces (glass, mirrors, polished chrome — fuzzy results)
-- Very small objects (under fist-size — apps struggle with focal distance)
+- Reflective/transparent surfaces (glass, mirrors, polished chrome, fuzzy results)
+- Very small objects (under fist-size, apps struggle with focal distance)
 - Moving subjects (Gaussian Splat assumes static scene)
 - Editing the captured model (you can scale/rotate but not modify geometry)
 
@@ -45,10 +45,10 @@ This skill makes both sides work:
 
 - A modern smartphone (iPhone 12+ or recent Android)
 - One of the capture apps installed:
-  - **Polycam** (free tier: 5 captures/month; $20/mo unlimited) — easiest, fastest
-  - **Luma AI** (free: unlimited Gaussian Splat captures) — best free option
-  - **Postshot** (desktop, ~$200) — pro-grade desktop processing
-  - **Brush** (Anthropic) — newer, integrates with Claude (early-access)
+  - **Polycam** (free tier: 5 captures/month; $20/mo unlimited), easiest, fastest
+  - **Luma AI** (free: unlimited Gaussian Splat captures), best free option
+  - **Postshot** (desktop, ~$200), pro-grade desktop processing
+  - **Brush** (Anthropic), newer, integrates with Claude (early-access)
 
 ## Output contract
 
@@ -69,7 +69,7 @@ captures/
 
 ## Process
 
-### Step 1 — Define the capture
+### Step 1, Define the capture
 
 Ask:
 1. **Subject type:** product / space / person / vehicle
@@ -78,7 +78,7 @@ Ask:
 4. **Lighting conditions:** indoor / outdoor / mixed / control available?
 5. **Budget:** free apps only / willing to pay for Polycam Pro / desktop pipeline OK?
 
-### Step 2 — Recommend app + protocol
+### Step 2, Recommend app + protocol
 
 Based on subject + budget, recommend:
 
@@ -90,12 +90,12 @@ Based on subject + budget, recommend:
 
 **For real estate (multi-room):** Luma AI → multiple captures stitched, plus 360 photos for spherical context
 
-### Step 3 — Shoot protocol generated
+### Step 3, Shoot protocol generated
 
 A detailed checklist for the specific subject:
 
 ```
-SHOT PLAN — [Subject]
+SHOT PLAN, [Subject]
 
 Preparation (10 min):
 - Subject placement: [where, what backdrop, what lighting]
@@ -116,7 +116,7 @@ Common mistakes to avoid:
 - Reflective floor (creates duplicate "ghost" subject)
 ```
 
-### Step 4 — Processing instructions
+### Step 4, Processing instructions
 
 For the chosen app:
 - Upload steps (specific to Polycam/Luma)
@@ -124,7 +124,7 @@ For the chosen app:
 - Quality check criteria
 - Export format (.splat / .ply / GLB)
 
-### Step 5 — Web optimization
+### Step 5, Web optimization
 
 Raw splats are huge (50-500MB). Web delivery needs <5MB ideally:
 
@@ -132,14 +132,14 @@ Raw splats are huge (50-500MB). Web delivery needs <5MB ideally:
 - Aim for 100K-500K splats max
 - Recommended settings per file-size target
 
-### Step 6 — Integration with ccai-3d-website
+### Step 6, Integration with ccai-3d-website
 
 If user wants to put the splat on their website:
 - Generate the React component using `@react-three/fiber` + a Gaussian Splat library (e.g., `@mkkellogg/gaussian-splats-3d`)
 - Drop into the `ccai-website-builder-setup` project
 - Performance notes (Gaussian Splats are heavier than GLB)
 
-### Step 7 — Log + invoice template (if delivering to a client)
+### Step 7, Log + invoice template (if delivering to a client)
 
 If the user is doing this as a service:
 - Add capture to `_capture-log.md`
@@ -150,7 +150,7 @@ If the user is doing this as a service:
 
 - **No people without consent.** Capturing humans in 3D without their permission is a privacy + legal issue. Skill refuses without explicit confirmation.
 - **No proprietary/IP-protected subjects.** Don't capture branded products you don't own or copyrighted artwork.
-- **Acknowledge the "fuzzy result" reality.** Reflective and transparent objects produce fuzzy splats — set expectations honestly.
+- **Acknowledge the "fuzzy result" reality.** Reflective and transparent objects produce fuzzy splats, set expectations honestly.
 - **Always compress before web delivery.** Raw splats are bandwidth disasters. Recommend SuperSplat or similar.
 
 ## Pro version differences
@@ -162,5 +162,5 @@ If the user is doing this as a service:
 - Client-portal generation for delivery
 
 ## Reference files
-- `templates/CAPTURE_BRIEF.md` — schema for the per-capture brief
-- `examples/sample-product-capture.md` — full walk-through of capturing a piece of pottery for a product page
+- `templates/CAPTURE_BRIEF.md`, schema for the per-capture brief
+- `examples/sample-product-capture.md`, full walk-through of capturing a piece of pottery for a product page

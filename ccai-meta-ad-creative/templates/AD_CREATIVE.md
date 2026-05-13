@@ -6,9 +6,9 @@ voice_loaded: [yes/no]
 generated: YYYY-MM-DD
 ---
 
-# Meta Ad Creative — [Offer Name]
+# Meta Ad Creative, [Offer Name]
 
-## Concept 1 — Pain Mirror
+## Concept 1, Pain Mirror
 - **Psychological pillar:** Pain mirror
 - **Primary text:** [≤90 chars]
 - **Headline:** [≤30 chars]
@@ -18,16 +18,16 @@ generated: YYYY-MM-DD
 - **Recommended daily budget:** $X
 - **Why it works for this audience:** [1 sentence]
 
-## Concept 2 — Contrarian
+## Concept 2, Contrarian
 [Same structure]
 
-## Concept 3 — Social Proof
+## Concept 3, Social Proof
 [Same structure]
 
-## Concept 4 — Personal Cost
+## Concept 4, Personal Cost
 [Same structure]
 
-## Concept 5 — Curiosity Gap
+## Concept 5, Curiosity Gap
 [Same structure]
 
 ---

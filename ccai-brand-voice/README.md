@@ -3,7 +3,7 @@
 > Capture your authentic writing/speaking voice into a structured `BRAND_VOICE.md` other CCAI skills read from automatically.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-brand-voice`
 **Status:** v0.1 · works with Claude Code
@@ -14,7 +14,7 @@
 
 Most AI-generated content sounds generic because the AI has no idea what *you* sound like. This skill fixes that.
 
-You feed it 5–15 samples of your own content (transcripts, written posts, emails — anything). It analyzes those samples across 7 dimensions and produces a single `BRAND_VOICE.md` file in your working directory. From that point on, every other Creative Core AI skill that writes for you — scripts, captions, sales copy, repurposing — reads from that file and writes in your voice.
+You feed it 5–15 samples of your own content (transcripts, written posts, emails, anything). It analyzes those samples across 7 dimensions and produces a single `BRAND_VOICE.md` file in your working directory. From that point on, every other Creative Core AI skill that writes for you, scripts, captions, sales copy, repurposing, reads from that file and writes in your voice.
 
 It's the foundational skill in the Creative Core AI stack. **Install this one first.**
 
@@ -24,7 +24,7 @@ It's the foundational skill in the Creative Core AI stack. **Install this one fi
 
 Most brand voice prompts ask the AI to make adjectives ("punchy, direct, warm"). Adjectives don't translate into output the AI can actually mimic.
 
-This skill is built on a stricter rule: **every observation in the doc must be backed by a verbatim quote from your real content.** No "punchy and direct" — instead, the actual sentence you wrote that demonstrates what punchy means *for you specifically*. Other skills can then match that pattern rather than guessing what "punchy" means in your context.
+This skill is built on a stricter rule: **every observation in the doc must be backed by a verbatim quote from your real content.** No "punchy and direct", instead, the actual sentence you wrote that demonstrates what punchy means *for you specifically*. Other skills can then match that pattern rather than guessing what "punchy" means in your context.
 
 It also runs a mandatory validation loop at the end: the skill writes 3 short test samples in the voice it captured, and you have to confirm they sound like you before the skill considers the task done. If they don't, it iterates.
 
@@ -78,11 +78,11 @@ A single `BRAND_VOICE.md` file in your working directory. See [`examples/sample-
 
 Other Creative Core AI skills will automatically read this file when they run in the same directory:
 
-- `ccai-video-script` — writes reels and shorts in your voice
-- `ccai-content-repurpose` — turns one post into many formats while keeping your voice
-- `ccai-sales-copy` — writes long-form copy in your voice
-- `ccai-carousel-builder` — builds carousels in your voice
-- `ccai-content-ideas` — generates ideas calibrated to your taboos and patterns
+- `ccai-video-script`, writes reels and shorts in your voice
+- `ccai-content-repurpose`, turns one post into many formats while keeping your voice
+- `ccai-sales-copy`, writes long-form copy in your voice
+- `ccai-carousel-builder`, builds carousels in your voice
+- `ccai-content-ideas`, generates ideas calibrated to your taboos and patterns
 
 ---
 
@@ -116,19 +116,19 @@ When you re-run it in a directory that already has `BRAND_VOICE.md`, the skill w
 Yes. Run it in separate working directories. Each directory gets its own `BRAND_VOICE.md`. Other skills read whichever one is in their current directory.
 
 **My samples are all videos. Do I need to transcribe them first?**
-Yes. This skill deliberately doesn't try to download or transcribe videos — too many failure modes, too many external dependencies. Use whatever transcription tool you prefer (Descript, Otter, OpenAI Whisper locally, etc.) and paste the text.
+Yes. This skill deliberately doesn't try to download or transcribe videos, too many failure modes, too many external dependencies. Use whatever transcription tool you prefer (Descript, Otter, OpenAI Whisper locally, etc.) and paste the text.
 
 **How many samples is "enough"?**
 Five minimum, 8–15 ideal. If you give it 5, the resulting doc will be marked "preliminary" and you'll want to re-run after adding more content.
 
 **The doc captured a phrase I don't actually like. Can I edit `BRAND_VOICE.md` directly?**
-Yes — it's a markdown file. Edit it freely. Just keep the section headings intact so other CCAI skills can read it.
+Yes, it's a markdown file. Edit it freely. Just keep the section headings intact so other CCAI skills can read it.
 
 ---
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -138,7 +138,7 @@ git clone https://github.com/cory-dot/ccai-brand-voice ~/.claude/skills/ccai-bra
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 
@@ -147,4 +147,4 @@ Want someone to set this all up for you? [Book a diagnostic call](https://creati
 
 ## License
 
-MIT. Use it commercially, fork it, modify it — just don't claim you wrote it.
+MIT. Use it commercially, fork it, modify it, just don't claim you wrote it.

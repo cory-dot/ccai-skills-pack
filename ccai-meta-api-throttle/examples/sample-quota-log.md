@@ -1,4 +1,4 @@
-# Meta API Quota — App "ccai-meta-pro"
+# Meta API Quota, App "ccai-meta-pro"
 
 > Maintained by: ccai-meta-api-throttle
 > Ad account: act_8472615980341
@@ -10,13 +10,13 @@
 
 | Endpoint | Calls this hour | Soft cap | Hard cap | % of hard | Status |
 |---|---|---|---|---|---|
-| /act_X/ads (read) | 124 | — | per-spend tier | — | 🟢 |
+| /act_X/ads (read) | 124 |, | per-spend tier |, | 🟢 |
 | /act_X/ads (write) | 18 | 100 | 200 | 9% | 🟢 |
 | /act_X/adsets | 11 | 80 | 150 | 7% | 🟢 |
 | /act_X/campaigns | 4 | 50 | 100 | 4% | 🟢 |
 | /act_X/insights | 28 | 30 | 60 | 47% | 🟡 |
 | /me/business_users | 1 | 100 | 200 | 0.5% | 🟢 |
-| Other | 6 | — | — | — | 🟢 |
+| Other | 6 |, |, |, | 🟢 |
 
 **Total this hour:** 192 calls
 
@@ -28,7 +28,7 @@
 | Latest total_cputime score | 22 | 100 |
 | Latest total_time score | 19 | 100 |
 
-All scores well under threshold — no throttling expected.
+All scores well under threshold, no throttling expected.
 
 ## Last 10 calls (rolling)
 
@@ -42,7 +42,7 @@ All scores well under threshold — no throttling expected.
 | 09:45:14 | /act_X/ads | POST | 200 | 33 | 20 |
 | 09:42:33 | /act_X/insights | GET | 200 | 28 | 18 |
 | 09:42:01 | /act_X/insights | GET | 200 | 27 | 18 |
-| 09:31:47 | /act_X/insights | GET | **429** | — | — |
+| 09:31:47 | /act_X/insights | GET | **429** |, |, |
 | 09:31:46 | /act_X/insights | GET | 200 | 100 | 87 |
 
 ## Active recommendations

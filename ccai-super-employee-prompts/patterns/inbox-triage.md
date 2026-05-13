@@ -3,15 +3,15 @@ id: inbox-triage
 job: Triage a batch of emails into Urgent / Needs Reply / FYI / Junk, with draft replies for the top 3 priorities
 inputs_needed: [email batch (pasted), user's normal email signoff, optional: existing label vocabulary]
 cadence: daily or hourly
-voice_matters: yes — replies go to customers
+voice_matters: yes, replies go to customers
 ---
 
-# Pattern 1 — Inbox Triage
+# Pattern 1, Inbox Triage
 
 ## The 5 parts
 
 ### Job
-Triage a batch of new emails into 4 priority buckets, then draft replies for the top 3 highest-priority ones — tone-matched to the user's voice.
+Triage a batch of new emails into 4 priority buckets, then draft replies for the top 3 highest-priority ones, tone-matched to the user's voice.
 
 ### Input
 The user pastes a batch of emails. Each email separated by `---`. Format per email:
@@ -26,11 +26,11 @@ The user provides the batch as part of the same conversation. If the batch is hu
 
 ### Transformation
 For each email:
-1. Classify into one bucket using these rules (in priority order — first match wins):
-   - **🔴 URGENT** — sender is a known client/customer AND uses "ASAP" / "today" / "tomorrow" / explicit deadline in next 48h
-   - **🟡 NEEDS REPLY** — sender expects a response, no immediate deadline, but ignoring it would cost relationship/revenue
-   - **🟢 FYI** — informational; no action expected from user
-   - **⚪ JUNK** — newsletters, automated notifications, cold pitches, anything user routinely deletes
+1. Classify into one bucket using these rules (in priority order, first match wins):
+   - **🔴 URGENT**, sender is a known client/customer AND uses "ASAP" / "today" / "tomorrow" / explicit deadline in next 48h
+   - **🟡 NEEDS REPLY**, sender expects a response, no immediate deadline, but ignoring it would cost relationship/revenue
+   - **🟢 FYI**, informational; no action expected from user
+   - **⚪ JUNK**, newsletters, automated notifications, cold pitches, anything user routinely deletes
 2. For URGENT and NEEDS REPLY: extract the actual question being asked
 3. Pick the top 3 highest-priority emails (all URGENT first, then NEEDS REPLY by relationship value)
 4. Draft a reply for each of the top 3
@@ -52,7 +52,7 @@ BODY:
 
 ### Voice
 Replies must match `BRAND_VOICE.md` if present. If not, apply these defaults:
-- No "Hey!" / "Hi there!" greetings — open with the answer
+- No "Hey!" / "Hi there!" greetings, open with the answer
 - No "I hope this email finds you well"
 - Max 4 sentences per reply unless the question explicitly requires more
 - End with the user's normal signoff (asked at start of run if not in BRAND_VOICE.md)
@@ -76,9 +76,9 @@ When the user invokes `/ccai-super-employee-prompts` and picks `inbox-triage`:
 ## Pro version differences
 
 `ccai-super-employee-prompts-pro` adds:
-- Gmail MCP integration — auto-pulls new emails on cron (hourly)
+- Gmail MCP integration, auto-pulls new emails on cron (hourly)
 - Auto-labels emails using their existing Gmail label vocabulary
-- Saves drafts to Gmail's Drafts folder (user clicks Send themselves — never auto-sends)
+- Saves drafts to Gmail's Drafts folder (user clicks Send themselves, never auto-sends)
 - Slack notification for URGENT emails
 
 The free version is manual paste-and-run. Same prompt logic; different trigger and delivery.

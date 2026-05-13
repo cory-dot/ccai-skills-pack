@@ -3,7 +3,7 @@
 > Internal helper for any skill that calls the Meta Marketing / Graph / Insights API. Prevents rate-limit lockouts without each skill re-implementing the math.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Status:** v0.1 · Tier B helper · `user-invocable: false` (other skills call it)
 
@@ -11,7 +11,7 @@
 
 ## What it does
 
-Meta's rate limiting is fragmented across 4 different systems (Marketing API limits, Graph API quotas, Insights-specific caps, Business Use Case CPU scores). Every skill that calls Meta has to handle all four — or it gets locked out.
+Meta's rate limiting is fragmented across 4 different systems (Marketing API limits, Graph API quotas, Insights-specific caps, Business Use Case CPU scores). Every skill that calls Meta has to handle all four, or it gets locked out.
 
 This skill centralizes the logic. Other skills (`ccai-meta-ads-autopilot-pro`, `ccai-meta-ad-creative-pro`, custom integrations) call it before and after Meta API requests:
 
@@ -20,7 +20,7 @@ This skill centralizes the logic. Other skills (`ccai-meta-ads-autopilot-pro`, `
 - **`batch-plan <endpoint> <items>`** → optimal batch size + wall-time estimate
 - **`interpret-error <code> <message>`** → maps error to remediation
 
-State lives in `meta-api/_quota.md` — append-only log per project / per ad account.
+State lives in `meta-api/_quota.md`, append-only log per project / per ad account.
 
 ## Why this is a separate skill
 
@@ -30,7 +30,7 @@ Centralized state = single source of truth.
 
 ## Why it's not user-invocable
 
-It's a helper. Users don't type `/ccai-meta-api-throttle` — other skills load it programmatically. The `user-invocable: false` frontmatter hides it from the slash-command menu.
+It's a helper. Users don't type `/ccai-meta-api-throttle`, other skills load it programmatically. The `user-invocable: false` frontmatter hides it from the slash-command menu.
 
 ## What you need
 
@@ -43,7 +43,7 @@ It's a helper. Users don't type `/ccai-meta-api-throttle` — other skills load 
 git clone https://github.com/cory-dot/ccai-meta-api-throttle ~/.claude/skills/ccai-meta-api-throttle
 ```
 
-No usage instructions — other skills handle the integration.
+No usage instructions, other skills handle the integration.
 
 ## Files in this repo
 
@@ -55,7 +55,7 @@ No usage instructions — other skills handle the integration.
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (32 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (32 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)

@@ -1,4 +1,4 @@
-# Prompt Index — ccai-marketing-prompts
+# Prompt Index, ccai-marketing-prompts
 
 Quick reference for all 35 prompts. Click any ID to see the full prompt file.
 

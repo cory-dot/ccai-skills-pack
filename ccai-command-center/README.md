@@ -1,9 +1,9 @@
 # ccai-command-center
 
-> Your morning standup tool. One command shows everything that matters — inbox, calendar, revenue, content state, open decisions, top 3 actions.
+> Your morning standup tool. One command shows everything that matters, inbox, calendar, revenue, content state, open decisions, top 3 actions.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-command-center`
 **Status:** v0.1 · Tier B · works with Claude Code
@@ -23,7 +23,7 @@ The output is a 1-page dashboard saved to `command-center/YYYY-MM-DD.md` so week
 
 ## Why it's different from a generic dashboard tool
 
-1. **Reads your CCAI skill files directly.** No new tool to set up — pulls from `CONTENT_IDEAS.md`, `meta-ads/_log.md`, `bookkeeping/`, etc. that you're already building.
+1. **Reads your CCAI skill files directly.** No new tool to set up, pulls from `CONTENT_IDEAS.md`, `meta-ads/_log.md`, `bookkeeping/`, etc. that you're already building.
 2. **Refuses to fabricate stats.** If a number isn't pulled from real data, it shows `[paste:]` and asks you to fill in.
 3. **Max 3 action items.** More than 3 = nothing is a priority.
 4. **Surfaces open decisions** from `second-opinion/` files so they don't slip.

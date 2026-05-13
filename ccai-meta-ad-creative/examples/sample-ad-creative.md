@@ -1,23 +1,23 @@
 ---
-offer: Creative Core AI Skool community — $20/mo with founding-50 lock
+offer: Creative Core AI Skool community, $20/mo with founding-50 lock
 audience: Small business owners 30-50, using Claude/ChatGPT but feel the output sounds generic
 voice_loaded: yes
 generated: 2026-05-12
 ---
 
-# Meta Ad Creative — CCAI Skool Founding Members
+# Meta Ad Creative, CCAI Skool Founding Members
 
-## Concept 1 — Pain Mirror
-- **Pillar:** Pain mirror — names the "sounds generic" frustration directly
+## Concept 1, Pain Mirror
+- **Pillar:** Pain mirror, names the "sounds generic" frustration directly
 - **Primary text:** Your AI sounds like every other AI. 20-min fix that makes it sound like you.
 - **Headline:** Make Claude sound like you
 - **Description:** Free course inside
-- **Image direction:** Split image — left half shows over-formal generic AI email, right half shows casual real-person email. Bold red dividing line down the middle.
+- **Image direction:** Split image, left half shows over-formal generic AI email, right half shows casual real-person email. Bold red dividing line down the middle.
 - **Audience:** Interest stack: Anthropic + Claude.ai + Skool + creator economy + small business owner. Age 30-50. US.
 - **Recommended daily budget:** $20
 - **Why it works:** Names a pain the audience experiences every time they use AI. Specificity ("20 min") closes the loop.
 
-## Concept 2 — Contrarian
+## Concept 2, Contrarian
 - **Pillar:** Contrarian
 - **Primary text:** Stop trying to make Claude sound "professional." Make it sound like you.
 - **Headline:** The voice fix nobody talks about
@@ -27,32 +27,32 @@ generated: 2026-05-12
 - **Recommended daily budget:** $15
 - **Why it works:** Reframes the common advice ("be professional") as the problem. Triggers a "wait, is that right?" curiosity check.
 
-## Concept 3 — Social Proof
+## Concept 3, Social Proof
 - **Pillar:** Social proof
 - **Primary text:** 14 small business owners. 12 are running AI workflows daily now. The two who quit had one thing in common.
-- **Headline:** 12 of 14 — what worked
+- **Headline:** 12 of 14, what worked
 - **Description:** Free guide inside
 - **Image direction:** Grid of 14 small icons (mix of muted gray + black filled). 12 highlighted in dark; 2 shown in pale gray with a small "x" overlay. Caption beneath: "real client data, 2026."
-- **Audience:** Slightly wider — same stack + lookalike of Skool free-trial signups
+- **Audience:** Slightly wider, same stack + lookalike of Skool free-trial signups
 - **Recommended daily budget:** $20
 - **Why it works:** Specific count anchored to real first-person data. Opens an information gap (what was the one thing?).
 
-## Concept 4 — Personal Cost
+## Concept 4, Personal Cost
 - **Pillar:** Personal cost
 - **Primary text:** Free Claude wasted 3 hours of my week before I realized why. The fix is one setting.
 - **Headline:** Wrong plan, lost hours
 - **Description:** Plan guide inside
-- **Image direction:** Big clock graphic showing 3 hours, with a small "$0 — but expensive" caption below. Black text on warm-white.
+- **Image direction:** Big clock graphic showing 3 hours, with a small "$0, but expensive" caption below. Black text on warm-white.
 - **Audience:** Same stack + AI tools interest
 - **Recommended daily budget:** $15
 - **Why it works:** Reframes a "free thing" as expensive. Curiosity-tier: "what's the setting?"
 
-## Concept 5 — Curiosity Gap
+## Concept 5, Curiosity Gap
 - **Pillar:** Curiosity gap
 - **Primary text:** The 20-minute Claude setup most people skip. Then wonder why their AI sounds generic.
 - **Headline:** The setup nobody does
 - **Description:** Walkthrough inside
-- **Image direction:** A simple step indicator — "Step 1 of 6" with a checkmark, but only step 1 is shown. The rest blurred or cut off. Curiosity-gap visual.
+- **Image direction:** A simple step indicator, "Step 1 of 6" with a checkmark, but only step 1 is shown. The rest blurred or cut off. Curiosity-gap visual.
 - **Audience:** Cold + warmer audience overlap
 - **Recommended daily budget:** $15
 - **Why it works:** The visual reinforces the verbal curiosity gap. Reader wants to know what the other 5 steps are.
@@ -63,11 +63,11 @@ generated: 2026-05-12
 
 | Use case | Concept # | Reasoning |
 |---|---|---|
-| Best for cold audience | #1 (Pain Mirror) | Universal pain — recognizable to anyone who's tried AI |
+| Best for cold audience | #1 (Pain Mirror) | Universal pain, recognizable to anyone who's tried AI |
 | Best for retargeting | #3 (Social Proof) | Specific 12/14 anchor builds trust for warmer audiences |
-| Highest-risk/highest-reward | #2 (Contrarian) | Could over-perform OR confuse — worth a small test |
+| Highest-risk/highest-reward | #2 (Contrarian) | Could over-perform OR confuse, worth a small test |
 | Safest baseline | #5 (Curiosity Gap) | Lowest-risk format, decent CTR floor across audiences |
-| Skip first round | #4 (Personal Cost) | Strong concept but more competitive ad space — test later |
+| Skip first round | #4 (Personal Cost) | Strong concept but more competitive ad space, test later |
 
 ---
 

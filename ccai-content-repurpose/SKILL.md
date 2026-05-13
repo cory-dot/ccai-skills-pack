@@ -1,7 +1,7 @@
 ---
 name: ccai-content-repurpose
-description: Takes one piece of content (transcript, post, article, email, video script) and adapts it into multiple target formats — LinkedIn post, Twitter/X thread, email newsletter, carousel, short-form video script, blog post — all calibrated to the user's brand voice. Preserves the load-bearing insight while restructuring for each platform's medium. Use when the user has one piece of content and wants to multiply it across channels without sounding repetitive.
-when_to_use: User mentions repurpose, multiply content, content for multiple platforms, adapt this for X, turn this reel into a post, "make this work for LinkedIn," or asks to break one piece into smaller pieces.
+description: "Takes one piece of content (transcript, post, article, email, video script) and adapts it into multiple target formats, LinkedIn post, Twitter/X thread, email newsletter, carousel, short-form video script, blog post, all calibrated to the user's brand voice. Preserves the load-bearing insight while restructuring for each platform's medium. Use when the user has one piece of content and wants to multiply it across channels without sounding repetitive."
+when_to_use: "User mentions repurpose, multiply content, content for multiple platforms, adapt this for X, turn this reel into a post, \"make this work for LinkedIn,\" or asks to break one piece into smaller pieces."
 argument-hint: "[path to source content or target formats]"
 ---
 
@@ -27,13 +27,13 @@ Only the formats the user requests are generated. Each file is self-contained.
 
 ## Inputs the skill reads (if present)
 
-- `BRAND_VOICE.md` — voice calibration is non-negotiable; every output must respect taboos and cadence
-- `HOOK_LIBRARY.md` — different format = different hook style; this provides options per format
-- `COMPETITOR_RADAR.md` — Steal verdicts may suggest format choices to prioritize
+- `BRAND_VOICE.md`, voice calibration is non-negotiable; every output must respect taboos and cadence
+- `HOOK_LIBRARY.md`, different format = different hook style; this provides options per format
+- `COMPETITOR_RADAR.md`, Steal verdicts may suggest format choices to prioritize
 
 ## Process
 
-### Step 1 — Get the source
+### Step 1, Get the source
 
 Ask for one of:
 - A path to a file in the project (e.g. `scripts/2026-05-12-01-claude-plan-comparison.md`)
@@ -42,17 +42,17 @@ Ask for one of:
 
 **Do not try to fetch URLs or download videos.** If the user only has a video URL, ask them to transcribe first.
 
-### Step 2 — Extract the core insight
+### Step 2, Extract the core insight
 
 Read the source. Identify:
-1. **The single load-bearing claim** — what's the ONE thing this content is asserting? One sentence.
-2. **The proof anchor** — the specific number, story, screenshot, or example that makes the claim land
-3. **The audience aha** — what shifts in the reader/viewer's head if they accept the claim?
-4. **Anything format-specific worth preserving** — a visual joke, a quoted line, a structural punchline
+1. **The single load-bearing claim**, what's the ONE thing this content is asserting? One sentence.
+2. **The proof anchor**, the specific number, story, screenshot, or example that makes the claim land
+3. **The audience aha**, what shifts in the reader/viewer's head if they accept the claim?
+4. **Anything format-specific worth preserving**, a visual joke, a quoted line, a structural punchline
 
 Show the user this extraction in 4 lines and ask: *"Is this the load-bearing insight, or am I missing something?"* Wait for confirmation before generating.
 
-### Step 3 — Ask which formats
+### Step 3, Ask which formats
 
 Default formats supported:
 - **LinkedIn post** (150–250 words, professional, no hashtags)
@@ -65,7 +65,7 @@ Default formats supported:
 
 Ask: *"Which formats? Default is LinkedIn + Twitter + Email if you don't specify."*
 
-### Step 4 — Generate each format
+### Step 4, Generate each format
 
 For each requested format, follow its specific rules:
 
@@ -77,7 +77,7 @@ For each requested format, follow its specific rules:
 - 150–250 words max
 
 #### Twitter/X thread rules
-- Opening tweet = the hook (must work standalone — 80%+ of readers won't read the thread)
+- Opening tweet = the hook (must work standalone, 80%+ of readers won't read the thread)
 - Each subsequent tweet adds ONE idea, ONE example, or ONE clarification
 - 5–10 tweets, each under 280 chars
 - Last tweet = CTA + (optional) link
@@ -99,7 +99,7 @@ For each requested format, follow its specific rules:
 - Output format: numbered slides with `**Slide N:** text` + visual direction note
 
 #### Reel/Short rules
-- Defer to `ccai-video-script` if available — invoke it as a sub-task
+- Defer to `ccai-video-script` if available, invoke it as a sub-task
 - If not available, produce a two-column script (spoken / visual) following the same rules as `ccai-video-script`
 
 #### Blog rules
@@ -111,7 +111,7 @@ For each requested format, follow its specific rules:
 - 1–2 internal-link placeholders for related content
 - CTA at the end (Skool + diagnostic, matching the article template)
 
-### Step 5 — De-repetition pass
+### Step 5, De-repetition pass
 
 After all formats are drafted, run a cross-format check:
 - **Same hook used in 3+ formats? Vary it.** Each format should have a different opener, even if the core insight is the same.
@@ -120,7 +120,7 @@ After all formats are drafted, run a cross-format check:
 
 The goal: someone who follows the user across 3 platforms shouldn't get the exact same content 3 times. Same *insight*, different *delivery*.
 
-### Step 6 — Save and summarize
+### Step 6, Save and summarize
 
 Write each format to its respective file under `repurposed/YYYY-MM-DD-source-slug/`. Summarize for the user:
 
@@ -128,7 +128,7 @@ Write each format to its respective file under `repurposed/YYYY-MM-DD-source-slu
 
 ## Hard rules
 
-- **One source, many formats — never invert.** Don't try to repurpose 5 pieces into 1 mega-piece. That's content compilation, different skill.
+- **One source, many formats, never invert.** Don't try to repurpose 5 pieces into 1 mega-piece. That's content compilation, different skill.
 - **Preserve the proof anchor across formats.** The specific number, story, or claim must be present in every format. Without the anchor, the formats are abstract noise.
 - **Format-native, not lazy-copy.** A LinkedIn post is not "the reel script with line breaks." Each format has its own rules; respect them.
 - **Respect BRAND_VOICE.md taboos in every format.** A taboo on emoji applies to the carousel too.
@@ -136,12 +136,12 @@ Write each format to its respective file under `repurposed/YYYY-MM-DD-source-slu
 
 ## Reference files
 
-- `templates/REPURPOSE.md` — output schema
-- `examples/sample-repurposed-batch.md` — a filled example showing one source repurposed to 4 formats
+- `templates/REPURPOSE.md`, output schema
+- `examples/sample-repurposed-batch.md`, a filled example showing one source repurposed to 4 formats
 
 ## Anti-patterns to avoid
 
 - Producing 6 versions of essentially the same paragraph. Each format must adapt structurally, not just visually.
 - Skipping Step 2 (extract the core insight). The whole skill rests on a clean extraction. Lazy extractions produce mush.
 - Adding "Click here for more!" to every format. Boring and lowers conversion. Plain action verbs.
-- Recommending the user "post all 6 today." Spread them out — same-day cross-post fatigues the audience. Default suggestion: 1 format per day across a week.
+- Recommending the user "post all 6 today." Spread them out, same-day cross-post fatigues the audience. Default suggestion: 1 format per day across a week.

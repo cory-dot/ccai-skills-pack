@@ -3,7 +3,7 @@
 > A skill about skills. Teaches the mother-skill pattern (one workflow that chains multiple sub-skills with approval gates) and scaffolds new mother skills using existing CCAI skills as building blocks.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-mother-skill-template`
 **Status:** v0.1 · works with Claude Code
@@ -12,16 +12,16 @@
 
 ## What it does
 
-The most powerful Claude Code setups don't use one skill at a time — they chain skills together into workflows. Generate a content idea → draft a script → score it → repurpose it: four skills, one command, one cohesive output.
+The most powerful Claude Code setups don't use one skill at a time, they chain skills together into workflows. Generate a content idea → draft a script → score it → repurpose it: four skills, one command, one cohesive output.
 
 That's a **mother skill**: a single `.md` file that calls other skills in sequence, passes data between them through known-location files, and pauses at approval gates so a human stays in the loop.
 
 This skill:
 
-1. **Teaches the 7-part mother skill anatomy** — what every mother skill must include
-2. **Provides a reusable scaffold** — `templates/MOTHER_SKILL.md` is the blank you fill in
-3. **Includes a worked example** — `content-sprint` mother skill that chains 4 CCAI skills end-to-end
-4. **Walks you through building your own** — interactive scaffolding when you have a workflow in mind
+1. **Teaches the 7-part mother skill anatomy**, what every mother skill must include
+2. **Provides a reusable scaffold**, `templates/MOTHER_SKILL.md` is the blank you fill in
+3. **Includes a worked example**, `content-sprint` mother skill that chains 4 CCAI skills end-to-end
+4. **Walks you through building your own**, interactive scaffolding when you have a workflow in mind
 
 ---
 
@@ -44,10 +44,10 @@ This skill:
 
 Every mother skill includes:
 
-1. **Frontmatter** (with `disable-model-invocation: true` — no auto-running workflows)
+1. **Frontmatter** (with `disable-model-invocation: true`, no auto-running workflows)
 2. **Mission** (one sentence: the end-state, not the steps)
 3. **Orchestration plan** (numbered steps with sub-skill, input, output, gate flag)
-4. **State / data passing** (file-based — survives compaction; chat doesn't)
+4. **State / data passing** (file-based, survives compaction; chat doesn't)
 5. **Approval gates** (explicit pauses with 3 options: approve / revise / stop)
 6. **Failure handling** (save work-in-progress, name where it stopped, instruct on resume)
 7. **Final summary** (what was built, where each output lives, next actions)
@@ -141,7 +141,7 @@ Read it, then build your own version for your workflow.
 
 | File | Purpose |
 |---|---|
-| [`SKILL.md`](SKILL.md) | The skill instructions — teaches the 7-part anatomy |
+| [`SKILL.md`](SKILL.md) | The skill instructions, teaches the 7-part anatomy |
 | [`templates/MOTHER_SKILL.md`](templates/MOTHER_SKILL.md) | Blank scaffold for building a mother skill |
 | [`examples/sample-mother-skill.md`](examples/sample-mother-skill.md) | Worked example: content-sprint chaining 4 CCAI skills |
 | [`LICENSE`](LICENSE) | MIT |
@@ -166,7 +166,7 @@ The free version: yes, you can edit the mother skill to remove gates after you t
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -176,7 +176,7 @@ git clone https://github.com/cory-dot/ccai-mother-skill-template ~/.claude/skill
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 

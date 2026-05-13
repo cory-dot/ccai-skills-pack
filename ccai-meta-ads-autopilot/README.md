@@ -1,9 +1,9 @@
 # ccai-meta-ads-autopilot
 
-> Weekly Meta Ads workflow — sweep last week's data, plan next week's 10 ads using the 3-3-2-2 distribution, output upload-ready specs. Manual execution in Ads Manager (pro version adds API auto-deploy).
+> Weekly Meta Ads workflow, sweep last week's data, plan next week's 10 ads using the 3-3-2-2 distribution, output upload-ready specs. Manual execution in Ads Manager (pro version adds API auto-deploy).
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-meta-ads-autopilot`
 **Status:** v0.1 free tier · works with Claude Code
@@ -18,15 +18,15 @@ This skill is built for the in-between: **you make the decisions, the skill stru
 
 Each weekly run produces:
 
-1. **Last week's audit** — winners to promote, losers to kill, gray zone to let run, with explicit thresholds
-2. **30-day rolling trends** — format winners, audience patterns (after a few weeks of history)
-3. **Competitor inspiration** — patterns to steal this week (you provide the competitor data)
-4. **10 new ad concepts** — using the proven **3-3-2-2 distribution**:
+1. **Last week's audit**, winners to promote, losers to kill, gray zone to let run, with explicit thresholds
+2. **30-day rolling trends**, format winners, audience patterns (after a few weeks of history)
+3. **Competitor inspiration**, patterns to steal this week (you provide the competitor data)
+4. **10 new ad concepts**, using the proven **3-3-2-2 distribution**:
    - **3 winners doubled down** (variations of last week's top performers)
    - **3 competitor-inspired** (patterns from ads you've seen working)
    - **2 new psychology pillars** (testing an angle not yet attempted)
    - **2 wildcards** (concepts you wouldn't normally make)
-5. **Upload-ready specs** for each — primary text, headline, description, audience, budget, image direction
+5. **Upload-ready specs** for each, primary text, headline, description, audience, budget, image direction
 6. **Recommended upload order** (paused → batch un-pause)
 7. **Weekly log entry** for future trend analysis
 
@@ -36,7 +36,7 @@ You execute the actions manually in Meta Ads Manager. Takes ~30-60 minutes after
 
 ## Why manual execution (for now)
 
-The hard part of weekly ad management isn't the API calls — it's the strategy. The skill runs the decision logic; you handle the upload.
+The hard part of weekly ad management isn't the API calls, it's the strategy. The skill runs the decision logic; you handle the upload.
 
 If you're running fewer than ~$5K/month in ad spend, manual is the right tradeoff (the API tier costs money + setup time you don't yet need). Above that, the pro version pays for itself:
 
@@ -105,7 +105,7 @@ The skill walks you through:
 The skill will:
 1. Ask you to paste last week's ad data (table)
 2. Run the audit (winners/losers/gray)
-3. Show you action list (kill/promote — you execute these in Ads Manager)
+3. Show you action list (kill/promote, you execute these in Ads Manager)
 4. Ask for 3-5 competitor ads you've noticed
 5. Generate 10 new concepts (3-3-2-2 distribution)
 6. Save the weekly batch to `meta-ads/YYYY-MM-DD-week-NN.md`
@@ -119,10 +119,10 @@ This is the most important strategic concept in the skill. Most ad creators over
 
 | Bucket | Count | Purpose |
 |---|---|---|
-| Winners doubled-down | 3 | Exploit what's working — but with variation, not exact copies |
+| Winners doubled-down | 3 | Exploit what's working, but with variation, not exact copies |
 | Competitor-inspired | 3 | Borrow patterns proven in your space |
 | New psychology pillars | 2 | Test angles you haven't tried yet |
-| Wildcards | 2 | Concepts you wouldn't normally make — where the surprise winners live |
+| Wildcards | 2 | Concepts you wouldn't normally make, where the surprise winners live |
 
 Result: 60% optimization, 40% discovery. That ratio prevents the "we found a winner and rode it into the ground" trap that kills most ad accounts.
 
@@ -169,7 +169,7 @@ Roadmap: `-pro` ships once 100+ free users provide real-world weekly data so we 
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -179,7 +179,7 @@ git clone https://github.com/cory-dot/ccai-meta-ads-autopilot ~/.claude/skills/c
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 

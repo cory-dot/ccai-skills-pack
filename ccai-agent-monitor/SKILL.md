@@ -1,7 +1,7 @@
 ---
 name: ccai-agent-monitor
-description: Monitors and audits the status of your running Claude agents and scheduled skills — surfaces failures, surfaces costs, identifies drift in skill output quality over time. Free version reads log files the agents write. Pro version adds live API monitoring of Anthropic Managed Agents + cost dashboards. Use when the user has multiple agents/skills running and wants visibility into what's working vs failing.
-when_to_use: User mentions agent monitoring, scheduled tasks, "is my automation working," skill failures, "what did my agents do this week," cost tracking, agent debugging, or has built mother skills and wants oversight.
+description: "Monitors and audits the status of your running Claude agents and scheduled skills, surfaces failures, surfaces costs, identifies drift in skill output quality over time. Free version reads log files the agents write. Pro version adds live API monitoring of Anthropic Managed Agents + cost dashboards. Use when the user has multiple agents/skills running and wants visibility into what's working vs failing."
+when_to_use: "User mentions agent monitoring, scheduled tasks, \"is my automation working,\" skill failures, \"what did my agents do this week,\" cost tracking, agent debugging, or has built mother skills and wants oversight."
 argument-hint: "[status | costs | drift | failures]"
 ---
 
@@ -12,10 +12,10 @@ Status + cost + drift monitoring for your running agents and scheduled skills.
 ## Output contract
 
 Saves to `monitor/` in the working directory:
-- `monitor/status-YYYY-MM-DD.md` — current snapshot
-- `monitor/costs-YYYY-MM.md` — monthly cost rollup
-- `monitor/drift-log.md` — append-only quality observations
-- `monitor/incidents/YYYY-MM-DD-NN.md` — per-incident reports
+- `monitor/status-YYYY-MM-DD.md`, current snapshot
+- `monitor/costs-YYYY-MM.md`, monthly cost rollup
+- `monitor/drift-log.md`, append-only quality observations
+- `monitor/incidents/YYYY-MM-DD-NN.md`, per-incident reports
 
 ## The 4 monitor modes
 
@@ -93,7 +93,7 @@ Pro version pulls live from:
 
 - **Never auto-restart failed agents.** Surface failures; let user decide.
 - **Never claim cost data is live without proof.** Free version is paste-and-display only.
-- **Drift detection is heuristic, not definitive.** "Possible drift detected" — not "drift detected." Flag for human review.
+- **Drift detection is heuristic, not definitive.** "Possible drift detected", not "drift detected." Flag for human review.
 - **Privacy first.** Logs may contain customer data; never include identifying info in summaries unless user explicitly approves.
 
 ## Pro version differences
@@ -106,5 +106,5 @@ Pro version pulls live from:
 - Drift detection via embedding-based output comparison
 
 ## Reference files
-- `templates/MONITOR_STATUS.md` — schema for status snapshot
-- `examples/sample-status-snapshot.md` — filled example with 6 running skills
+- `templates/MONITOR_STATUS.md`, schema for status snapshot
+- `examples/sample-status-snapshot.md`, filled example with 6 running skills

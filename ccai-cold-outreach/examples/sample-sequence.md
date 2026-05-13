@@ -1,46 +1,46 @@
-# Outreach Sequence — Sarah Chen @ Northstar Coaching
+# Outreach Sequence, Sarah Chen @ Northstar Coaching
 
 > Batch: 2026-05-12 · Lead score: 89/100
 > Channel: LinkedIn DM
-> Signal: LinkedIn post 2026-05-08 announcing "Marketing Operations Coordinator" hire — job posting emphasized "managing AI tooling and content workflows"
+> Signal: LinkedIn post 2026-05-08 announcing "Marketing Operations Coordinator" hire, job posting emphasized "managing AI tooling and content workflows"
 > Angle: "The reason most coaching businesses over-hire on the ops side before they have the systems is a gap I run into a lot."
 > Voice loaded from: BRAND_VOICE.md (yes)
 
 ---
 
-## Touch 1 — Day 0 (Wed 2026-05-13, 10am ET)
+## Touch 1, Day 0 (Wed 2026-05-13, 10am ET)
 
 **LinkedIn DM (no subject):**
 
-Saw your Marketing Operations Coordinator hire — congrats.
+Saw your Marketing Operations Coordinator hire, congrats.
 
 The reason most coaching businesses bring on an ops person before they have the systems documented is the same gap I keep running into: the new hire ends up building the systems themselves, in their head, and the founder is back to square one when they leave.
 
-Have you mapped what the first 30 days of her work actually looks like? Happy to share what we found works (and doesn't) — we built a coaching client's whole ops layer last quarter.
+Have you mapped what the first 30 days of her work actually looks like? Happy to share what we found works (and doesn't), we built a coaching client's whole ops layer last quarter.
 
-— Cory
+, Cory
 
 **Length:** 86 words
 
 ---
 
-## Touch 2 — Day 4 (Sun 2026-05-17, 7pm ET)
+## Touch 2, Day 4 (Sun 2026-05-17, 7pm ET)
 
 *Send only if no reply to Touch 1.*
 
 **LinkedIn DM:**
 
-Quick share that might be useful regardless — wrote up the "first 30 days for a new ops hire" template that this coaching client wished they'd had before bringing theirs on: [link to a real CCAI guide]
+Quick share that might be useful regardless, wrote up the "first 30 days for a new ops hire" template that this coaching client wished they'd had before bringing theirs on: [link to a real CCAI guide]
 
-Not pitching anything here — just useful if it's relevant.
+Not pitching anything here, just useful if it's relevant.
 
-— Cory
+, Cory
 
 **Length:** 49 words
 
 ---
 
-## Touch 3 — Day 9 (Fri 2026-05-22, 9am ET)
+## Touch 3, Day 9 (Fri 2026-05-22, 9am ET)
 
 *Send only if no reply to Touch 2.*
 
@@ -48,25 +48,25 @@ Not pitching anything here — just useful if it's relevant.
 
 Going to stop here unless you say keep going.
 
-If the ops hire timing isn't where the conversation is for you right now, no worries — wishing the new role lands well.
+If the ops hire timing isn't where the conversation is for you right now, no worries, wishing the new role lands well.
 
-— Cory
+, Cory
 
 **Length:** 39 words
 
 ---
 
-## Touch 4 — Day 14 (Wed 2026-05-27, optional)
+## Touch 4, Day 14 (Wed 2026-05-27, optional)
 
 *Send only if there's been engagement (post like, profile view, content interaction).*
 
 **LinkedIn DM:**
 
-Saw you posted about [whatever she posted about, light reference] — that resonated.
+Saw you posted about [whatever she posted about, light reference], that resonated.
 
 If you ever do want to compare notes on the ops side, the door's open.
 
-— Cory
+, Cory
 
 **Length:** 28 words
 
@@ -74,15 +74,15 @@ If you ever do want to compare notes on the ops side, the door's open.
 
 ## Send checklist
 
-- [ ] Day 0 — Wed 5/13 10am ET: Send Touch 1
-- [ ] Day 4 — Sun 5/17 7pm ET: Check reply; if none, send Touch 2 (with link to the guide)
-- [ ] Day 9 — Fri 5/22 9am ET: Check reply; if none, send Touch 3
-- [ ] Day 14 — Wed 5/27: Check engagement signals; if any, send Touch 4
+- [ ] Day 0, Wed 5/13 10am ET: Send Touch 1
+- [ ] Day 4, Sun 5/17 7pm ET: Check reply; if none, send Touch 2 (with link to the guide)
+- [ ] Day 9, Fri 5/22 9am ET: Check reply; if none, send Touch 3
+- [ ] Day 14, Wed 5/27: Check engagement signals; if any, send Touch 4
 - [ ] Log final result in outreach/_log.md
 
 ## Notes on this specific sequence
 
-- The "she'll leave eventually" frame in Touch 1 is direct without being doom — it names a real risk Sarah probably hasn't articulated yet. Good signal-grounded angle.
+- The "she'll leave eventually" frame in Touch 1 is direct without being doom, it names a real risk Sarah probably hasn't articulated yet. Good signal-grounded angle.
 - Touch 2's link must be a REAL CCAI guide. Don't fabricate. If no relevant existing content, skip Touch 2's link and just send the lighter "quick share" message.
 - Day-of-week timing chosen for LinkedIn: Wed morning + Sun evening are her highest-activity windows based on her posting cadence.
 

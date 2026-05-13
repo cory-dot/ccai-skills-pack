@@ -1,4 +1,4 @@
-# Sample 3D Capture — Hand-thrown ceramic vase
+# Sample 3D Capture, Hand-thrown ceramic vase
 
 > Real walk-through. Capturing a ceramic vase for a product page on a client's e-commerce site.
 
@@ -6,7 +6,7 @@
 - **What:** Hand-thrown ceramic vase, matte glaze, mid-fire stoneware
 - **Type:** product
 - **Size:** ~10 inches tall, fits in two hands
-- **Material:** ceramic (matte glaze — no reflectivity issues)
+- **Material:** ceramic (matte glaze, no reflectivity issues)
 - **Owner / consent:** Client's product, capture rights confirmed in SOW
 
 ## Final use case
@@ -18,8 +18,8 @@
 
 ### Equipment
 - iPhone 14 Pro
-- App: Polycam (free tier — under 5 captures/month)
-- Tripod: no — handheld worked fine for this size
+- App: Polycam (free tier, under 5 captures/month)
+- Tripod: no, handheld worked fine for this size
 
 ### Lighting
 - Type: natural, north-facing window
@@ -33,26 +33,26 @@
 - Duration: 8 minutes total
 
 ### Pre-capture checklist
-- ✅ Clear background — placed vase on a plain white tablecloth
-- ✅ Stable lighting — moved any reflective items away from the scene
-- ✅ Subject didn't move — handheld camera, vase stayed put
-- ✅ Phone storage — 12GB free
+- ✅ Clear background, placed vase on a plain white tablecloth
+- ✅ Stable lighting, moved any reflective items away from the scene
+- ✅ Subject didn't move, handheld camera, vase stayed put
+- ✅ Phone storage, 12GB free
 - ✅ Polycam logged in
 
 ### Watch-outs encountered
 - Almost over-exposed top of the vase from the window angle. Mid-shoot, moved 90° to put window to the side instead of behind subject.
-- Slight wobble in the tablecloth between shots 30-45 — Polycam handled it fine in processing.
+- Slight wobble in the tablecloth between shots 30-45, Polycam handled it fine in processing.
 
 ## Processing
 
 - **App:** Polycam Web (uploaded the 75 photos)
-- **Processing time:** 35 minutes (free tier — Pro is faster)
-- **Result:** Solid splat, 280K Gaussians. Minor fuzziness on the underside (the part I didn't capture from below — fixable next time with one low-arc shot)
+- **Processing time:** 35 minutes (free tier, Pro is faster)
+- **Result:** Solid splat, 280K Gaussians. Minor fuzziness on the underside (the part I didn't capture from below, fixable next time with one low-arc shot)
 - **Export format:** `.splat` for web
 
 ## Web optimization
 
-- **Tool:** SuperSplat (web app — free)
+- **Tool:** SuperSplat (web app, free)
 - **Original file size:** 12.4MB
 - **Compressed file size:** 3.8MB (well under 5MB target)
 - **Splat count after compression:** 165K
@@ -83,9 +83,9 @@ The 3D capture of the [vase name] is live on your product page:
 https://[client-site]/products/cream-stoneware-vase
 
 Source files for your records (Dropbox link): [URL]
-- original.splat (12.4MB) — full quality
-- web-optimized.splat (3.8MB) — what's actually deployed
-- preview.jpg (180KB) — 2D thumbnail for OG image
+- original.splat (12.4MB), full quality
+- web-optimized.splat (3.8MB), what's actually deployed
+- preview.jpg (180KB), 2D thumbnail for OG image
 
 Stats:
 - Capture: 8 min · 75 photos
@@ -93,7 +93,7 @@ Stats:
 - Web optimization: SuperSplat down to 3.8MB
 - Performance: Lighthouse Mobile Performance 84 (was 91 without 3D)
 
-The 8-point performance trade-off is from the splat file. Worth the visual upgrade for a premium product like this — but flag-worthy on lower-margin products.
+The 8-point performance trade-off is from the splat file. Worth the visual upgrade for a premium product like this, but flag-worthy on lower-margin products.
 
 Next steps:
 1. I'll send you a one-pager on what to do if you want more captures

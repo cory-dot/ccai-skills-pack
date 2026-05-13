@@ -1,7 +1,7 @@
 ---
 name: ccai-ugc-video-ads
-description: Generates UGC-style video ads from a product photo or brief — produces 5 distinct UGC concepts each with a scripted creator voiceover, on-screen text plan, and shot list. Free version outputs the spec (you film or use your video tool of choice). Pro version (planned) auto-generates videos via Higgsfield MCP. Use when the user needs Meta/TikTok ad video creative in the UGC format and wants structured concepts instead of generic scripts.
-when_to_use: User mentions UGC video ads, user-generated content style ads, talking-head ad scripts, TikTok-style ads for Meta, creator-style ad spec, Higgsfield, or asks for video ad concepts beyond static creative.
+description: "Generates UGC-style video ads from a product photo or brief, produces 5 distinct UGC concepts each with a scripted creator voiceover, on-screen text plan, and shot list. Free version outputs the spec (you film or use your video tool of choice). Pro version (planned) auto-generates videos via Higgsfield MCP. Use when the user needs Meta/TikTok ad video creative in the UGC format and wants structured concepts instead of generic scripts."
+when_to_use: "User mentions UGC video ads, user-generated content style ads, talking-head ad scripts, TikTok-style ads for Meta, creator-style ad spec, Higgsfield, or asks for video ad concepts beyond static creative."
 argument-hint: "[product URL or product description]"
 ---
 
@@ -25,7 +25,7 @@ But producing them is hard: finding creators, briefing them, getting good footag
 - Product URL OR 1-paragraph description
 - Audience (1 sentence)
 - Offer + price
-- Optional: target platform (Meta / TikTok / both — affects length + tone)
+- Optional: target platform (Meta / TikTok / both, affects length + tone)
 - Optional: BRAND_VOICE.md for voice match in voiceovers
 
 ## The 5 UGC concept structure
@@ -39,7 +39,7 @@ Each concept uses a different UGC archetype:
 - Energy: high but not performative
 
 ### 2. Problem-fixed reaction
-*"I literally cried when I figured this out — I've been struggling with X for years..."*
+*"I literally cried when I figured this out, I've been struggling with X for years..."*
 - Persona: 30-45yo who solved a specific painful problem
 - Length: 30-45 sec
 - Energy: emotional, vulnerable
@@ -64,19 +64,19 @@ Visual-first concept: split screen or sequential transformation.
 
 ## Process
 
-### Step 1 — Brief
+### Step 1, Brief
 - Product / offer / price
 - Audience
 - Platform (Meta / TikTok)
 - Voice notes if BRAND_VOICE.md present
 
-### Step 2 — Generate 5 concepts (one per UGC archetype)
+### Step 2, Generate 5 concepts (one per UGC archetype)
 For each:
 
 ```
-**Concept N — [archetype name]**
+**Concept N, [archetype name]**
 
-**Hook (first 3 seconds — said by creator):**
+**Hook (first 3 seconds, said by creator):**
 "[exact dialogue]"
 
 **Voiceover script (full):**
@@ -89,7 +89,7 @@ For each:
 - 15-25s: "[text]"
 
 **Shot list:**
-1. [shot description — angle, action, length]
+1. [shot description, angle, action, length]
 2. ...
 5. ...
 
@@ -100,21 +100,21 @@ For each:
 - Location: [indoor / outdoor / specific]
 
 **Audio direction:**
-- Trending sound: [yes / no — if yes, type recommended]
+- Trending sound: [yes / no, if yes, type recommended]
 - Background music vs voiceover-only: [recommendation]
 - Sound effects: [list if any]
 
 **Recommended length:** [N] seconds for Meta, [N] for TikTok if different
 
-**Estimated production cost:** $X (creator $) — $Y (creator + post-production)
+**Estimated production cost:** $X (creator $), $Y (creator + post-production)
 ```
 
-### Step 3 — Recommend launch order
+### Step 3, Recommend launch order
 - Highest-likelihood-to-work for cold audience: [#]
 - Best for retargeting warm audience: [#]
 - Riskiest / wildcard: [#]
 
-### Step 4 — Save and summarize
+### Step 4, Save and summarize
 
 ## Hard rules
 
@@ -133,5 +133,5 @@ For each:
 - Trending-sound auto-detection from TikTok API
 
 ## Reference files
-- `templates/UGC_BATCH.md` — output schema
-- `examples/sample-ugc-batch.md` — filled example for a coaching offer
+- `templates/UGC_BATCH.md`, output schema
+- `examples/sample-ugc-batch.md`, filled example for a coaching offer

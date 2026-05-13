@@ -8,7 +8,7 @@ audience_aha: [what shifts in the reader's head]
 formats_generated: [list]
 ---
 
-# Repurpose Summary — [topic]
+# Repurpose Summary, [topic]
 
 ## Core extraction
 
@@ -34,7 +34,7 @@ formats_generated: [list]
 
 ## Recommended posting cadence
 
-Spread these across a week (don't same-day cross-post — audience fatigue):
+Spread these across a week (don't same-day cross-post, audience fatigue):
 
 | Day | Format | Why this order |
 |---|---|---|
@@ -43,7 +43,7 @@ Spread these across a week (don't same-day cross-post — audience fatigue):
 | Wed | Email | Mid-week newsletter window |
 | Thu | Twitter thread | Threadable insight while audience is engaged |
 | Fri | Carousel | Saves/shares peak Friday |
-| Following Mon | Blog | Long-form anchor — SEO compounds |
+| Following Mon | Blog | Long-form anchor, SEO compounds |
 
 ---
 

@@ -1,9 +1,9 @@
 # ccai-video-script
 
-> Write short-form video scripts (Reels, Shorts, TikTok) that don't sound AI-generated — calibrated to your actual brand voice.
+> Write short-form video scripts (Reels, Shorts, TikTok) that don't sound AI-generated, calibrated to your actual brand voice.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-video-script`
 **Status:** v0.1 · works with Claude Code
@@ -22,7 +22,7 @@ This skill is built around five explicit **de-AI passes** that strip those tells
 4. Read-aloud test
 5. End test (cut the moralizing last line)
 
-It also produces a proper two-column shooting script — spoken lines on the left, visual/B-roll/on-screen text cues on the right — so you can hand the file to your editor or just film straight from it.
+It also produces a proper two-column shooting script, spoken lines on the left, visual/B-roll/on-screen text cues on the right, so you can hand the file to your editor or just film straight from it.
 
 ---
 
@@ -32,7 +32,7 @@ It also produces a proper two-column shooting script — spoken lines on the lef
 2. **Reads your BRAND_VOICE.md, HOOK_LIBRARY.md, COMPETITOR_RADAR.md, and CONTENT_IDEAS.md.** When you have the CCAI foundation skills installed, scripts come out calibrated. The same prompt produces very different output for two different brands.
 3. **Section budgeting.** A 45-second script is ~120 words. The skill enforces budgets per section (hook, promise, demo, payoff, CTA) so the script actually fits the target length.
 4. **Visual cues are mandatory.** Spoken-only scripts are unfilmable. Every line gets a visual direction.
-5. **Saves to versioned files in `scripts/`.** Not buried in chat history — proper datestamped files you can grep, reuse, and reference from other skills.
+5. **Saves to versioned files in `scripts/`.** Not buried in chat history, proper datestamped files you can grep, reuse, and reference from other skills.
 
 ---
 
@@ -40,7 +40,7 @@ It also produces a proper two-column shooting script — spoken lines on the lef
 
 - Claude Code installed
 - A topic or idea (can come from `CONTENT_IDEAS.md` automatically if available)
-- **Strongly recommended:** `ccai-brand-voice` already run — without it, scripts will sound generic
+- **Strongly recommended:** `ccai-brand-voice` already run, without it, scripts will sound generic
 - **Helpful:** `ccai-hook-research` (uses your hook patterns) and `ccai-competitor-research` (uses Steal verdicts)
 
 No API keys. No transcription. No video downloads. You write, the skill structures.
@@ -105,10 +105,10 @@ The skill will:
 First script: ~5 min (most spent picking the hook). After you've used it 3-4 times, ~2 min per script.
 
 **Can it write longer-form (3-5 minute) videos?**
-Not optimally — this is built for short-form (under 90 seconds). For long-form, the structural rules are different. A separate `ccai-longform-script` skill is on the roadmap.
+Not optimally, this is built for short-form (under 90 seconds). For long-form, the structural rules are different. A separate `ccai-longform-script` skill is on the roadmap.
 
 **What about teleprompter scripts?**
-The two-column format is teleprompter-friendly — just print the left column, ignore the right. Add a line break every 6-8 words for natural breathing pauses if you read on-prompter.
+The two-column format is teleprompter-friendly, just print the left column, ignore the right. Add a line break every 6-8 words for natural breathing pauses if you read on-prompter.
 
 **Pro version with auto-scraped competitor hooks?**
 Coming in `ccai-video-script-pro` (Apify + auto hook ingestion + on-camera teleprompter export).
@@ -117,7 +117,7 @@ Coming in `ccai-video-script-pro` (Apify + auto hook ingestion + on-camera telep
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (26 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)
@@ -127,7 +127,7 @@ git clone https://github.com/cory-dot/ccai-video-script ~/.claude/skills/ccai-vi
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
 ```
 
-The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
 

@@ -1,9 +1,9 @@
 # ccai-3d-capture
 
-> End-to-end Gaussian Splatting workflow — capture real objects/spaces in 3D using a smartphone, optimize for web, embed on your site. The "Gaussian Splatting business" playbook.
+> End-to-end Gaussian Splatting workflow, capture real objects/spaces in 3D using a smartphone, optimize for web, embed on your site. The "Gaussian Splatting business" playbook.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-3d-capture`
 **Status:** v0.1 · Tier C · works with Claude Code
@@ -12,16 +12,16 @@
 
 ## What it does
 
-Gaussian Splatting turns photo sets into photorealistic 3D scenes that render in browsers. A smartphone + 5 minutes can produce a usable splat. This skill is the playbook for doing that consistently — for your own products, spaces, or as a side business serving local real estate / e-commerce / hospitality clients.
+Gaussian Splatting turns photo sets into photorealistic 3D scenes that render in browsers. A smartphone + 5 minutes can produce a usable splat. This skill is the playbook for doing that consistently, for your own products, spaces, or as a side business serving local real estate / e-commerce / hospitality clients.
 
 The workflow covers:
-1. **Define the capture** — subject type, size, lighting, final use case
-2. **Recommend app + protocol** — Polycam vs Luma vs Postshot vs Brush, with specific shoot plans
-3. **Pre-capture checklist** — what to clear, what to light, what to avoid
-4. **Processing** — upload steps, time expectations, quality criteria
-5. **Web optimization** — compress 50-500MB raw splats to <5MB for web delivery
-6. **Integration** — embed in your `ccai-website-builder-setup` project via Three.js + Gaussian Splat library
-7. **Client deliverable + invoice template** — if doing this as a service
+1. **Define the capture**, subject type, size, lighting, final use case
+2. **Recommend app + protocol**, Polycam vs Luma vs Postshot vs Brush, with specific shoot plans
+3. **Pre-capture checklist**, what to clear, what to light, what to avoid
+4. **Processing**, upload steps, time expectations, quality criteria
+5. **Web optimization**, compress 50-500MB raw splats to <5MB for web delivery
+6. **Integration**, embed in your `ccai-website-builder-setup` project via Three.js + Gaussian Splat library
+7. **Client deliverable + invoice template**, if doing this as a service
 
 ## When this is the right tool
 
@@ -33,11 +33,11 @@ The workflow covers:
 
 ## When it's the wrong tool
 
-- Reflective objects (glass, polished metal) — fuzzy results
-- Transparent objects (acrylic, water) — algorithm struggles
-- Moving subjects (animals, people not staying still) — Gaussian Splat needs static scene
-- You need editable geometry — splats can't be modified, just rendered
-- Tiny objects (under fist-size) — apps struggle with focal distance
+- Reflective objects (glass, polished metal), fuzzy results
+- Transparent objects (acrylic, water), algorithm struggles
+- Moving subjects (animals, people not staying still), Gaussian Splat needs static scene
+- You need editable geometry, splats can't be modified, just rendered
+- Tiny objects (under fist-size), apps struggle with focal distance
 
 ## Apps supported
 
@@ -92,7 +92,7 @@ The skill produces a client deliverable + invoice template for each capture if y
 
 ## Part of the Creative Core AI skills pack
 
-This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (32 skills total). Two ways to install:
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack), the full Creative Core AI skill library (32 skills total). Two ways to install:
 
 ```bash
 # Just this skill (ad-hoc)

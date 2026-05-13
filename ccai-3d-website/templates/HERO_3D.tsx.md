@@ -11,7 +11,7 @@ import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import { useReducedMotion } from 'framer-motion'
 
-// Lazy-load the 3D scene — Three.js can't SSR
+// Lazy-load the 3D scene, Three.js can't SSR
 const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
   ssr: false,
   loading: () => <HeroFallback />,
@@ -31,7 +31,7 @@ export function Hero3D() {
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-neutral-50">
-      {/* 3D background — only render if user hasn't requested reduced motion */}
+      {/* 3D background, only render if user hasn't requested reduced motion */}
       <div className="absolute inset-0">
         {prefersReducedMotion ? (
           <img
@@ -54,7 +54,7 @@ export function Hero3D() {
             Your headline here
           </h1>
           <p className="mt-6 max-w-xl text-lg text-neutral-200 md:text-xl">
-            Subhead text — pulled from your offer brief.
+            Subhead text, pulled from your offer brief.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -124,15 +124,15 @@ useGLTF.preload('/3d/hero-model.glb')
 ## What you customize after generation
 
 1. **Replace `/3d/hero-model.glb`** with your actual model
-2. **Adjust `scale={1.5}`** in `HeroModel` — depends on your model's native scale
-3. **Camera position** — `[0, 0, 5]` works for most front-facing models; raise Z for distant objects
-4. **Update headline + subhead + CTA** — from your offer/brief
-5. **Replace `/3d/hero-fallback.jpg`** — a still image for users on reduced-motion or low-power devices
+2. **Adjust `scale={1.5}`** in `HeroModel`, depends on your model's native scale
+3. **Camera position**, `[0, 0, 5]` works for most front-facing models; raise Z for distant objects
+4. **Update headline + subhead + CTA**, from your offer/brief
+5. **Replace `/3d/hero-fallback.jpg`**, a still image for users on reduced-motion or low-power devices
 
 ## Performance notes
 
 - `dpr={[1, 2]}` caps device pixel ratio at 2 to avoid retina-display performance hits
-- `autoRotate` is gentle (`autoRotateSpeed={0.5}`) — too fast looks gimmicky
+- `autoRotate` is gentle (`autoRotateSpeed={0.5}`), too fast looks gimmicky
 - `useGLTF.preload` starts loading the model before the component mounts
 
 ## Spline-based alternative

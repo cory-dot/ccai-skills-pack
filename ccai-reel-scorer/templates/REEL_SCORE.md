@@ -9,7 +9,7 @@ generated: YYYY-MM-DD
 
 # Reel Score Report
 
-## Overall: **[N]/100** — [Verdict]
+## Overall: **[N]/100**, [Verdict]
 
 [One-sentence summary of the script's strongest and weakest dimension.]
 
@@ -36,17 +36,17 @@ generated: YYYY-MM-DD
 
 ## Top 3 revisions (in priority order)
 
-### 1. [Dimension] — [score]/10
+### 1. [Dimension], [score]/10
 **What's wrong:** [specific problem]
 **Suggested fix:** [specific revision]
 **Impact if fixed:** +[N] points (estimated)
 
-### 2. [Dimension] — [score]/10
+### 2. [Dimension], [score]/10
 **What's wrong:**
 **Suggested fix:**
 **Impact if fixed:** +[N] points (estimated)
 
-### 3. [Dimension] — [score]/10
+### 3. [Dimension], [score]/10
 **What's wrong:**
 **Suggested fix:**
 **Impact if fixed:** +[N] points (estimated)

@@ -1,4 +1,4 @@
-# Sample video project — 50 ad variants in one render
+# Sample video project, 50 ad variants in one render
 
 > Real walk-through. Producing 50 ad creative variants for an A/B test using ad-variant template type.
 
@@ -37,7 +37,7 @@ ccai-ad-variants/
 └── README.md
 ```
 
-## The data file — 50 variants
+## The data file, 50 variants
 
 ```typescript
 import { AdVariant } from './Composition'
@@ -61,7 +61,7 @@ export const variants: AdVariant[] = [
 ]
 ```
 
-50 unique combinations — different headlines, different proof anchors, different CTAs.
+50 unique combinations, different headlines, different proof anchors, different CTAs.
 
 ## Rendering all 50
 

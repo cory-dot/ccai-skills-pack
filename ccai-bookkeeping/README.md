@@ -3,7 +3,7 @@
 > Turn messy bank statements, expense receipts, and Stripe exports into a clean monthly P&L with categorized transactions and red-flag detection. Free version: manual paste/upload. Pro version: bank API integration.
 
 
-> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-bookkeeping`
 **Status:** v0.1 · Tier B (no API needed in free version) · works with Claude Code
@@ -27,7 +27,7 @@ This isn't accounting software. It's a *cleanup layer* between your raw financia
 You still need an accountant for taxes. This skill makes the data you hand to them clean and structured instead of "here's a folder of PDFs."
 
 Three real differences:
-1. **Anomaly detection.** First-time vendors, MoM jumps, duplicates — flagged automatically. Your accountant won't catch these unless you point at them.
+1. **Anomaly detection.** First-time vendors, MoM jumps, duplicates, flagged automatically. Your accountant won't catch these unless you point at them.
 2. **Mixed-transaction flagging.** That Amazon order with personal items mixed in? Tagged "MIXED" until you split it.
 3. **Doesn't pretend to give tax advice.** Categories only. Deductibility questions go to your accountant.
 
@@ -39,7 +39,7 @@ Three real differences:
 - Bank statements (PDFs work)
 - Stripe / payment processor exports (CSVs ideal)
 - Photos of physical receipts (Claude reads images)
-- An honest answer about whether you commingle personal/business (most do — that's fine, the skill handles it)
+- An honest answer about whether you commingle personal/business (most do, that's fine, the skill handles it)
 
 No Plaid, no API keys, no accounting software needed. Pro version adds those.
 
