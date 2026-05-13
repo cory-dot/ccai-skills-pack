@@ -72,6 +72,42 @@ Site type loads the matching `templates/site-type/<type>.md` overlay. If ambiguo
 2. Fetch sitemap (or `/sitemap.xml` fallback), parse canonical URL list + `lastmod`
 3. If no sitemap → fall back to homepage + visible nav links + a 2-level deep crawl from there. Log as finding: "No sitemap found, recommend adding one."
 
+### Step 2.5, Detect hosting platform + URL convention
+
+Many SEO problems are hosting-platform-specific (e.g., Lovable's SPA fallback for clean URLs, Webflow's lack of dynamic sitemap, Wix's locked-down `<head>`). Detect the host so the audit can flag platform-specific gotchas.
+
+Detection heuristics (from response headers, HTML fingerprints, CDN signatures):
+- **Lovable hosting**: HTML contains `<script ... src="/~flock.js"` or `data-proxy-url="/~api/analytics"`. May have `pub-*.r2.dev` URLs in OG tags from preview environment leakage.
+- **Vercel**: response headers include `server: Vercel` or `x-vercel-id`. URL paths like `/_next/static/` in HTML.
+- **Netlify**: response headers include `server: Netlify` or `x-nf-request-id`.
+- **Cloudflare Pages**: `server: cloudflare` + `cf-ray` header (note: Cloudflare can also be in front of any other host as a proxy; check for absence of other-host signatures).
+- **Webflow**: HTML contains `data-wf-page` or `wf-page-link` classes.
+- **Wix**: HTML contains `wix-` classes or `_wixCIDX` window globals.
+
+Once hosting is identified, run platform-specific extra checks (see `templates/hosting/<platform>.md` overlays). Examples of hosting-specific findings:
+- Lovable: does the host resolve clean URLs to nested `index.html`, or only to flat `.html`? (Test: curl `/<route>` and `/<route>.html`; if titles differ, host is serving SPA fallback for clean URLs.)
+- Lovable: does the hosted build run the full npm script chain, or only `vite build`? (Test: check for sentinel files, manifests, or post-build artifacts that should exist but don't.)
+- Webflow: dynamic sitemap limit (Webflow caps at certain page counts).
+- Wix: which `<head>` injection methods are available; flag items that aren't implementable.
+
+### Step 2.6, Body content size check (critical for SPAs)
+
+For every URL in the crawl, after fetching HTML, measure body content size:
+
+```
+body_size = len(HTML between <body> and </body>) minus whitespace
+```
+
+For SPAs and prerendered sites, the threshold is the key SEO signal:
+
+- **< 200 bytes**: body is effectively empty. Page is JS-only. Critical finding: non-JS crawlers (Bingbot by default, GPTBot, ClaudeBot, PerplexityBot, social unfurl bots like Facebook/Twitter/LinkedIn/Slack) see no content. Even if metadata is rich, the page won't index in Bing and won't be cited by AI search engines.
+- **200-500 bytes**: minimal body. Probably just a heading + navigation. Flag as warning.
+- **500+ bytes**: real content. Pass.
+
+The empty-body trap is sneaky because Googlebot renders JavaScript, so a page can be indexed in Google while remaining invisible to Bing and AI crawlers. Google Search Console won't flag this. Bing's URL Inspection eventually will (vague "Discovered but not crawled" error). The audit catches it before Bing does.
+
+This check is ONE of the highest-impact items in the entire audit. Score it heavily.
+
 Site-size handling:
 - 1-50 pages → full crawl
 - 50-200 pages → full crawl, paginated
@@ -108,16 +144,37 @@ Output → `link-graph.md`.
 
 Output → `cannibalization-check.md`.
 
+### Step 5.5, Internal link convention consistency
+
+Detect mismatches between internal links and canonical URLs. Common pattern: a site that uses `.html` URLs in its sitemap and canonical tags, but has internal `<a href="/guides/something">` links pointing to clean URLs that fall through to SPA fallback.
+
+For each crawled page:
+1. Extract all internal `<a href>` values
+2. Compare each href to the canonical URL convention (does the canonical end in `.html`? Do internal links?)
+3. Flag inconsistencies as findings: "Internal links use clean URLs while canonicals use `.html` URLs. Bots following internal links hit SPA fallback instead of prerendered HTML."
+
+This compounded Bing's deduplication problem on Lovable-hosted SPAs (Bing followed clean-URL internal links, found duplicate empty bodies, and picked the wrong canonical for the whole site). The audit catches it as a separate finding from the body-size check.
+
+### Step 5.6, Stale search engine cache (manual step note)
+
+The audit can't directly read search engine indexes (free tier doesn't have GSC/Bing API access), but it can prompt the user to run a manual check after the audit:
+
+> After this audit, open Google Search Console and Bing Webmaster Tools. For your homepage and 2-3 top pages, run URL Inspection. Compare what the search engine has indexed (the "Crawled page" HTML in GSC) against what's currently served by the site. If they differ significantly, your search engine has a stale cache from before recent fixes. After any major SEO overhaul, manually click "Request Indexing" on every important URL in both consoles. GSC has a daily quota (~10-12); Bing is more lenient.
+
+Add this as a follow-up task in the REPORT.md if any critical issues are flagged.
+
 ### Step 6, Write the top-level REPORT.md
 
 Synthesize per-page findings into a site-wide narrative:
 
 1. **Overall scores**, SEO score / AEO score / Performance proxy score / Accessibility score
-2. **The top 10 fixes**, ranked by (impact × ease). Each fix references the pages affected.
-3. **What you're doing well**, keep the win list short and honest, not flattering
-4. **Critical issues**, anything blocking indexation, HTTPS issues, broken canonicals
-5. **AEO readiness**, separate breakout: FAQ presence, structured data depth, content freshness signals, citation patterns, original data
-6. **Next step**, either "run `ccai-seo-setup` to fix these" (if stack is supported) or "share REPORT.md with your developer"
+2. **Hosting platform detected** + platform-specific gotchas flagged
+3. **The top 10 fixes**, ranked by (impact × ease). Each fix references the pages affected.
+4. **What you're doing well**, keep the win list short and honest, not flattering
+5. **Critical issues**, anything blocking indexation, HTTPS issues, broken canonicals, empty bodies on SPA pages
+6. **AEO readiness**, separate breakout: FAQ presence, structured data depth, content freshness signals, citation patterns, original data
+7. **Post-fix runbook**, manual Request Indexing list (see step 5.6)
+8. **Next step**, either "run `ccai-seo-setup <hosting-platform>` to fix these" (if hosting is supported) or "share REPORT.md with your developer"
 
 ### Step 7, Brand voice check (optional)
 
@@ -133,9 +190,12 @@ If `BRAND_VOICE.md` exists in working dir, sample 3 pages and flag taboo phrasin
 
 - **No fabricated metrics.** If a check requires data the free tier can't access (real Core Web Vitals, backlinks, real index status), say "needs pro tier", never invent numbers.
 - **JS-rendered SPAs without prerendering are a critical finding.** Log it. Don't try to "render" client-side React in audit.
+- **Empty-body prerendered SPAs are ALSO a critical finding.** A page can have rich `<head>` metadata and a 45-byte `<body>` containing only `<div id="root"></div>`. Bingbot and AI crawlers won't index it. Googlebot will (it renders JS), which masks the problem. The body-size check (step 2.6) is mandatory for any site that looks like an SPA.
+- **Hosting-platform detection is mandatory.** Many SEO issues are hosting-specific. Run step 2.5 before running per-page checks so platform overlays apply.
 - **Respect robots.txt during crawl.** If it disallows `/`, log as finding and stop.
 - **Reasonable rate limit**, 1 request / 500ms during crawl. Don't hammer the user's site.
 - **Sample bias warning.** When sampling (>200 pages), state clearly that findings are based on a sample.
+- **Curl is the tiebreaker.** When the host's own SEO panel, an SEO tool, and the live HTML disagree, trust curl against the live URL. Hosts' built-in scanners frequently see different content than real crawlers do (especially on hosts that use SPA fallback for clean URLs). See `templates/hosting/lovable.md` for the specific case study.
 
 ## Free vs Pro
 
@@ -162,7 +222,13 @@ If `BRAND_VOICE.md` exists in working dir, sample 3 pages and flag taboo phrasin
 - `templates/site-type/ecommerce.md`, overlay for e-comm
 - `templates/site-type/local-service.md`, overlay for local
 - `templates/site-type/coaching-creator.md`, overlay for creators/coaches
-- `examples/sample-audit-creativecore-ai.md`, full walkthrough on creativecore.ai
+- `templates/hosting/lovable.md`, Lovable-specific gotchas (SPA fallback, npm script chain ignored, OG image cache, etc.)
+- `templates/hosting/vercel.md`, Vercel-specific notes (mostly: clean URLs work natively, no special workarounds needed)
+- `templates/hosting/netlify.md`, Netlify-specific notes (`_redirects` + `netlify.toml`)
+- `templates/hosting/cloudflare-pages.md`, CF Pages notes (`_routes.json` if needed)
+- `templates/hosting/webflow.md`, Webflow gotchas (dynamic sitemap limit, schema injection methods)
+- `templates/hosting/wix.md`, Wix gotchas (locked-down `<head>`, items not implementable)
+- `examples/sample-audit-creativecore-ai.md`, full walkthrough on creativecore.ai (a Vite+React SPA on Lovable hosting — the canonical case study for the empty-body trap and the `.html` URL workaround)
 
 ## Sister skill
 

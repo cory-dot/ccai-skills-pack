@@ -1,18 +1,32 @@
 # ccai-seo-audit
 
-> Diagnostic SEO + AEO audit. Crawl your full sitemap, run 55+ checks per page, build the internal link graph, output a prioritized fix list. Free version, pro adds PageSpeed Insights API, Search Console, backlink data.
+> Diagnostic SEO + AEO audit. Crawl your full sitemap, run 60+ checks per page, detect your hosting platform, build the internal link graph, output a prioritized fix list. Free version, pro adds PageSpeed Insights API, Search Console, backlink data.
 
 
 > **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)**, Creative Core AI's 34-skill library. Install this skill standalone (see below), or grab the full pack in one go.
 
 **Slash command:** `/ccai-seo-audit`
-**Status:** v0.1 · Foundation tier · works with Claude Code
+**Status:** v0.2 · Foundation tier · works with Claude Code
+
+---
+
+## What's new in v0.2 (2026-05-13)
+
+Hardened from the first real-world implementation against a Lovable-hosted Vite + React site. The new checks catch failure modes that ranked highest by impact:
+
+- **Hosting platform detection** (Lovable, Vercel, Netlify, Cloudflare Pages, Webflow, Wix) with platform-specific gotcha overlays. Especially: Lovable's SPA fallback for clean URLs, hosted build ignoring npm script chains, and "Improve SEO" panel reporting false positives.
+- **Body content size check** for SPAs. Catches the "rich `<head>` + empty `<body>`" trap that hides from Google (it renders JS) but blocks Bing and AI crawlers. Single highest-impact addition.
+- **Internal link convention consistency** check. Flags mismatches between canonical URL convention and rendered internal links, which cause search engine deduplication to pick wrong canonicals.
+- **Stale search engine cache** diagnostic step. Prompts the user to compare GSC's "Crawled page" HTML against live HTML after any structural SEO change.
+- **Curl-as-tiebreaker** hard rule. When hosts' built-in SEO panels disagree with live HTML, trust curl.
+
+See `templates/hosting/<platform>.md` for platform-specific check overlays. The canonical case study is `templates/hosting/lovable.md`.
 
 ---
 
 ## What it does
 
-Crawls your full sitemap, runs 55+ checks per page across 11 categories, builds an internal link graph, flags cannibalization and orphans, and outputs a prioritized fix list a non-technical operator can hand to a developer.
+Crawls your full sitemap, runs 60+ checks per page across 11 categories, detects your hosting platform and applies platform-specific overlays, builds an internal link graph, flags cannibalization and orphans, and outputs a prioritized fix list a non-technical operator can hand to a developer.
 
 Built for business owners who keep getting told "your SEO needs work" but never told *which 3 things to fix first*.
 
@@ -58,7 +72,7 @@ This skill:
 10. Mobile + tap targets
 11. Attribution + analytics + UTM
 
-55+ specific checks total. See [`templates/SEO_CHECKLIST.md`](templates/SEO_CHECKLIST.md) for the full canonical list.
+60+ specific checks total (counting v0.2's hosting platform overlays). See [`templates/SEO_CHECKLIST.md`](templates/SEO_CHECKLIST.md) for the full canonical list and `templates/hosting/<platform>.md` for platform-specific overlays.
 
 ## Output
 
