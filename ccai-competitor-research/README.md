@@ -2,6 +2,9 @@
 
 > Build and maintain structured competitor profiles. Not a one-time analysis — a living strategic radar that compounds over time.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-competitor-research`
 **Status:** v0.1 · works with Claude Code
 
@@ -103,9 +106,20 @@ Profile them anyway, but be honest about which patterns are available to you. Th
 
 ## Part of the Creative Core AI skills pack
 
-This is one of ~33 skills in the [Creative Core AI skills pack](https://github.com/cory-dot/ccai-skills-pack). The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free course for non-technical business owners.
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+
+```bash
+# Just this skill (ad-hoc)
+git clone https://github.com/cory-dot/ccai-competitor-research ~/.claude/skills/ccai-competitor-research
+
+# Or the entire pack
+git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
+```
+
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
+
 
 ---
 

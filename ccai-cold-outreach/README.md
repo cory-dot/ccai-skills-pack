@@ -2,6 +2,9 @@
 
 > Writes personalized cold outreach sequences — LinkedIn DMs, emails, follow-ups — calibrated to your brand voice and the specific lead's signals.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-cold-outreach`
 **Status:** v0.1 · Tier B (free version is paste-and-send) · works with Claude Code
 

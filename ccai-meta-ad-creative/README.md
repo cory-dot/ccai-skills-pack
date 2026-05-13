@@ -2,6 +2,9 @@
 
 > Quick Meta ad creative generator — 5 distinct concepts from a product URL or description. Companion to `ccai-meta-ads-autopilot` (full weekly batch).
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-meta-ad-creative`
 **Status:** v0.1 · Tier B (free version: image direction only) · works with Claude Code
 

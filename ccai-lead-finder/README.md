@@ -2,6 +2,9 @@
 
 > Structured lead qualification + outreach research. You bring the names; the skill turns them into qualified prospects with personalized angles.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-lead-finder`
 **Status:** v0.1 · Tier B (free version is manual paste) · works with Claude Code
 

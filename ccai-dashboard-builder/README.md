@@ -2,6 +2,9 @@
 
 > Generates internal-tool dashboards (KPI views, admin panels, ops consoles) into your existing Next.js project. Mock data first, real data second.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-dashboard-builder`
 **Status:** v0.1 · Tier C · works with Claude Code
 

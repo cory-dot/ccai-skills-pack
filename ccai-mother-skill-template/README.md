@@ -2,6 +2,9 @@
 
 > A skill about skills. Teaches the mother-skill pattern (one workflow that chains multiple sub-skills with approval gates) and scaffolds new mother skills using existing CCAI skills as building blocks.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-mother-skill-template`
 **Status:** v0.1 · works with Claude Code
 
@@ -163,9 +166,20 @@ The free version: yes, you can edit the mother skill to remove gates after you t
 
 ## Part of the Creative Core AI skills pack
 
-This is the final skill in the [Creative Core AI Tier A pack](https://github.com/cory-dot/ccai-skills-pack). The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free course for non-technical business owners.
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+
+```bash
+# Just this skill (ad-hoc)
+git clone https://github.com/cory-dot/ccai-mother-skill-template ~/.claude/skills/ccai-mother-skill-template
+
+# Or the entire pack
+git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
+```
+
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
+
 
 ---
 

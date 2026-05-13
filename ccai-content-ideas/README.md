@@ -2,6 +2,9 @@
 
 > Structured content idea generation that compounds over time. Not a one-shot brainstormer — a content radar.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-content-ideas`
 **Status:** v0.1 · works with Claude Code
 
@@ -115,9 +118,20 @@ Coming in `ccai-content-ideas-pro` — adds Apify/Reddit/Google Trends auto-feed
 
 ## Part of the Creative Core AI skills pack
 
-This is one of ~33 skills in the [Creative Core AI skills pack](https://github.com/cory-dot/ccai-skills-pack). The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai), our free course for non-technical business owners.
+This skill is part of [`ccai-skills-pack`](https://github.com/cory-dot/ccai-skills-pack) — the full Creative Core AI skill library (26 skills total). Two ways to install:
+
+```bash
+# Just this skill (ad-hoc)
+git clone https://github.com/cory-dot/ccai-content-ideas ~/.claude/skills/ccai-content-ideas
+
+# Or the entire pack
+git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack && cd ~/ccai-skills-pack && ./install.sh
+```
+
+The full pack is taught in [The AI Operator's Playbook](https://skool.com/creative-core-ai) — our free Skool course for non-technical business owners.
 
 Want someone to set this all up for you? [Book a diagnostic call](https://creativecore.ai/book).
+
 
 ---
 

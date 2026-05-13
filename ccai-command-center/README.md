@@ -2,6 +2,9 @@
 
 > Your morning standup tool. One command shows everything that matters — inbox, calendar, revenue, content state, open decisions, top 3 actions.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-command-center`
 **Status:** v0.1 · Tier B · works with Claude Code
 

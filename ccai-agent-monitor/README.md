@@ -2,6 +2,9 @@
 
 > Status + cost + drift monitoring for your running Claude agents and scheduled skills.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-agent-monitor`
 **Status:** v0.1 · Tier B · works with Claude Code
 

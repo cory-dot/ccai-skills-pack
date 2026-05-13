@@ -2,6 +2,9 @@
 
 > Turn messy bank statements, expense receipts, and Stripe exports into a clean monthly P&L with categorized transactions and red-flag detection. Free version: manual paste/upload. Pro version: bank API integration.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-bookkeeping`
 **Status:** v0.1 · Tier B (no API needed in free version) · works with Claude Code
 

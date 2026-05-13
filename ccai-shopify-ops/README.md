@@ -2,6 +2,9 @@
 
 > 5-mode Shopify ops skill — product audits, descriptions, weekly reviews, customer messages, abandoned-cart sequences. Calibrated to brand voice.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-shopify-ops`
 **Status:** v0.1 · Tier B (free version: paste-and-run) · works with Claude Code
 

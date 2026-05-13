@@ -2,6 +2,9 @@
 
 > GoHighLevel landing page builder — generates paste-ready section-by-section copy + form spec + workflow stub for GHL's drag-and-drop editor.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-ghl-page`
 **Status:** v0.1 · Tier C · works with Claude Code
 

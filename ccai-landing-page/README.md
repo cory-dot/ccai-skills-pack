@@ -2,6 +2,9 @@
 
 > Generates a complete 7-panel landing page (Next.js + Tailwind + Framer Motion) into your `ccai-website-builder-setup` project. Brand-voice calibrated.
 
+
+> **Part of [ccai-skills-pack](https://github.com/cory-dot/ccai-skills-pack)** — Creative Core AI's 26-skill library. Install this skill standalone (see below), or grab the full pack in one go.
+
 **Slash command:** `/ccai-landing-page`
 **Status:** v0.1 · Tier C · works with Claude Code
 
