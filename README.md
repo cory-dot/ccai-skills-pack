@@ -1,6 +1,6 @@
 # Creative Core AI — Skills Pack
 
-> The complete free + pro skill library for small business owners using Claude Code. 26 skills, dual-distributed: install the whole pack, or grab them ad-hoc one at a time.
+> The complete free + pro skill library for small business owners using Claude Code. 32 skills, dual-distributed: install the whole pack, or grab them ad-hoc one at a time.
 
 **Maintained by:** [Creative Core AI](https://creativecore.ai)
 **Course:** [The AI Operator's Playbook](https://skool.com/creative-core-ai) (free)
@@ -15,7 +15,7 @@
 ```bash
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack
 cd ~/ccai-skills-pack
-./install.sh                  # installs all 26 skills
+./install.sh                  # installs all 32 skills
 
 # Or install specific groups:
 ./install.sh foundation       # 4 foundation skills only (start here)
@@ -26,7 +26,7 @@ Windows PowerShell:
 ```powershell
 git clone https://github.com/cory-dot/ccai-skills-pack $HOME\ccai-skills-pack
 cd $HOME\ccai-skills-pack
-.\install.ps1                 # all 26
+.\install.ps1                 # all 32
 .\install.ps1 foundation      # foundation set
 ```
 
@@ -46,7 +46,7 @@ Restart Claude Code or run `/doctor` after install to confirm skills loaded.
 
 ---
 
-## The 26 skills
+## The 32 skills
 
 ### Foundation (start here — 4 skills)
 
@@ -83,7 +83,7 @@ Read/write files that other skills depend on. Always install these first.
 | **[`ccai-super-employee-prompts`](./ccai-super-employee-prompts)** | 8 delegation patterns + 5-part framework |
 | **[`ccai-mother-skill-template`](./ccai-mother-skill-template)** | Chains CCAI skills with approval gates |
 
-### Operations / Tier B (9 skills)
+### Operations / Tier B (11 skills)
 
 These reference external services. Free version uses manual paste; pro versions add API integration.
 
@@ -94,12 +94,14 @@ These reference external services. Free version uses manual paste; pro versions 
 | **[`ccai-cold-outreach`](./ccai-cold-outreach)** | 4-touch personalized outreach sequences |
 | **[`ccai-meta-ads-autopilot`](./ccai-meta-ads-autopilot)** | Weekly Meta Ads workflow with 3-3-2-2 creative distribution |
 | **[`ccai-meta-ad-creative`](./ccai-meta-ad-creative)** | Quick 5-concept Meta ad creative generator |
+| **[`ccai-meta-api-throttle`](./ccai-meta-api-throttle)** | Internal helper for Meta API rate-limit awareness (called by other skills) |
+| **[`ccai-ugc-video-ads`](./ccai-ugc-video-ads)** | 5 UGC-style video ad concepts with creator brief + shot list |
 | **[`ccai-obsidian-wiki`](./ccai-obsidian-wiki)** | Tiered retrieval for Obsidian vaults (5-10x token savings) |
 | **[`ccai-command-center`](./ccai-command-center)** | One-command morning dashboard across all CCAI skill outputs |
 | **[`ccai-shopify-ops`](./ccai-shopify-ops)** | 5-mode Shopify ops (audit, descriptions, weekly review, messages, cart) |
 | **[`ccai-agent-monitor`](./ccai-agent-monitor)** | Status + costs + drift + failures for your running agents |
 
-### Build / Tier C (4 skills)
+### Build / Tier C (8 skills)
 
 | Skill | What it does |
 |---|---|
@@ -107,12 +109,16 @@ These reference external services. Free version uses manual paste; pro versions 
 | **[`ccai-landing-page`](./ccai-landing-page)** | 7-panel landing pages into your scaffolded project |
 | **[`ccai-ghl-page`](./ccai-ghl-page)** | GoHighLevel-specific funnel builder (paste-ready) |
 | **[`ccai-dashboard-builder`](./ccai-dashboard-builder)** | Internal-tool dashboards (KPI views, admin panels) |
+| **[`ccai-3d-website`](./ccai-3d-website)** | 3D hero / product viewer / background via Three.js / Spline |
+| **[`ccai-video-editor`](./ccai-video-editor)** | Programmatic video editing via Remotion — 5 template types |
+| **[`ccai-batch-render`](./ccai-batch-render)** | CSV → many videos (companion to ccai-video-editor) |
+| **[`ccai-3d-capture`](./ccai-3d-capture)** | Gaussian Splatting workflow (capture → process → web embed) |
 
 ---
 
 ## Recommended install order
 
-Don't install all 26 on day one. The order that produces the most value fastest:
+Don't install all 32 on day one. The order that produces the most value fastest:
 
 1. **`ccai-brand-voice`** — foundation that everything else reads from
 2. **`ccai-hook-research`** + **`ccai-content-ideas`** — start the content engine
