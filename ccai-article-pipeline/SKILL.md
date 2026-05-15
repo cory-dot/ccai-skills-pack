@@ -244,6 +244,39 @@ All checks run on `articles/draft-<slug>.md` before allowing `--commit`. HARD FA
 8. **`slug` not already used** by another article in `articles/` (excluding the current draft)
 9. **`og_image` path matches `/og/<slug>.png`** exactly
 
+## Editorial rules to enforce (separate from voice)
+
+These are about WHAT goes in the article, not HOW it's written. They apply at drafting time and must be re-checked at `--commit`.
+
+### Rule E1: assume the reader has their own setup
+
+Personal examples are encouraged (real numbers, real tools, concrete situations make articles credible). But every example must read as a template, not a tour of Cory's personal machine.
+
+Drafted articles MUST NOT contain:
+- ❌ Absolute file paths from Cory's machine (`D:\claude-code-agents\`, `C:\Users\coryl\...`, etc.). Use relative paths or `<placeholders>`.
+- ❌ Internal tool names that aren't public to the reader (e.g., `creative-engine`). If a personal tool is essential, describe what it does generically: "my existing video pipeline" not "creative-engine."
+- ❌ Internal client identifiers like `ccai_ads`, `creativecoreai` (used as database client keys) — readers don't have those rows.
+- ❌ Personal config that doesn't generalize (specific Meta dev app names, ad account names, etc.).
+- ❌ Scratch file paths or session-specific filenames (e.g., `scratch/ccai_ads/280-meta-creative-flow.md`).
+
+Drafted articles MAY contain:
+- ✅ Public tools/services by name (Pipeboard, Claude Code, GitHub, ElevenLabs, etc.).
+- ✅ Real numbers and outcomes ("first ad cost $2.11") — grounds the story without requiring reader to have the same setup.
+- ✅ Generic file paths in code examples (`<your video path>`, `.mcp.json`, `src/pages/...`).
+
+### Rule E2: don't let side quests dilute the value prop
+
+Every article has ONE main value proposition stated in the H1 / lead / TL;DR. Sections that don't directly serve that value prop get cut, no matter how individually interesting.
+
+**Pre-flight check at draft time:**
+1. State the value prop in one sentence. Write it down at the top of the draft scratch.
+2. For each section, ask: "Does this serve the value prop, or am I including it because it's interesting?" Cut the second category.
+3. If multiple distinct value props emerge during drafting, split into multiple articles. One article = one value prop.
+
+**Example from article-15 (Meta Ads MCP):** original draft had 10 "discoveries" but only 6 served the value prop ("how to use Pipeboard to connect agents to Meta Ads"). The other 4 (brand voice methodology, pre-flight QA gates, parallel-DB pattern, "system is the product" philosophy) were cut. Each could become its own article for a different audience.
+
+This rule is the difference between a focused article that ranks for its target query and a sprawling article that's interesting to read but doesn't serve a search intent.
+
 ## Brand voice rules to enforce (from BRAND_VOICE.md + memory)
 
 Drafted articles MUST:
