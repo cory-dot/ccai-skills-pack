@@ -1,6 +1,6 @@
 # install.ps1, install one or all CCAI skills from this monorepo (Windows PowerShell)
 # Usage:
-#   .\install.ps1                    # install all 34 skills
+#   .\install.ps1                    # install all 35 skills
 #   .\install.ps1 ccai-brand-voice   # install just one
 #   .\install.ps1 foundation         # install foundation set only
 #   .\install.ps1 -List              # list available skills
@@ -17,7 +17,7 @@ $ScriptDir = $PSScriptRoot
 
 # Skill groups
 $Foundation = @("ccai-brand-voice", "ccai-hook-research", "ccai-content-ideas", "ccai-competitor-research")
-$Content = @("ccai-video-script", "ccai-content-repurpose", "ccai-sales-copy", "ccai-carousel-builder")
+$Content = @("ccai-video-script", "ccai-content-repurpose", "ccai-sales-copy", "ccai-carousel-builder", "ccai-article-pipeline")
 $Decisions = @("ccai-second-opinion", "ccai-reel-scorer")
 $Workflow = @("ccai-marketing-prompts", "ccai-super-employee-prompts", "ccai-mother-skill-template")
 $Seo = @("ccai-seo-audit", "ccai-seo-setup")
@@ -33,10 +33,10 @@ Usage:
   .\install.ps1 [target]
 
 Targets:
-  (none)         Install all 34 skills
+  (none)         Install all 35 skills
   -List          List all available skills
   foundation     Install foundation set (4 skills) -- start here
-  content        Install content production set (4)
+  content        Install content production set (5)
   decisions      Install decisions + quality set (2)
   workflow       Install workflow + meta set (3)
   seo            Install SEO + AEO set (2 -- audit + setup)
@@ -67,14 +67,14 @@ function Install-Skill {
 
 if ($Help) { Show-Help; exit 0 }
 if ($List) {
-    Write-Host "Available skills (34):"
+    Write-Host "Available skills (35):"
     $All | ForEach-Object { Write-Host "  - $_" }
     exit 0
 }
 
 switch -Regex ($Target) {
     "^all$" {
-        Write-Host "Installing all 34 skills to $SkillsDir..."
+        Write-Host "Installing all 35 skills to $SkillsDir..."
         $All | ForEach-Object { Install-Skill $_ }
         Write-Host "Done. Restart Claude Code or run /doctor to confirm."
     }

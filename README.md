@@ -1,6 +1,6 @@
 # Creative Core AI, Skills Pack
 
-> The complete free + pro skill library for small business owners using Claude Code. 34 skills, dual-distributed: install the whole pack, or grab them ad-hoc one at a time.
+> The complete free + pro skill library for small business owners using Claude Code. 35 skills, dual-distributed: install the whole pack, or grab them ad-hoc one at a time.
 
 **Maintained by:** [Creative Core AI](https://creativecore.ai)
 **Course:** [The AI Operator's Playbook](https://skool.com/creative-core-ai) (free)
@@ -15,7 +15,7 @@
 ```bash
 git clone https://github.com/cory-dot/ccai-skills-pack ~/ccai-skills-pack
 cd ~/ccai-skills-pack
-./install.sh                  # installs all 34 skills
+./install.sh                  # installs all 35 skills
 
 # Or install specific groups:
 ./install.sh foundation       # 4 foundation skills only (start here)
@@ -27,7 +27,7 @@ Windows PowerShell:
 ```powershell
 git clone https://github.com/cory-dot/ccai-skills-pack $HOME\ccai-skills-pack
 cd $HOME\ccai-skills-pack
-.\install.ps1                 # all 34
+.\install.ps1                 # all 35
 .\install.ps1 foundation      # foundation set
 ```
 
@@ -47,7 +47,7 @@ Restart Claude Code or run `/doctor` after install to confirm skills loaded.
 
 ---
 
-## The 34 skills
+## The 35 skills
 
 ### Foundation (start here, 4 skills)
 
@@ -60,7 +60,7 @@ Read/write files that other skills depend on. Always install these first.
 | **[`ccai-content-ideas`](./ccai-content-ideas)** | `CONTENT_IDEAS.md` radar with status tracking + insights ledger |
 | **[`ccai-competitor-research`](./ccai-competitor-research)** | `COMPETITOR_RADAR.md` with 8-dimension profiles + cross-radar synthesis |
 
-### Content production (4 skills)
+### Content production (5 skills)
 
 | Skill | What it does |
 |---|---|
@@ -68,6 +68,7 @@ Read/write files that other skills depend on. Always install these first.
 | **[`ccai-content-repurpose`](./ccai-content-repurpose)** | One source → 6 format-native outputs with de-repetition |
 | **[`ccai-sales-copy`](./ccai-sales-copy)** | Direct-response copy with Schwartz awareness diagnosis |
 | **[`ccai-carousel-builder`](./ccai-carousel-builder)** | IG + LinkedIn carousels with swipe-friction check |
+| **[`ccai-article-pipeline`](./ccai-article-pipeline)** | News-driven article pipeline: research → draft → commit → verify, with 9-rule voice gate + 15-check post-publish verification (Lovable + GitHub) |
 
 ### Decisions + quality (2 skills)
 
@@ -80,7 +81,7 @@ Read/write files that other skills depend on. Always install these first.
 
 | Skill | What it does |
 |---|---|
-| **[`ccai-marketing-prompts`](./ccai-marketing-prompts)** | 35-prompt callable library, voice-adapted |
+| **[`ccai-marketing-prompts`](./ccai-marketing-prompts)** | 34-prompt callable library, voice-adapted |
 | **[`ccai-super-employee-prompts`](./ccai-super-employee-prompts)** | 8 delegation patterns + 5-part framework |
 | **[`ccai-mother-skill-template`](./ccai-mother-skill-template)** | Chains CCAI skills with approval gates |
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # install.sh, install one or all CCAI skills from this monorepo
 # Usage:
-#   ./install.sh                    # install all 34 skills
+#   ./install.sh                    # install all 35 skills
 #   ./install.sh ccai-brand-voice   # install just one
 #   ./install.sh foundation         # install foundation set only
 #   ./install.sh --list             # list available skills
@@ -13,7 +13,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Skill groups
 FOUNDATION=(ccai-brand-voice ccai-hook-research ccai-content-ideas ccai-competitor-research)
-CONTENT=(ccai-video-script ccai-content-repurpose ccai-sales-copy ccai-carousel-builder)
+CONTENT=(ccai-video-script ccai-content-repurpose ccai-sales-copy ccai-carousel-builder ccai-article-pipeline)
 DECISIONS=(ccai-second-opinion ccai-reel-scorer)
 WORKFLOW=(ccai-marketing-prompts ccai-super-employee-prompts ccai-mother-skill-template)
 SEO=(ccai-seo-audit ccai-seo-setup)
@@ -30,10 +30,10 @@ Usage:
   ./install.sh [target]
 
 Targets:
-  (none)         Install all 34 skills
+  (none)         Install all 35 skills
   --list         List all available skills
   foundation     Install foundation set (4 skills), start here
-  content        Install content production set (4)
+  content        Install content production set (5)
   decisions      Install decisions + quality set (2)
   workflow       Install workflow + meta set (3)
   seo            Install SEO + AEO set (2, audit + setup)
@@ -68,13 +68,13 @@ case "${1:-all}" in
     show_help
     ;;
   --list)
-    echo "Available skills (34):"
+    echo "Available skills (35):"
     for skill in "${ALL[@]}"; do
       echo "  - $skill"
     done
     ;;
   all)
-    echo "Installing all 34 skills to $SKILLS_DIR..."
+    echo "Installing all 35 skills to $SKILLS_DIR..."
     for skill in "${ALL[@]}"; do
       install_skill "$skill"
     done
