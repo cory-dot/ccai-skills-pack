@@ -35,9 +35,14 @@ Orchestrates the full lifecycle of a new article: research → draft → validat
 
 ```
 articles/
-├── draft-<slug>.md          # Draft saved here, waits for human review
-├── article-<NN>-<slug>.md   # Final version after --commit (NN auto-incremented)
+├── article-<NN>-<slug>.md   # Final published versions (NN auto-incremented). Source of truth for the authoring workspace.
+├── drafts/
+│   └── draft-<slug>.md      # In-progress drafts. Auto-moved + renamed on --commit.
 └── ...
+
+When a draft is committed, the file is renamed AND moved:
+  articles/drafts/draft-<slug>.md   →   articles/article-<NN>-<slug>.md
+  (both locally AND in the GitHub repo)
 
 verify-output (on --verify <slug>):
 ✅ /guides/<slug>.html         → 200
@@ -99,13 +104,13 @@ User invokes `/ccai-article-pipeline` with no arguments. Skill researches and dr
 
 7. **Run pre-publish gate checks** (see Pre-publish gate section below). If any fail, fix automatically where possible (e.g., shorten seo_title) or warn the user.
 
-8. **Save** to `articles/draft-<slug>.md`.
+8. **Save** to `articles/drafts/draft-<slug>.md` locally. Also push a backup to the GitHub repo at `articles/drafts/draft-<slug>.md` on `refresh/wave-1` (gives you collaborator-visible drafts for review on mobile / from anywhere).
 
 9. **Output summary**:
    - Word count, reading time, frontmatter snapshot
    - Voice check results (PASS/FAIL per rule)
-   - Path to draft
-   - Next step: "Review the draft, then run `/ccai-article-pipeline --commit <slug>` to push to GitHub"
+   - Path to draft (local + GitHub URL)
+   - Next step: "Review the draft, then run `/ccai-article-pipeline --commit <slug>` to publish"
 
 ### Mode 2, Topic-specified draft
 
@@ -120,7 +125,11 @@ Skip the news search step. Use the user's topic as the seed. Otherwise same as M
 
 User invokes `/ccai-article-pipeline --commit <slug>`. Skill validates and pushes.
 
-1. **Locate the draft.** Find `articles/draft-<slug>.md`. If not present, look for `articles/article-*-<slug>.md` (might be a re-commit). Fail if neither exists.
+1. **Locate the draft.** Look in this order:
+   - `articles/drafts/draft-<slug>.md` (current convention)
+   - `articles/draft-<slug>.md` (legacy location, for older drafts)
+   - `articles/article-*-<slug>.md` (might be a re-commit of an already-renamed file)
+   Fail if none of these exist.
 
 2. **Re-run pre-publish gate** (full set, see below). HARD FAIL on any gate failure. Output the failing checks and stop. Don't silently push broken content.
 
@@ -143,12 +152,16 @@ User invokes `/ccai-article-pipeline --commit <slug>`. Skill validates and pushe
      ${EXISTING_SHA:+-f sha="$EXISTING_SHA"}
    ```
 
-5. **Rename the local draft** to `articles/article-NN-<slug>.md` (auto-increment NN based on existing article numbers).
+5. **Rename and move:**
+   - Local: rename `articles/drafts/draft-<slug>.md` → `articles/article-NN-<slug>.md` (auto-increment NN based on existing article numbers in `articles/`)
+   - GitHub: PUT the finalized version to `articles/article-NN-<slug>.md` AND DELETE the old `articles/drafts/draft-<slug>.md` so the drafts/ folder stays clean
 
 6. **Output summary**:
-   - Commit SHA
+   - Commit SHA for production push
+   - Commit SHA for /articles/ backup
+   - Commit SHA for draft deletion
    - Branch
-   - File path
+   - File paths (production + backup + deleted draft)
    - Next steps:
      - "Go to Lovable, click Publish."
      - "After publish completes, run `/ccai-article-pipeline --verify <slug>`"
