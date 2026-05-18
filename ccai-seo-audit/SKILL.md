@@ -135,6 +135,43 @@ Aggregate all internal links across crawled pages. Detect:
 
 Output → `link-graph.md`.
 
+### Step 4.5, Internal link prerender + CTA presence check (added 2026-05-17)
+
+A new class of failure surfaced in May 2026 on Lovable sites that had per-page metadata and body content correctly prerendered: the navigation header, footer, and article CTAs were React components that never reached the prerendered HTML. The link graph in Step 4 already detects orphans and broken links, but it can't detect "all of the site's nav is JS-only" because the link graph is built from whatever links exist in HTML — and when nav is JS-only, there are no nav links to graph.
+
+This step runs after Step 4 and catches what Step 4 cannot.
+
+**Sub-step 4.5a, Outbound link count per page (Checklist 12.1):**
+
+For each crawled page, count internal `<a href>` links. Apply tiered thresholds by page type:
+- Homepage: ≥5 internal links expected (nav)
+- Hub pages (e.g., `/guides.html`, `/blog.html`): ≥10 outbound links expected (list of children)
+- Article/blog pages: ≥3 internal links expected (cross-links to related content + at least one CTA)
+
+Flag pages below their threshold as findings. Especially flag homepages with <3 internal links as critical.
+
+**Sub-step 4.5b, Navigation prerender check (Checklist 12.2):**
+
+Cross-page anchor analysis. Sample 3 pages (homepage + 2 random others). For each, extract the set of internal `<a href>` values. Take the intersection. If the intersection has <3 hrefs, the navigation isn't reaching prerendered HTML — flag as critical finding "Navigation is JavaScript-only; crawlers cannot traverse the site."
+
+**Sub-step 4.5c, Footer link check (Checklist 12.3):**
+
+Per page, look for `<a href>` patterns to expected footer destinations: homepage, contact/about, privacy/terms, social URLs. If a page has none of these, footer is likely JS-only as well.
+
+**Sub-step 4.5d, Expected CTA presence (Checklist 12.4):**
+
+If the working directory contains a `BRAND_VOICE.md` that specifies expected CTAs (or the user provides them via args), per content page check that those URLs appear as `<a href>` values in the prerendered HTML.
+
+Example: a brand-voice rule like "every article ends with both Skool + booking CTAs" — verify each article has `<a href="https://www.skool.com/...">` AND `<a href="/book.html">` (or whatever the user's booking URL is). Plaintext references in code blocks don't count.
+
+**Sub-step 4.5e, Article cross-linking (Checklist 12.5):**
+
+For each article URL, count outbound internal links matching the article URL pattern (e.g., `/guides/*.html`, `/blog/*.html`). Threshold: ≥3 cross-links per article. Below threshold = "Articles don't cross-link; no internal link graph between content."
+
+**Why this step matters:** Lovable's "Try to fix" SEO tool (May 2026) marks per-page metadata and JSON-LD as "Fixed" based on source state, but doesn't verify the deployed HTML. The fixes routinely don't reach the crawler. Step 4.5 catches this gap specifically — it's the difference between an audit that says "Looks good per Lovable" and one that says "Here's what the crawler actually sees."
+
+Output to `link-graph.md` (extends Step 4 output) or a new `nav-and-cta-check.md` if findings are extensive.
+
 ### Step 5, Cannibalization + duplicate check
 
 - Cluster pages by title similarity (>70% overlap)

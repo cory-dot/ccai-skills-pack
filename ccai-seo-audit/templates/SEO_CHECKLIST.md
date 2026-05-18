@@ -1,6 +1,6 @@
 # Canonical SEO + AEO Checklist (2026)
 
-> 55 items across 11 categories. Used by both `ccai-seo-audit` (to grade) and `ccai-seo-setup` (to implement). Keep these two files in sync.
+> 60 items across 12 categories. Used by both `ccai-seo-audit` (to grade) and `ccai-seo-setup` (to implement). Keep these two files in sync.
 
 Each item has:
 - **What**, the check
@@ -364,6 +364,42 @@ Each item has:
 - **Why:** Bing = where ChatGPT search and Copilot index from. Verify both, not just Google.
 - **How:** Check `<meta name="google-site-verification">` and `<meta name="msvalidate.01">` (or DNS verification)
 - **Severity:** high
+
+---
+
+## 12. Internal link graph + prerender visibility (5 items)
+
+> Added 2026-05-17 after the Lovable May 13 release exposed a new failure pattern: per-page metadata and body content can be prerendered correctly, but the navigation, footer, and CTA links remain JavaScript-only. The HTML crawler sees a properly-titled page with content but zero links, breaking link-graph signals and CTA discoverability.
+
+### 12.1 Outbound internal links per page meet minimum thresholds
+- **What:** Homepage has ≥5 internal `<a href>` links to top-level routes in prerendered HTML. Hub pages have ≥10 outbound links (to their children). Article/blog pages have ≥3 outbound internal links (cross-links to related content + at least one CTA).
+- **Why:** Pages with no outbound internal links pass no authority. Pages whose nav is JS-only are crawler dead-ends — Google may still render JS to find links eventually, but Bing and AI crawlers won't.
+- **How to verify:** Per page, `curl ${URL} | grep -oE '<a [^>]*href="/[^"]*"' | wc -l` for site-internal hrefs. Compare against thresholds above.
+- **Severity:** critical (homepage, hubs), high (articles)
+
+### 12.2 Site navigation present in prerendered HTML
+- **What:** Header nav links visible in HTML on every crawled page. Detection heuristic: collect the set of internal hrefs that appear on 3+ pages. If the count is <3, navigation is JS-only and crawlers can't traverse the site.
+- **Why:** Crawlable navigation is how non-sitemap discovery works. Without it, all pages are effectively orphans even if they're in the sitemap.
+- **How to verify:** Cross-page anchor analysis — sample 3 pages, intersect their internal href sets, expect ≥3 shared nav links.
+- **Severity:** critical
+
+### 12.3 Footer links present in prerendered HTML
+- **What:** Footer contains at least: link to homepage, contact/about page, privacy/terms pages, and any social presence URLs as `<a href>`.
+- **Why:** Footer links are EEAT trust signals (contact, legal) and pass authority broadly across the site.
+- **How to verify:** Page-source grep for footer-region hrefs. Spot-check 2 pages, expect 5+ footer links.
+- **Severity:** medium
+
+### 12.4 Expected CTAs present in prerendered HTML (config-driven)
+- **What:** When `BRAND_VOICE.md` or audit args specify expected CTA URLs/patterns (e.g., a Skool community URL, a booking URL), the audit verifies each content page contains those URLs as crawlable `<a href>` elements.
+- **Why:** Brand-voice CTA rules ("both CTAs at end") that are implemented as React components without anchor tags don't reach the crawler. Lovable's SEO review won't catch this; this audit will.
+- **How to verify:** Per page, `curl ${URL} | grep -F 'href="<expected-CTA-URL>"'` returns at least one match.
+- **Severity:** high (for sites where CTA discoverability is a conversion mechanism)
+
+### 12.5 Article cross-linking (related articles section)
+- **What:** Each article/blog post links to ≥3 other articles via a "related articles" or "see also" section, with crawlable `<a href>` markup.
+- **Why:** Cross-linking creates the internal link graph that helps Google distinguish authoritative pages from isolated ones. Articles with zero internal incoming links are nearly impossible to rank.
+- **How to verify:** Per article URL, count `<a href>` values that point to other articles on the same site (typically `/guides/*.html` or `/blog/*.html` patterns).
+- **Severity:** high (content sites)
 
 ---
 

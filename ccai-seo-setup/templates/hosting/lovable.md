@@ -4,6 +4,11 @@ Lovable (lovable.dev) hosts Vite + React + TypeScript SPAs. You describe changes
 
 This template is the canonical case study for SEO on Lovable. Other hosts have lighter overlays.
 
+> **Updated 2026-05-17** for Lovable's May 13, 2026 native SEO release. Significant platform changes:
+> - **New projects (May 13+):** TanStack Start with full SSR by default. Most of this template's prerender workarounds are no longer needed on new projects. If your project was created on or after 2026-05-13, skip prompts 1-4 below and start at prompt 5 (per-page schemas).
+> - **Existing Vite + React projects:** Lovable now auto-generates `sitemap.xml`, `robots.txt`, `llms.txt`, and basic head tags as static files. These were previously the user's responsibility. The auto-prerender for existing Vite + React projects only snapshots `index.html` — it does NOT execute route components, so per-route titles, body content, JSON-LD, H1, canonical, nav, footer, and CTAs all still require custom prerender work (this template).
+> - **"Try to fix" SEO review tool:** Lovable's new in-editor SEO review checks source state and applies fixes, but those fixes don't necessarily reach the prerendered HTML on Vite + React projects. Curl-verify every fix (see Section "Lovable's 'Try to fix' tool blind spot" below).
+
 > **For setup runs:** read this template first, then the matching stack template (`templates/stacks/vite-react.md` by default). The hosting template covers what's different about Lovable; the stack template covers the underlying Vite + React patterns.
 
 ---
@@ -26,7 +31,7 @@ Verified by curl + sentinel diagnostics on a live Lovable site (2026-05-13):
 
 5. **Cloudflare in front, no real edge logic.** Lovable serves through Cloudflare with `Cache-Control: no-cache, must-revalidate, max-age=0` on HTML. You CAN put your own Cloudflare in front of the Lovable origin if you want Worker logic, but doing so is going to the trouble of a partial migration.
 
-6. **Lovable's "Improve SEO" panel is blind to Lovable's hosting.** Their internal scanner crawls clean URLs and falls into the same SPA-fallback trap a real naive crawler would. Their panel will tell you the sitemap is missing, social previews are broken, and schema is absent, all of which can be verifiably false against the live HTML. Treat the panel as a hint, not a verdict. Use curl + Google Search Console + Bing Webmaster Tools + Rich Results Test as your real auditors.
+6. **Lovable's "Try to fix" SEO review tool is blind to the prerender layer.** The May 2026 SEO review tool checks the React source code state — when you click "Try to fix," it generates code changes in your components (per-route titles via `<Helmet>`, JSON-LD blocks, etc.). On Vite + React projects, those source changes don't reach the prerendered HTML because Lovable's auto-prerender doesn't execute route components. Result: the editor marks items as "Fixed ✓" but `curl` against the live URL shows no change. Curl-verify every claimed fix; never trust the green checkmarks alone. (The older "Improve SEO" panel had the opposite blind spot: it crawled clean URLs and reported issues that weren't actually broken. Different bug, same lesson: trust curl.)
 
 ---
 
@@ -190,9 +195,11 @@ Always include a curl verification step. Lovable will say "Done" but the only wa
 
 ---
 
-## The 13 essential Lovable prompts
+## The essential Lovable prompts
 
 These are the prompts a Lovable + Vite + React content site needs, in dependency order. Each prompt is paste-ready (after variable substitution via `templates/META_PROMPT.md`).
+
+> **Note on the May 13, 2026 release:** Lovable now auto-generates `sitemap.xml`, `robots.txt`, `llms.txt`, and basic head tags as static files. If your project has these already (curl `/sitemap.xml`, `/llms.txt`, `/robots.txt` — all return 200), you can skip the corresponding setup prompts (10, 12, and parts of 13 below) and rely on Lovable's defaults. The prompts that remain critical on Vite + React projects are the prerender-layer ones (2, 3, 4, 5, 6, 7, 9, 14, 15).
 
 1. **Soft-404 fix** (noindex injection on NotFound page). Stand-alone, no dependencies.
 2. **Vite plugin for per-page metadata prerender** (`closeBundle` pattern, Node-compatible scripts, sentinel file). Foundation for everything below.
@@ -203,12 +210,14 @@ These are the prompts a Lovable + Vite + React content site needs, in dependency
 7. **Homepage Organization + WebSite schema + sameAs + founder @id**. Depends on 6.
 8. **Updated date pattern** (frontmatter + visible UI + sitemap lastmod + JSON-LD dateModified). Depends on 5.
 9. **/guides hub upgrade** (intro + clusters + CollectionPage + ItemList). Depends on 2.
-10. **IndexNow integration with file fallback + auto-ping on build**. Depends on 2.
+10. **IndexNow integration with file fallback + auto-ping on build**. Depends on 2. (Lovable may now do this natively; verify before adding.)
 11. **UTM auto-tagging on share buttons**. Stand-alone.
-12. **llms.txt auto-generation** (build-time, AI-crawler discovery). Depends on 2.
-13. **GSC + Bing Webmaster verification meta tags** (placeholders Cory swaps in). Stand-alone.
+12. **llms.txt auto-generation** (build-time, AI-crawler discovery). Depends on 2. (Lovable now auto-generates this; verify before adding.)
+13. **GSC + Bing Webmaster verification meta tags** (placeholders user swaps in). Stand-alone.
+14. **Nav / footer / CTA prerender** (the new May 2026 finding — Lovable's auto-prerender doesn't include these; prerender them as HTML strings during build). Depends on 2. See `templates/patterns/nav-prerender.md`.
+15. **Related articles cross-linking** (auto-generated "Related articles" section in HTML for every article, building the internal link graph). Depends on 2 + 14. See `templates/patterns/related-articles.md`.
 
-For the prompt text (generic, with `${VARIABLES}`), see `templates/PROMPTS.md` (or the published companion article at https://creativecore.ai/guides/fixing-lovable-seo.html for a narrative walkthrough of why each one exists).
+For the prompt text (generic, with `${VARIABLES}`), see `templates/META_PROMPT.md` (for variable customization) and the individual pattern files in `templates/patterns/`.
 
 ---
 
@@ -229,8 +238,10 @@ For the prompt text (generic, with `${VARIABLES}`), see `templates/PROMPTS.md` (
 | 11 UTM share | Open site in browser, click copy-link, paste URL, verify `utm_*` params |
 | 12 llms.txt | `curl ${SITE}/llms.txt` returns markdown |
 | 13 GSC + Bing meta | `curl ${SITE}/ \| grep google-site-verification` matches |
+| 14 Nav / footer / CTA prerender | `curl -s ${SITE}/ \| grep -oE '<a [^>]*href="/[^"]*"' \| sort -u \| wc -l` returns ≥5; `curl -s ${SITE}/guides/<slug>.html \| grep -F 'href="${YOUR_BOOKING_URL}"'` returns at least 1 match |
+| 15 Related articles | `curl -s ${SITE}/guides/<slug>.html \| grep -oE '<a [^>]*href="/(guides\|blog)/[^"]*"' \| wc -l` returns ≥3 |
 
-For all of these: the curl command is non-negotiable. Lovable's UI saying "Done" is necessary but not sufficient.
+For all of these: the curl command is non-negotiable. Lovable's UI (and its new "Try to fix" SEO review) saying "Done" or "Fixed" is necessary but not sufficient.
 
 ---
 
@@ -247,6 +258,9 @@ For all of these: the curl command is non-negotiable. Lovable's UI saying "Done"
 | Google Search Console shows old content under "Crawled page" but live HTML is correct | Google hasn't re-crawled since fixes shipped | Manual Request Indexing in GSC (daily quota ~10-12) |
 | `${YOUR_BUSINESS_NAME}` schema isn't being picked up by Rich Results Test | JSON-LD has syntax error, or it's hydrated client-side only | Verify it's in the prerendered HTML (curl + grep), not just `react-helmet-async` runtime injection |
 | OG image not updating when shared on Facebook/Twitter | Social platforms cache OG metadata for ~24-48 hours | Use Facebook Sharing Debugger to force re-fetch; Twitter's validator is gone but pasting in a Twitter compose box re-fetches |
+| Site only has 1-2 internal links per page in HTML (homepage has only /book.html, articles have zero) | Nav, footer, CTAs are React components that don't reach prerendered HTML — auto-prerender doesn't execute route components | Apply prompt 14 (nav-prerender pattern). Verify with `curl -s ${SITE}/ \| grep -oE 'href="/[^"]*"' \| sort -u` |
+| Lovable's "Try to fix" marks everything Fixed but curl shows no change | Tool is checking source code state, not deployed HTML. On Vite + React, source fixes don't reach prerender. | Always curl-verify "Try to fix" results. For per-route content (title, meta, OG, JSON-LD, H1, canonical, body), only static-file fixes (sitemap, robots.txt, llms.txt) are reliable from the tool alone. |
+| Articles have zero internal cross-links between them | No related-articles section in prerendered HTML; React component for it (if any) doesn't reach the prerender | Apply prompt 15 (related-articles pattern). |
 
 ---
 

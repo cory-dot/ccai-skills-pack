@@ -1,6 +1,12 @@
 # Lovable hosting overlay (audit-side)
 
-Platform-specific checks to run when the audit detects a Lovable-hosted site. These supplement the main 50+ item checklist.
+Platform-specific checks to run when the audit detects a Lovable-hosted site. These supplement the main 60-item checklist.
+
+> **Updated 2026-05-17** for Lovable's May 13, 2026 native SEO release. Key behavioral changes since previous version of this overlay:
+> - New Lovable projects (May 13+) default to TanStack Start with full SSR — most architectural prerender issues no longer apply.
+> - Existing Vite + React projects (overwhelming majority of Lovable sites) get an "auto-prerender" that snapshots `index.html` only. Route components do not execute. Per-route meta, body, JSON-LD, H1, canonical, nav, footer, CTAs — none of these reach prerendered HTML unless the user has a custom prerender plugin.
+> - Lovable now ships auto-generated `sitemap.xml`, `robots.txt`, `llms.txt`, and basic head tags on Vite + React projects. Audit should credit these as wins, not flag them as missing.
+> - Lovable's new "Try to fix" SEO review tool is a different beast from the old "Improve SEO" panel. See Section 5 below.
 
 ## Detection signatures
 
@@ -9,6 +15,18 @@ Lovable hosting is identified by any of:
 - HTML contains `data-proxy-url="/~api/analytics"`
 - OG image URLs point to `pub-<uuid>.r2.dev/...lovable.app-<id>.png` (preview environment leakage; common in older deploys)
 - DNS shows Cloudflare in front (not unique to Lovable, but in combination with the above is a strong signal)
+
+## What Lovable now ships natively (May 13, 2026 release)
+
+On a default Vite + React Lovable project with no custom prerender, the following are present out of the box. Audit should detect and credit these as wins:
+
+- **`sitemap.xml`** — auto-generated with the project's known top-level routes. Note: usually does NOT include dynamic routes (e.g., `/product/:id`, `/blog/:slug`). Flag missing dynamic routes as a finding.
+- **`robots.txt`** — auto-generated with bot-specific allows (Googlebot, Bingbot, Twitterbot, facebookexternalhit) and a `Sitemap:` directive.
+- **`llms.txt`** — auto-generated with structured "Pages" and "Optional" sections.
+- **Site-wide JSON-LD** — Organization + WebSite blocks in `index.html`'s head. Note: this is NOT per-page schema; do not credit as Article/Product schema presence.
+- **HTTPS + HSTS + standard security headers** — Cloudflare-in-front gives these by default.
+
+These items used to require a custom build script chain (which Lovable's hosted build doesn't run). With the May 13 release, they're handled at the platform level. Substantial improvement; treat the basics as solved for new Lovable users.
 
 ## Mandatory extra checks for Lovable sites
 
@@ -57,17 +75,57 @@ Findings to log:
 
 If the canonical URL convention is `.html` but internal links point to clean URLs (`/guides/something` instead of `/guides/something.html`), this compounds the deduplication problem on Bing. Step 5.5 in the main SKILL.md.
 
-### 5. Lovable's own "Improve SEO" panel false positives
+### 5. Lovable's "Try to fix" SEO review tool blind spots (May 2026)
 
-The user may have already run Lovable's built-in SEO scanner and have a list of issues from it. The audit should explicitly verify those findings against live HTML before treating them as ground truth. Common Lovable panel false positives:
+Lovable replaced the older "Improve SEO" panel with a "Try to fix" review tool in their May 13, 2026 release. The new tool checks more items and applies fixes with one click. The blind spot:
 
-- "Sitemap is missing" → curl `${SITE}/sitemap.xml`; if 200 with valid XML, the panel is wrong.
-- "Social previews are generic" / "OG URL is hardcoded to homepage" → curl the prerendered `.html` URLs and check `og:title`/`og:url`; if per-page, the panel is wrong.
-- "Pages are missing schema for rich results" → curl `.html` URLs and grep for `application/ld+json`; if present, the panel is wrong.
+**The tool checks the project source state, not the deployed HTML.** When it marks an item as "Fixed," it means Lovable's AI has updated the React component source code. On a Vite + React project (the majority of Lovable sites), those source changes don't reach the prerendered HTML because the auto-prerender doesn't execute route components.
 
-The pattern: Lovable's scanner crawls clean URLs and falls into the same SPA-fallback trap a naive crawler would, while the prerendered `.html` versions Google indexes have the right metadata. Verify with curl.
+Common "Fixed" claims that don't reach the crawler on Vite + React Lovable projects:
 
-### 6. Lovable preview environment URL leakage
+| "Try to fix" claim | What actually happens on Vite + React |
+|---|---|
+| "Search results show the same title for all pages — Fixed" | Per-route `<title>` is set in a React component via `useEffect` / `<Helmet>`. The component never runs during prerender. All routes still serve the same `<title>` in HTML. |
+| "Social previews are the same for every page — Fixed" | Same architectural cause. OG tags set per-route in React still serve identically to all crawlers. |
+| "Pages are missing schema for rich results — Fixed" | Per-page JSON-LD added to React components, but the prerendered HTML still only contains the site-wide schema in `index.html`. |
+| "Headings are out of order — Fixed" | Heading hierarchy fixed in React JSX, but prerendered HTML still has no `<h1>` element. |
+| "Page loads slowly — Fixed" | Loosely meaningful (Lighthouse score may improve from JS optimizations) but does nothing for crawlers that don't execute JS. |
+| "Sitemap missing — Fixed" | **Actually fixed.** Lovable generates `sitemap.xml` as a static file. ✓ |
+| "AI summary missing / llms.txt — Fixed" | **Actually fixed.** Lovable generates `llms.txt` as a static file. ✓ |
+
+**The diagnostic:** any "Fixed" item from the Lovable review tool that touches per-route content (title, meta, OG, JSON-LD, H1, canonical, body content) MUST be curl-verified before the audit accepts it. Static-file fixes (sitemap, robots.txt, llms.txt) are reliable.
+
+**Communicate this to the user as part of the audit:** they may have just run "Try to fix" and seen all-green checkmarks. The audit is the external verification step that catches what the Lovable tool's source-state check misses.
+
+### 5a. Old "Improve SEO" panel false positives (pre-May-2026, legacy)
+
+The older Lovable scanner is now replaced by "Try to fix" but some users may have sites that were audited under the old version. Pattern was the same in the opposite direction — the scanner crawled clean URLs and fell into SPA-fallback, reporting issues that weren't actually broken on prerendered `.html` URLs. Verify any such reports with curl.
+
+### 6. Nav / footer / CTA prerender check (Checklist Category 12)
+
+This is the most common newly-emerging failure on Lovable sites in 2026: per-page content is prerendered correctly, but the navigation header, footer links, and article CTAs remain React components that only render after JS hydration.
+
+Diagnostic curls:
+
+```bash
+# Homepage internal links
+curl -s ${SITE}/ | grep -oE '<a [^>]*href="/[^"]*"' | sort -u
+
+# Same for an article
+curl -s ${SITE}/<article-url> | grep -oE '<a [^>]*href="/[^"]*"' | sort -u
+
+# Compare the sets. If they DON'T overlap on 3+ links (a shared nav), nav is JS-only.
+```
+
+Findings to log (severity per Category 12 thresholds):
+
+- "Homepage has fewer than 5 internal links in prerendered HTML. Site navigation is JavaScript-only; crawlers cannot traverse the site beyond the sitemap." (CRITICAL)
+- "Articles have zero internal cross-links. Brand CTAs (Skool, booking URL, etc.) are not present as `<a href>` in HTML — they're React components without anchor tags." (HIGH)
+- "Footer links not in prerendered HTML." (MEDIUM)
+
+Fix path: see `ccai-seo-setup templates/patterns/nav-prerender.md` and `templates/patterns/related-articles.md`.
+
+### 7. Lovable preview environment URL leakage
 
 Some Lovable sites have OG images pointing at preview environment URLs (`pub-<uuid>.r2.dev/...lovable.app-<id>.png`) instead of the production domain. These often 404 once the preview is wiped.
 
